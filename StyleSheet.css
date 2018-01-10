@@ -5,14 +5,16 @@ body {
     /*padding: 2em;*/
     margin: 0;
     margin-top: 60px;
-    background-image: url("cloud_background.png");
+    background: url("cloud_background.png") no-repeat center center fixed;
     /*background-color: peachpuff;*/
     background-size: cover;
+    -webkit-background-size: cover; /* For WebKit*/
+    -moz-background-size: cover;    /* Mozilla*/
+    -o-background-size: cover;      /* Opera*/
     background-repeat: no-repeat;
     opacity: 0.7;
     /*min-height: 100%;
-  	min-width: 1024px;
-	
+  	min-width: 1024px;	
     width: 100%;
     height: auto;
     position: absolute;
@@ -213,7 +215,7 @@ input {
     border-radius: 25px;
     background: #d4eff9;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    /*background-size: 100% 100%;*/
     color:black;
     opacity: 0.7px;
     padding: 20px; 
@@ -234,11 +236,12 @@ input {
 
 .container-fluid {
     background: #99c635;
+    height: 80px;;
 }
 
-.glyphicon-home:before {
+/*.glyphicon-home:before {
     color:red;
-}
+}*/
 
 .glyphicon-home::after{
     color:yellow;
