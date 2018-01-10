@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+</head>
+<!--<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Cyber Secure</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="index.html">Home</a>
+            </li>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="levels.html">Levels</a></li>
+            <li><a href="level2.html">Level 2</a></li>
+        </ul>
+    </div>
+</nav>-->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="index.html">Cyber Secure</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <!--<li class="active">
+                <a href="index.html">Home</a>
+            </li>-->
+            <li><a href="levels.html">Levels</a></li>
+            <li><a href="level2.html">Level 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<body>
+    <h1>Body stuff</h1>
+    
+    <div class="row">
+        <div class="col-sm-12 info-home">Bogies</div>
+    </div>
+</body>
+<footer>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
+            authDomain: "project400-cybersecurity.firebaseapp.com",
+            databaseURL: "https://project400-cybersecurity.firebaseio.com",
+            projectId: "project400-cybersecurity",
+            storageBucket: "project400-cybersecurity.appspot.com",
+            messagingSenderId: "718162010119"
+        };
+        firebase.initializeApp(config);
+
+        // Get a reference to the database service
+        var database = firebase.database();
+        // set value of Test (or create if it does not exist)
+        database.ref("userName").set("Tony");
+        // get value of Test
+        database.ref("userName").once("value").then(function (data) {
+            console.log(data.val());
+        });
+    </script>
+    <script src="app.js"></script>
+</footer>
+
+</html>

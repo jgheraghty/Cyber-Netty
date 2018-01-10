@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="StyleSheet.css" rel="stylesheet" />
+
+</head>
+
+<body onload="addEvents()">
+    <h1>Log in</h1>
+    <form onsubmit="Submit()" action="levels.html">
+        <p><label id="user">Username:</label>
+            <input id="userName" type="text" name="store" />
+        </p><p><label id="password">Password:</label>
+            <input id="pass" type="text" /></p>
+
+        <input type="submit" class="button" id="btnSubmit" value="Log in" />
+    </form>
+
+    <div class="subBtn">
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+</body>
