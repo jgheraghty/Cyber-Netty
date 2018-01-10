@@ -5,8 +5,8 @@ body {
     /*padding: 2em;*/
     margin: 0;
     margin-top: 60px;
-    /*background-image: url("background_cs.jpeg");*/
-    background-color: peachpuff;
+    background-image: url("cloud_background.png");
+    /*background-color: peachpuff;*/
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0.7;
@@ -200,6 +200,37 @@ input {
     text-align:center;
     height:100px;
     font-size: 60px;
-    margin-top: 450px;
+    margin-top: 400px;
     /*padding: 60px;*/
+}
+
+.character {
+    text-align: center;
+}
+
+.info-about {
+    border-radius: 25px;
+    background: #d4eff9;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color:black;
+    opacity: 0.7px;
+    padding: 20px; 
+    /*width: 200px;
+    height: 150px;*/ 
+    margin-top: 40px;
+    margin-right: 40px;
+    margin-left: 40px;
+    font-size: 50px;
+}
+
+/*.info-about img {
+    width: 100%;
+    height: auto;
+}*/
+
+/* Navbar */
+
+.container-fluid {
+    background: #99c635;
 }
