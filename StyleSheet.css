@@ -27,6 +27,7 @@ form {
     height: 400px;
     margin: 0 auto;
     background: white;
+    border-radius: 25px;
     opacity: 0.7px;
 }
 
@@ -233,4 +234,12 @@ input {
 
 .container-fluid {
     background: #99c635;
+}
+
+.glyphicon-home:before {
+    color:red;
+}
+
+.glyphicon-home::after{
+    color:yellow;
 }
