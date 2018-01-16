@@ -25,7 +25,8 @@ body {
 }
 
 form {
-    text-align: left;
+    margin-bottom: 100px;
+    /*text-align: left;
     position: relative;
     padding: 30px;
     width: 800px;
@@ -33,12 +34,37 @@ form {
     margin: 0 auto;
     background: white;
     border-radius: 25px;
+    opacity: 0.7;*/
+}
+
+.loginBack {
+    text-align: left;
+    position: relative;
+    padding: 30px;
+    width: 800px;
+    height: 280px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
     opacity: 0.7;
+}
+
+.signupBack {
+    text-align: left;
+    position: relative;
+    padding: 30px;
+    width: 800px;
+    height: 520px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    opacity: 0.7;
+    margin-bottom: 150px;
 }
 
 .form-control {
     height: 60px;
-    font-size: 30px;
+    font-size: 28px;
     border: 3px solid #555;
 
 }
@@ -115,12 +141,12 @@ h1 {
     top: 65px;
 }
 
-#email {
+/*#email {
     position: absolute;
     font-size: 20px;
     margin-top: 120px;
     margin-left: 40px;
-}
+}*/
 
 #emailAddress {
     position: absolute;
@@ -165,16 +191,29 @@ input {
     padding: 2px 12px;
 }
 
-#btnSubmit {
+#btnLogin {
     align-content: center;
-    margin-top: 120px;
+    margin-top: 50px;
     width: 140px;
     height: 40px;
     font-size: 25px;
     background-color: azure;
 }
 
-#btnSubmit:hover{
+#btnLogin:hover{
+    background-color: aquamarine;
+}
+
+#btnSignUp {
+    align-content: center;
+    margin-top: 55px;
+    width: 140px;
+    height: 40px;
+    font-size: 25px;
+    background-color: azure;
+}
+
+#btnSignUp:hover{
     background-color: aquamarine;
 }
 /*#para {

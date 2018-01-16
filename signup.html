@@ -20,7 +20,7 @@
     <div class="container-fluid navBar">
         <div class="navbar-header">
             <!--<a class="navbar-brand" href="index.html">Cyber Secure</a>-->
-            
+
         </div>
         <ul class="nav navbar-nav">
             <!--<li class="active">
@@ -35,7 +35,8 @@
     </div>
 </nav>
 
-<body> <!--onload="addEvents()">-->
+<body>
+    <!--onload="addEvents()">-->
     <h1>Create a New Account</h1>
     <!--<form onsubmit="Submit()" action="index.html">
         <p><label id="user">Username:</label>
@@ -54,11 +55,18 @@
         </p>
         <input type="submit" class="button" id="btnSubmit" value="Submit" />
     </form>-->
-    <form class="form-horizontal" action="/levels.html">
+    <form class="form-horizontal signupBack" action="/levels.html">
         <div class="form-group inputs">
             <label class="control-label col-sm-4" for="username">Username:</label>
             <div class="col-sm-8">
                 <input type="username" class="form-control" id="username" placeholder="Username" name="username">
+            </div>
+        </div>
+        <div class="form-group inputs">
+            <label class="control-label col-sm-4" for="email">Email Address:</label>
+            <div class="col-sm-8">
+                <br/>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
             </div>
         </div>
         <div class="form-group inputs">
@@ -67,16 +75,22 @@
                 <input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd">
             </div>
         </div>
+        <div class="form-group inputs">
+            <label class="control-label col-sm-4" for="cpwd">Confirm Password:</label>
+            <div class="col-sm-8">
+                <br/>
+                <input type="password" class="form-control" id="cpwd" placeholder="Confirm Password" name="cpwd">
+            </div>
+        </div>
         <div>
             <!-- class="form-group">-->
             <div>
                 <!--class="col-sm-offset-2 col-sm-10">-->
-                <button type="submit" id="btnSubmit" class="btn btn-default button">Submit</button>
+                <button type="submit" id="btnSignUp" class="btn btn-default button">Submit</button>
             </div>
         </div>
     </form>
-
-
+    <h3>Hi</h3>
     <div class="subBtn">
         <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
