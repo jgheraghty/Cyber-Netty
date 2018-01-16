@@ -20,7 +20,7 @@
     <div class="container-fluid navBar">
         <div class="navbar-header">
             <!--<a class="navbar-brand" href="index.html">Cyber Secure</a>-->
-            
+
         </div>
         <ul class="nav navbar-nav">
             <!--<li class="active">
@@ -35,15 +35,39 @@
     </div>
 </nav>
 
-<body onload="addEvents()">
-    <h1>Log in</h1>
+<body>
+    <!--onload="addEvents()">-->
+    <!--<h1>Log in</h1>
     <form onsubmit="Submit()" action="levels.html">
         <label id="user">Username:</label>
         <input id="userName" type="text" name="store" />
         <label id="password">Password:</label>
         <input id="pass" type="text" />
         <input type="submit" class="button" id="btnSubmit" value="Log in" />
+    </form>-->
+    <h1>Log In</h1>
+    <form class="form-horizontal" action="/levels.html">
+        <div class="form-group inputs">
+            <label class="control-label col-sm-4" for="username">Username:</label>
+            <div class="col-sm-8">
+                <input type="username" class="form-control" id="username" placeholder="Enter Username" name="username">
+            </div>
+        </div>
+        <div class="form-group inputs">
+            <label class="control-label col-sm-4" for="pwd">Password:</label>
+            <div class="col-sm-8">
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+        </div>
+        <div>
+            <!-- class="form-group">-->
+            <div>
+                <!--class="col-sm-offset-2 col-sm-10">-->
+                <button type="submit" id="btnSubmit" class="btn btn-default button">Submit</button>
+            </div>
+        </div>
     </form>
+
     <div class="subBtn">
         <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
     </div>
