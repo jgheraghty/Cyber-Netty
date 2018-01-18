@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Level 1</title>
+    <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -31,13 +31,42 @@
         <ul class="nav navbar-nav navbar-right">
             <li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
             <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>
+            <li><a href="information.html"><span class="glyphicon glyphicon-book info"></span></a></li>
         </ul>
     </div>
 </nav>
+
 <body>
     <div class="container-fluid">
-        <h1>Level 1!</h1>
-        <p>Match cards - what one is the odd one out?</p>
-    </div>
+        <h1>Activities</h1>
+        <div class="col-sm-12">
+            <div class="activeBack">
+                <div>
+                    <h1>Complete an activity to unlock others</h1>
+                </div>
+                <br/>
+                <div>
+                    <div class="row activityList">
+                        <p>
+                            <div onclick="location.href='activity1.html';" class="col-sm-12 activity">Odd One Out</div>
+                        </p>
+                        <p>
+                            <div onclick="location.href='activity2.html';" class="col-sm-12 activity locked">Match Them</div>
+                            </a>
+                        </p>
+                        <p>
+                            <div onclick="location.href='activity3.html';" class="col-sm-12 activity locked">Who Is Who?</div>
+                        </p>
+                        <!--<p>
+                            <div onclick="location.href='activity4.html';" class="col-sm-12 activity locked">Did You Know?</div>
+                            </a>
+                        </p>-->
 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="javascript/app.js"></script>
 </body>
