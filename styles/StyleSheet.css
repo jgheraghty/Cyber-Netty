@@ -315,16 +315,19 @@ input {
     height: 100px;;
 }
 
-.home::before, .login::before {
-    color: #fff66c;
+.home::before, .info::before {
+    /*color: #fff66c;*/
+    color: white;
     font-size: 65px;
     margin-left:60px;
     margin-right: 100px;
 }
 
-.user::before {
-    color: #fff66c;
-    font-size: 65px;    
+.login::before, .user::before {
+    /*color: #fff66c;*/
+    color:white;
+    font-size: 65px; 
+    margin-left: 60px;   
 }
 
 
