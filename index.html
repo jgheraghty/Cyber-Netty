@@ -50,8 +50,11 @@
                 </div>
                 <br/>
                 <div>
-                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock levels.</h3>
+                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock
+                        levels.</h3>
                     <p></p>
+                    <textarea id="mainText"></textarea><br>
+                    <button onclick="Sub()" id="submit">Submit</button>
                 </div>
             </div>
         </div>
@@ -73,16 +76,8 @@
         };
         firebase.initializeApp(config);
 
-        // Get a reference to the database service
-        var database = firebase.database();
-        // set value of Test (or create if it does not exist)
-        database.ref("userName").set("Tony");
-        // get value of Test
-        database.ref("userName").once("value").then(function (data) {
-            console.log(data.val());
-        });
     </script>
-    <script src="app.js"></script>
+    <script src="javascript/app.js"></script>
 </footer>
 
 </html>

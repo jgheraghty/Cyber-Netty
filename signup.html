@@ -14,6 +14,10 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="styles/StyleSheet.css" rel="stylesheet" />
 
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
 </head>
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid navBar">
@@ -85,11 +89,13 @@
             <!-- class="form-group">-->
             <div>
                 <!--class="col-sm-offset-2 col-sm-10">-->
-                <button type="submit" id="btnSignUp" class="btn btn-default button">Submit</button>
+                <button onclick="signUp()" type="submit" id="btnSignUp" class="btn btn-default button">Submit</button>
             </div>
         </div>
     </form>
     <div class="subBtn">
         <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
+
+    <script src="javascript/app.js"></script>
 </body>
