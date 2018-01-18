@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,20 +38,21 @@
 <body>
     <div class="container-fluid">
         <h1>Activities</h1>
-
-        <p>Complete a level to unlock others</p>
-        <div class="row">
-            <p>
-                <div onclick="location.href='level1.html';" class="col-sm-12 level">Level 1</div>
-            </p>
-            <p>
-                <div onclick="location.href='level2.html';" class="col-sm-12 level locked">Level 2</div>
-                </a>
-            </p>
-            <p>
-                <div onclick="level3()" class="col-sm-12 level locked">Level 3</div>
-            </p>
-        </div>
+        <p>Hello
+            <p id="greeting"> </p>
+            <p>Complete a level to unlock others</p>
+            <div class="row">
+                <p>
+                    <div onclick="location.href='level1.html';" class="col-sm-12 level">Level 1</div>
+                </p>
+                <p>
+                    <div onclick="location.href='level2.html';" class="col-sm-12 level locked">Level 2</div>
+                    </a>
+                </p>
+                <p>
+                    <div onclick="level3()" class="col-sm-12 level locked">Level 3</div>
+                </p>
+            </div>
     </div>
-
+    <script src="javascript/app.js"></script>
 </body>
