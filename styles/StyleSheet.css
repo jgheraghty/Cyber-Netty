@@ -7,7 +7,7 @@ body {
     /*padding: 2em;*/
     margin: 0;
     margin-top: 60px;
-    background: url("../images/cloud_background.png") no-repeat center center fixed;
+    background: url("../images/blue_background.jpeg") no-repeat center center fixed;
     /*background-color: peachpuff;*/
     background-size: cover;
     -webkit-background-size: cover; /* For WebKit*/

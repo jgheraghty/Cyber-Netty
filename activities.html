@@ -15,6 +15,23 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="styles/StyleSheet.css" rel="stylesheet" />
 
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
+            authDomain: "project400-cybersecurity.firebaseapp.com",
+            databaseURL: "https://project400-cybersecurity.firebaseio.com",
+            projectId: "project400-cybersecurity",
+            storageBucket: "project400-cybersecurity.appspot.com",
+            messagingSenderId: "718162010119"
+        };
+        firebase.initializeApp(config);
+    </script>
+
 </head>
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid navBar">
@@ -26,23 +43,54 @@
             <!--<li class="active">
                 <a href="index.html">Home</a>
             </li>-->
-            <li><a href="index.html"><span class="glyphicon glyphicon-home home"></span></a></li>
+            <li>
+                <a href="index.html">
+                    <span class="glyphicon glyphicon-home home"></span>
+                </a>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
-            <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>
-            <li><a href="information.html"><span class="glyphicon glyphicon-book info"></span></a></li>
+            <li>
+                <a href="signup.html">
+                    <span class="glyphicon glyphicon-user user"></span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <span class="glyphicon glyphicon-log-in login"></span>
+                </a>
+            </li>
+            <li>
+                <a href="information.html">
+                    <span class="glyphicon glyphicon-book info"></span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
 
 <body>
+
+    <script>
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                document.getElementById("userGreeting").innerHTML = '<h1> Hey there, ' + user.displayName + '! </h1>';
+            }
+            else {
+                console.log("No user signed in..");
+            }
+            
+        });
+    </script>
+
     <div class="container-fluid">
         <h1>Activities</h1>
         <div class="col-sm-12">
             <div class="activeBack">
                 <div>
-                    <h1>Complete an activity to unlock others</h1>
+                    <h1><p id="userGreeting"></p></h1>
+                    <br>
+                    <h2>Join Netty on an adventure to learn all about the internet! Complete an activity to unlock others</h2>
                 </div>
                 <br/>
                 <div>

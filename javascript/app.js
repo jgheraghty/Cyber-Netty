@@ -38,7 +38,7 @@ function Sub() {
     // set value (or create if it does not exist)
     database.ref("userNom").push(messageText);
     /* -----------------------------------------*/
-}
+
 
 /*// Get a reference to the database service
 var database = firebase.database();
@@ -48,3 +48,13 @@ database.ref("userNom").push("Linda");
 database.ref("userNom").once("value").then(function (data) {
     console.log(data.val());
 });*/
+
+firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+
+  
+}
