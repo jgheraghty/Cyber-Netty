@@ -18,6 +18,42 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
+            authDomain: "project400-cybersecurity.firebaseapp.com",
+            databaseURL: "https://project400-cybersecurity.firebaseio.com",
+            projectId: "project400-cybersecurity",
+            storageBucket: "project400-cybersecurity.appspot.com",
+            messagingSenderId: "718162010119"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- Firebase AuthUI -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'activities.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: ''
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
 </head>
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid navBar">
@@ -29,12 +65,28 @@
             <!--<li class="active">
                 <a href="index.html">Home</a>
             </li>-->
-            <li><a href="index.html"><span class="glyphicon glyphicon-home home"></span></a></li>
+            <li>
+                <a href="index.html">
+                    <span class="glyphicon glyphicon-home home"></span>
+                </a>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
-            <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>
-            <li><a href="information.html"><span class="glyphicon glyphicon-book info"></span></a></li>
+            <li>
+                <a href="signup.html">
+                    <span class="glyphicon glyphicon-user user"></span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <span class="glyphicon glyphicon-log-in login"></span>
+                </a>
+            </li>
+            <li>
+                <a href="information.html">
+                    <span class="glyphicon glyphicon-book info"></span>
+                </a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -54,7 +106,16 @@
                     <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock
                         activities.
                     </h3>
-                    <p></p>
+                    <div id="firebaseui-auth-container"></div>
+                    <!--<div class="quickstart-user-details-container">
+                        <h3>
+                            Firebase sign-in status:
+                            <span id="userLog-status">Unknown</span>
+                            <div>Firebase auth
+                                <code>currentUser</code> object value:</div>
+                            <pre><code id="UserAccount">null</code></pre>
+                        </h3>
+                    </div>-->
                     <!--<textarea id="mainText"></textarea><br>
                     <button onclick="Sub()" id="submit">Submit</button>-->
                 </div>
@@ -66,18 +127,7 @@
     </div>-->
 </body>
 <footer>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
-            authDomain: "project400-cybersecurity.firebaseapp.com",
-            databaseURL: "https://project400-cybersecurity.firebaseio.com",
-            projectId: "project400-cybersecurity",
-            storageBucket: "project400-cybersecurity.appspot.com",
-            messagingSenderId: "718162010119"
-        };
-        firebase.initializeApp(config);
-    </script>
+
     <script src="javascript/app.js"></script>
 </footer>
 
