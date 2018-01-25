@@ -4,7 +4,9 @@
 <head>
     <title>Activity 1</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="javascript/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -29,17 +31,28 @@
             <li><a href="index.html"><span class="glyphicon glyphicon-home home"></span></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
-            <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>
-            <li><a href="information.html"><span class="glyphicon glyphicon-book info"></span></a></li>
+            <li><a href="authentication.html"><span id="authentication" class="glyphicon glyphicon-user user"></span></a></li>
+            <!--<li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>-->
+            <li><a href="information.html"><span id="activities" class="glyphicon glyphicon-book info hide"></span></a></li>
         </ul>
     </div>
 </nav>
-
 <body>
     <div class="container-fluid">
         <h1>Activity 1!</h1>
         <p>Match cards - what one is the odd one out?</p>
-    </div>
 
+        <h2>Match the Numbers!</h2>
+
+        <div id="content">
+
+            <div id="deck"> </div>
+            <div id="cardPlace"> </div>
+
+            <div id="win">
+                <h2>Match the Numbers!</h2>
+                <button onclick="play()">Play!</button>
+            </div>
+        </div>
 </body>
