@@ -42,6 +42,7 @@ function Sub() {
     database.ref("userNom").push(messageText);
     /* -----------------------------------------*/
 
+<<<<<<< HEAD
 
     /*// Get a reference to the database service
     var database = firebase.database();
@@ -139,4 +140,24 @@ function handleCardDrop(event, ui) {
 
 }
 
+=======
+
+/*// Get a reference to the database service
+var database = firebase.database();
+// set value of Test (or create if it does not exist)
+database.ref("userNom").push("Linda");
+// get value of Test
+database.ref("userNom").once("value").then(function (data) {
+    console.log(data.val());
+});*/
+
+firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+
+  
+>>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
 }

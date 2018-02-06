@@ -43,13 +43,35 @@
             <!--<li class="active">
                 <a href="index.html">Home</a>
             </li>-->
-            <li><a href="index.html"><span class="glyphicon glyphicon-home home"></span></a></li>
+            <li>
+                <a href="index.html">
+                    <span class="glyphicon glyphicon-home home"></span>
+                </a>
+            </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
+<<<<<<< HEAD
             <li><a href="authentication.html"><span id="authentication" class="glyphicon glyphicon-user user"></span></a></li>
             <!--<li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
       <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>-->
             <li><a href="activities.html"><span id="activities" class="glyphicon glyphicon-book info hide"></span></a></li>
+=======
+            <li>
+                <a href="signup.html">
+                    <span class="glyphicon glyphicon-user user"></span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html">
+                    <span class="glyphicon glyphicon-log-in login"></span>
+                </a>
+            </li>
+            <li>
+                <a href="information.html">
+                    <span class="glyphicon glyphicon-book info"></span>
+                </a>
+            </li>
+>>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
         </ul>
     </div>
 </nav>
@@ -59,6 +81,7 @@
     <script>
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
+<<<<<<< HEAD
                 document.getElementById("userGreeting").innerHTML = '<h1> Hey there, ' + user.displayName + '! </h1>';
                 //btnLogout.classList.remove('hide');
                 authentication.classList.add('hide');
@@ -71,6 +94,13 @@
                 activities.classList.add('hide');
             }
 
+=======
+                document.body.innerHTML = '<h1> Congrats' + user.displayName + ', you are done! </h1> <h2> Do these activities </h2> <h2> Verify email address ' + user.email + '. </h2>';
+            }
+            else {
+                console.log("No user signed in..");
+            }
+>>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
         });
     </script>
 

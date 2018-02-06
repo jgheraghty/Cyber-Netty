@@ -85,7 +85,11 @@ function sendPasswordReset() {
         // Password Reset Email sent to user
         // alert to user
         alert('Password Reset Email Sent!');
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
     }).catch(function (error) {
         // error handling
         var errorCode = error.code;
@@ -109,6 +113,7 @@ function StateChanged() {
     // waiting for authentication state changes
     // start change state]
     firebase.auth().onAuthStateChanged(function (user) {
+<<<<<<< HEAD
 
         if (user.emailVerified) {
             console.log('Email is verified');
@@ -116,6 +121,8 @@ function StateChanged() {
         else {
             console.log('Email is not verified');
         }
+=======
+>>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
         // [START_EXCLUDE silent]
         document.getElementById('verifyEmail').disabled = true;
         // [END_EXCLUDE]
@@ -138,6 +145,7 @@ function StateChanged() {
             // [END_EXCLUDE]
         } else {
             // User is signed out.
+<<<<<<< HEAD
 
             document.getElementById('userLog-status').textContent = 'Signed out';
             document.getElementById('userLog').textContent = 'Sign in';
@@ -148,6 +156,17 @@ function StateChanged() {
         document.getElementById('userLog').disabled = false;
         
 
+=======
+            
+            document.getElementById('userLog-status').textContent = 'Signed out';
+            document.getElementById('userLog').textContent = 'Sign in';
+            document.getElementById('UserAccount').textContent = 'null';
+            
+        }
+        // user can log in again
+        document.getElementById('userLog').disabled = false;
+       
+>>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
     });
     // [END change state]
     document.getElementById('userLog').addEventListener('click', UserLogin, false);
