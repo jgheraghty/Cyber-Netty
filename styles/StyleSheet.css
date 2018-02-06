@@ -1,18 +1,23 @@
 /*StyleSheet*/
 
+
 /* Background blue = #81dbfe */
+
 body {
     font: 21px sans-serif;
-    color:#000000;
+    color: #000000;
     /*padding: 2em;*/
     margin: 0;
     margin-top: 60px;
-    background: url("../images/blue_background.jpeg") no-repeat center center fixed;
-    /*background-color: peachpuff;*/
+    /*background: url("../images/blue_background.jpeg") no-repeat center center fixed;*/
+    background-color: white;
     background-size: cover;
-    -webkit-background-size: cover; /* For WebKit*/
-    -moz-background-size: cover;    /* Mozilla*/
-    -o-background-size: cover;      /* Opera*/
+    -webkit-background-size: cover;
+    /* For WebKit*/
+    -moz-background-size: cover;
+    /* Mozilla*/
+    -o-background-size: cover;
+    /* Opera*/
     background-repeat: no-repeat;
     /*opacity: 0.7;*/
     /*min-height: 100%;
@@ -85,14 +90,13 @@ form {
     border-radius: 25px;
     opacity: 0.7;
     margin-bottom: 10px;
-    margin-top:100px;
+    margin-top: 100px;
 }
 
 .form-control {
     height: 60px;
     font-size: 28px;
     border: 3px solid #555;
-
 }
 
 h1 {
@@ -114,7 +118,7 @@ h1 {
 .button {
     /*position: absolute;*/
     left: 50%;
-    display:block;
+    display: block;
     margin: 0 auto;
     /*margin-left: 340px;*/
     color: black;
@@ -166,6 +170,7 @@ h1 {
     left: 300px;
     top: 65px;
 }
+
 
 /*#email {
     position: absolute;
@@ -226,7 +231,7 @@ input {
     background-color: azure;
 }
 
-#btnLogin:hover{
+#btnLogin:hover {
     background-color: aquamarine;
 }
 
@@ -239,9 +244,11 @@ input {
     background-color: azure;
 }
 
-#btnSignUp:hover{
+#btnSignUp:hover {
     background-color: aquamarine;
 }
+
+
 /*#para {
 	border: 1px solid #DF8081;
 	padding: 30px;
@@ -251,16 +258,18 @@ input {
 	background: white;
 }*/
 
+
 /*activities Styles*/
 
 .activityList {
     margin-bottom: 120px;
 }
+
 .activity {
-    border:whitesmoke solid 3px;
-    background-color:peachpuff; 
-    text-align:center;
-    height:100px;
+    border: whitesmoke solid 3px;
+    background-color: peachpuff;
+    text-align: center;
+    height: 100px;
     font-size: 30px;
     padding: 60px;
 }
@@ -280,19 +289,20 @@ input {
     background-color: grey;
 }
 
-
 .subBtn {
     text-align: center;
-    margin-top:30px;
+    margin-top: 30px;
     margin-bottom: 150px;
 }
 
+
 /*Home information*/
+
 .info-home {
-    border:whitesmoke solid 3px;
-    background-color: #ffffff; 
-    text-align:center;
-    height:100px;
+    border: whitesmoke solid 3px;
+    background-color: #ffffff;
+    text-align: center;
+    height: 100px;
     font-size: 60px;
     margin-top: 400px;
     /*padding: 60px;*/
@@ -304,55 +314,65 @@ input {
 
 .info-about {
     border-radius: 25px;
-    background: #ffffff;
+    background: #81cbec;
     background-repeat: no-repeat;
     /*background-size: 100% 100%;*/
-    color:black;
+    color: black;
     opacity: 0.7;
-    padding: 20px; 
+    padding: 20px;
     /*width: 200px;
-    height: 150px;*/ 
+    height: 150px;*/
     margin-top: 40px;
     margin-right: 75px;
     margin-left: 75px;
     font-size: 50px;
-    text-align:center;
+    text-align: center;
 }
+
 
 /*.info-about img {
     width: 100%;
     height: auto;
 }*/
 
+
 /* Navbar */
 
 .navBar {
-    background: #99c635;
-    height: 100px;;
+    background: #81cbec;
+    height: 100px;
+    /*border: dotted 2px white;*/
 }
 
-.home::before, .info::before {
+.navbar-default {
+    border-color: #81cbec;
+}
+
+.home::before,
+.info::before {
     /*color: #fff66c;*/
     color: white;
     font-size: 65px;
-    margin-left:60px;
+    margin-left: 60px;
     margin-right: 100px;
 }
 
-.login::before, .user::before {
+.login::before,
+.user::before {
     /*color: #fff66c;*/
-    color:white;
-    font-size: 65px; 
+    color: white;
+    font-size: 65px;
     margin-left: 60px;
-    margin-right: 60px;   
+    margin-right: 60px;
 }
-
 
 .inputs {
     font-size: 40px;
 }
 
+
 /*----------Match activity----------*/
+
 
 /*body {
   margin: 30px;
@@ -360,35 +380,41 @@ input {
   line-height: 1.8em;
   color: #333;
 }*/
- 
-h1, h2, h3, h4 {
-  /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-}
- 
-#content {
-  margin: 80px 70px;
-  text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
+
+h1,
+h2,
+h3,
+h4 {
+    /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
 
- /* Winner message */
-#win {
-  position: absolute;
-  left: 650px;
-  top: 550px;
-  width: 400;
-  height: 100;
-  z-index: 100;
-  background: green;
-  border: 2px solid #333;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-  padding: 20px;
+#content {
+    margin: 80px 70px;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
 }
+
+
+/* Winner message */
+
+#win {
+    position: absolute;
+    left: 650px;
+    top: 550px;
+    width: 400;
+    height: 100;
+    z-index: 100;
+    background: green;
+    border: 2px solid #333;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+    padding: 20px;
+}
+
 
 /*#win h2 {
 	width: 400px;
@@ -405,103 +431,137 @@ h1, h2, h3, h4 {
 	font-size: 16px; 
 }*/
 
-button{
-	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-	color:green;
-	width:100px;
-	height:30px;
-	font-size:18px;
+button {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    color: green;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
 }
+
 .wideBox {
-  clear: both;
-  text-align: center;
-  margin: 70px;
-  padding: 10px;
-  background: #ebedf2;
-  /*border: 1px solid #333;*/
+    clear: both;
+    text-align: center;
+    margin: 70px;
+    padding: 10px;
+    background: #ebedf2;
+    /*border: 1px solid #333;*/
 }
- 
+
 .wideBox h1 {
-  font-weight: bold;
-  margin: 20px;
-  color: #666;
-  font-size: 1.5em;
+    font-weight: bold;
+    margin: 20px;
+    color: #666;
+    font-size: 1.5em;
 }
- 
+
 #cardPlace {
-  margin: 50px auto 0 auto;
-  background: skyblue;
+    margin: 50px auto 0 auto;
+    background: skyblue;
 }
- 
+
+
 /* The initial pile of unsorted cards */
- 
+
 #deck {
-  margin: 0 auto;
-  background: #ffd;
+    margin: 0 auto;
+    background: #ffd;
 }
- 
-#cardPlace, #deck {
-  width: 620px;
-  height: 250px;
-  padding: 10px;
-  border: 2px solid #333;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+
+#cardPlace,
+#deck {
+    width: 620px;
+    height: 250px;
+    padding: 10px;
+    border: 2px solid #333;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
 }
- 
+
+
 /* Individual cards and places */
- 
-#cardPlace div, #deck div {
-  float: left;
-  width: 100px;
-  height: 78px;
-  padding: 10px;
-  padding-top: 40px;
-  padding-bottom: 0;
-  border: 2px solid #333;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  margin: 0 0 0 0px;
-  background: pink;
-}
- 
-#cardPlace div:first-child, #deck div:first-child {
-  margin-left: 0;
-}
- 
-#cardPlace div.hovered {
-  background: green;
-}
- 
-#cardPlace div {
-  border-style: dashed;
-}
- 
+
+#cardPlace div,
 #deck div {
-  background: green;
-  color: pink;
-  font-size: 40px;
-  text-shadow: 0 0 3px black;
+    float: left;
+    width: 100px;
+    height: 78px;
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 0;
+    border: 2px solid #333;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 0 0 0px;
+    background: pink;
 }
- 
+
+#cardPlace div:first-child,
+#deck div:first-child {
+    margin-left: 0;
+}
+
+#cardPlace div.hovered {
+    background: green;
+}
+
+#cardPlace div {
+    border-style: dashed;
+}
+
+#deck div {
+    background: green;
+    color: pink;
+    font-size: 40px;
+    text-shadow: 0 0 3px black;
+}
+
 #deck div.ui-draggable-dragging {
-  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
 }
- 
+
+
 /* Individually coloured cards */
- 
-#card1.correct { background: red; }
-#card2.correct { background: orange; }
-#card3.correct { background: yellow; }
-#card4.correct { background: lightgreen; }
-#card5.correct { background: green; }
-#card6.correct { background: blue; }
-#card7.correct { background: cyan; }
-#card8.correct { background: violet; }
-#card9.correct { background: purple; }
-#card10.correct { background: indigo; }
- 
- 
+
+#card1.correct {
+    background: red;
+}
+
+#card2.correct {
+    background: orange;
+}
+
+#card3.correct {
+    background: yellow;
+}
+
+#card4.correct {
+    background: lightgreen;
+}
+
+#card5.correct {
+    background: green;
+}
+
+#card6.correct {
+    background: blue;
+}
+
+#card7.correct {
+    background: cyan;
+}
+
+#card8.correct {
+    background: violet;
+}
+
+#card9.correct {
+    background: purple;
+}
+
+#card10.correct {
+    background: indigo;
+}

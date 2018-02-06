@@ -55,26 +55,6 @@
     </script>
 
 </head>
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid navBar">
-        <div class="navbar-header">
-            <!--<a class="navbar-brand" href="index.html">Cyber Secure</a>-->
-
-        </div>
-        <ul class="nav navbar-nav">
-            <!--<li class="active">
-                <a href="index.html">Home</a>
-            </li>-->
-            <li><a href="index.html"><span class="glyphicon glyphicon-home home"></span></a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="authentication.html"><span id="authentication" class="glyphicon glyphicon-user user"></span></a></li>
-            <!--<li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>-->
-            <li><a href="activities.html"><span id="activities" class="glyphicon glyphicon-book info hide"></span></a></li>
-        </ul>
-    </div>
-</nav>
 
 <body>
     <div class="row">
@@ -83,23 +63,42 @@
         </div>-->
         <div class="col-sm-12">
             <div class="info-about">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid navBar">
+                        <div class="navbar-header">
+                            <!--<a class="navbar-brand" href="index.html">Cyber Secure</a>-->
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <!--<li class="active">
+                <a href="index.html">Home</a>
+            </li>-->
+                            <li><a href="index.html">Home<!--<span class="glyphicon glyphicon-home home"></span>--></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="authentication.html">Join Netty<!--<span id="authentication" class="glyphicon glyphicon-user user"></span>--></a></li>
+                            <li><a href="authentication.html">Login<!--<span id="authentication" class="glyphicon glyphicon-user user"></span>--></a></li>
+                            <!--<li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>-->
+                            <li><a href="activities.html"><span id="activities" class="glyphicon glyphicon-book info hide"></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <hr>
                 <div>
                     <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
                 </div>
                 <br/>
                 <div>
-                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock
-                        activities.
+                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock activites.
                     </h3>
                     <script>
-                        firebase.auth().onAuthStateChanged(function (user) {
+                        firebase.auth().onAuthStateChanged(function(user) {
                             if (user) {
                                 document.getElementById("userGreeting").innerHTML = '<h1> Hey there, ' + user.displayName + '! </h1>';
                                 //btnLogout.classList.remove('hide');
                                 authentication.classList.add('hide');
                                 activities.classList.remove('hide');
-                            }
-                            else {
+                            } else {
                                 console.log("No user signed in..");
                                 //btnLogout.classList.add('hide');
                                 authentication.classList.remove('hide');
