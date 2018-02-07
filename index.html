@@ -18,7 +18,6 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
-<<<<<<< HEAD
 
     <script>
         // Initialize Firebase
@@ -56,80 +55,6 @@
     </script>
 
 </head>
-=======
-
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
-            authDomain: "project400-cybersecurity.firebaseapp.com",
-            databaseURL: "https://project400-cybersecurity.firebaseio.com",
-            projectId: "project400-cybersecurity",
-            storageBucket: "project400-cybersecurity.appspot.com",
-            messagingSenderId: "718162010119"
-        };
-        firebase.initializeApp(config);
-    </script>
-
-    <!-- Firebase AuthUI -->
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-    <script type="text/javascript">
-        // FirebaseUI config.
-        var uiConfig = {
-            signInSuccessUrl: 'activities.html',
-            signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                firebase.auth.EmailAuthProvider.PROVIDER_ID
-            ],
-            // Terms of service url.
-            tosUrl: ''
-        };
-
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
-
-</head>
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid navBar">
-        <div class="navbar-header">
-            <!--<a class="navbar-brand" href="index.html">Cyber Secure</a>-->
-
-        </div>
-        <ul class="nav navbar-nav">
-            <!--<li class="active">
-                <a href="index.html">Home</a>
-            </li>-->
-            <li>
-                <a href="index.html">
-                    <span class="glyphicon glyphicon-home home"></span>
-                </a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a href="signup.html">
-                    <span class="glyphicon glyphicon-user user"></span>
-                </a>
-            </li>
-            <li>
-                <a href="login.html">
-                    <span class="glyphicon glyphicon-log-in login"></span>
-                </a>
-            </li>
-            <li>
-                <a href="information.html">
-                    <span class="glyphicon glyphicon-book info"></span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</nav>
->>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
 
 <body>
     <div class="row">
@@ -147,28 +72,41 @@
                             <!--<li class="active">
                 <a href="index.html">Home</a>
             </li>-->
-                            <li><a href="index.html">Home<!--<span class="glyphicon glyphicon-home home"></span>--></a></li>
+                            <li>
+                                <a href="index.html">Home
+                                    <!--<span class="glyphicon glyphicon-home home"></span>-->
+                                </a>
+                            </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="authentication.html">Join Netty<!--<span id="authentication" class="glyphicon glyphicon-user user"></span>--></a></li>
-                            <li><a href="authentication.html">Login<!--<span id="authentication" class="glyphicon glyphicon-user user"></span>--></a></li>
+                            <li>
+                                <a href="authentication.html">Join Netty
+                                    <!--<span id="authentication" class="glyphicon glyphicon-user user"></span>-->
+                                </a>
+                            </li>
+                            
                             <!--<li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
       <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>-->
-                            <li><a href="activities.html"><span id="activities" class="glyphicon glyphicon-book info hide"></span></a></li>
+                            <!--<li>
+                                <a href="activities.html">
+                                    <span id="activities" class="glyphicon glyphicon-book info hide"></span>
+                                </a>
+                            </li>-->
                         </ul>
                     </div>
                 </nav>
-                <hr>
+                
+                <div class="inside-about">
                 <div>
                     <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
                 </div>
                 <br/>
                 <div>
-                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock activites.
+                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock
+                        activites.
                     </h3>
-<<<<<<< HEAD
                     <script>
-                        firebase.auth().onAuthStateChanged(function(user) {
+                        firebase.auth().onAuthStateChanged(function (user) {
                             if (user) {
                                 document.getElementById("userGreeting").innerHTML = '<h1> Hey there, ' + user.displayName + '! </h1>';
                                 //btnLogout.classList.remove('hide');
@@ -184,9 +122,6 @@
                         });
                     </script>
 
-=======
-                    <div id="firebaseui-auth-container"></div>
->>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
                     <!--<div class="quickstart-user-details-container">
                         <h3>
                             Firebase sign-in status:
@@ -201,6 +136,8 @@
                 </div>
             </div>
         </div>
+    </div>
+
     </div>
 
 </body>
