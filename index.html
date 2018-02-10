@@ -3,6 +3,7 @@
 
 <head>
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -57,7 +58,14 @@
 </head>
 
 <body>
+
+
     <div class="row">
+        <div class="col-sm-12">
+            <div class="logoTop">
+            <h1>Logo goes here</h1>
+            </div>
+        </div>
         <!--<div class="col-sm-4">
             <div class="character">:D</div>
         </div>-->
@@ -84,7 +92,7 @@
                                     <!--<span id="authentication" class="glyphicon glyphicon-user user"></span>-->
                                 </a>
                             </li>
-                            
+
                             <!--<li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
       <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>-->
                             <!--<li>
@@ -95,34 +103,34 @@
                         </ul>
                     </div>
                 </nav>
-                
+
                 <div class="inside-about">
-                <div>
-                    <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
-                </div>
-                <br/>
-                <div>
-                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock
-                        activites.
-                    </h3>
-                    <script>
-                        firebase.auth().onAuthStateChanged(function (user) {
-                            if (user) {
-                                document.getElementById("userGreeting").innerHTML = '<h1> Hey there, ' + user.displayName + '! </h1>';
-                                //btnLogout.classList.remove('hide');
-                                authentication.classList.add('hide');
-                                activities.classList.remove('hide');
-                            } else {
-                                console.log("No user signed in..");
-                                //btnLogout.classList.add('hide');
-                                authentication.classList.remove('hide');
-                                activities.classList.add('hide');
-                            }
+                    <div>
+                        <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
+                    </div>
+                    <br/>
+                    <div>
+                        <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and
+                            unlock activites.
+                        </h3>
+                        <script>
+                            firebase.auth().onAuthStateChanged(function (user) {
+                                if (user) {
+                                    document.getElementById("userGreeting").innerHTML = '<h1> Hey there, ' + user.displayName + '! </h1>';
+                                    //btnLogout.classList.remove('hide');
+                                    authentication.classList.add('hide');
+                                    activities.classList.remove('hide');
+                                } else {
+                                    console.log("No user signed in..");
+                                    //btnLogout.classList.add('hide');
+                                    authentication.classList.remove('hide');
+                                    activities.classList.add('hide');
+                                }
 
-                        });
-                    </script>
+                            });
+                        </script>
 
-                    <!--<div class="quickstart-user-details-container">
+                        <!--<div class="quickstart-user-details-container">
                         <h3>
                             Firebase sign-in status:
                             <span id="userLog-status">Unknown</span>
@@ -131,14 +139,15 @@
                             <pre><code id="UserAccount">null</code></pre>
                         </h3>
                     </div>-->
-                    <!--<textarea id="mainText"></textarea><br>
+                        <!--<textarea id="mainText"></textarea><br>
                     <button onclick="Sub()" id="submit">Submit</button>-->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
     </div>
+
 
 </body>
 <footer>

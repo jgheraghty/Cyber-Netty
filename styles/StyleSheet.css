@@ -3,31 +3,42 @@
 
 /* Background blue = #81dbfe */
 
-body {
+/*body {
     font: 21px sans-serif;
     color: #000000;
-    /*padding: 2em;*/
     margin: 0;
     margin-top: 60px;
-    /*background: url("../images/blue_background.jpeg") no-repeat center center fixed;*/
-    background-color: white;
-    background-size: cover;
+    background: url("../images/CyberNetty-Background_Cover.png") no-repeat center center fixed;
     -webkit-background-size: cover;
-    /* For WebKit*/
-    -moz-background-size: cover;
-    /* Mozilla*/
-    -o-background-size: cover;
-    /* Opera*/
-    background-repeat: no-repeat;
-    /*opacity: 0.7;*/
+    /* For WebKit
+    -moz-background-size: cover;*/
+    /* Mozilla
+    -o-background-size: cover;*/
+    /* Opera
+    background-repeat: no-repeat;*/
+    /*opacity: 0.7;
+    background-size: cover;*/
     /*min-height: 100%;
   	min-width: 1024px;	
     width: 100%;
     height: auto;
     position: absolute;
     top: 0;
-    left: 0;*/
-}
+    left: 0;
+}*/
+
+html, body{
+    height: 100%;
+  }
+  body { 
+              background-image: url(../images/Test-Netty-3.png);
+              /*background-position: center center;*/
+              background-repeat:  no-repeat;
+              background-attachment: fixed;
+              background-size:  cover;
+              background-color: #999;
+    
+  }
 
 form {
     /*text-align: left;
@@ -308,6 +319,13 @@ input {
     /*padding: 60px;*/
 }
 
+.logoTop {
+    float:left;
+    font-size: 400px;
+    margin-top: 150px;
+    margin-left: 120px;
+}
+
 .character {
     text-align: center;
 }
@@ -322,9 +340,9 @@ input {
     padding: 20px;
     /*width: 200px;
     height: 150px;*/
-    margin-top: 40px;
-    margin-right: 75px;
-    margin-left: 75px;
+    /*margin-top: 200px;*/
+    margin-right: 100px;
+    margin-left: 100px;
     font-size: 50px;
     text-align: center;
 }
