@@ -365,9 +365,9 @@ input {
     padding: 20px;
     /*width: 200px;
     height: 150px;*/
-    margin-top: 80px;
-    margin-right: 290px;
-    margin-left: 10px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 50px;
     text-align: center;
 }
@@ -398,11 +398,12 @@ input {
     color: black;
     /*opacity: 0.7;*/
     padding: 20px;
-    width: 260px;
-    /*height: 150px;*/
+    /*width: 260px;*/
+    height: 470px;
     /*margin-top: 200px;*/
-    margin-right: 10px;
-    margin-left: 720px;
+    margin-right: auto;
+    margin-left: auto;
+    /*float:right;*/
     font-size: 50px;
     text-align: center;
 }
@@ -415,11 +416,12 @@ input {
     color: black;
     /*opacity: 0.7;*/
     padding: 20px;
-    width: 260px;
-    /*height: 150px;*/
-    margin-top: 20px;
-    margin-right: 10px;
-    margin-left: 720px;
+    /*width: 260px;*/
+    height: 470px;
+    /*margin-top: 20px;*/
+    margin-right: auto;
+    margin-left: auto;
+    /*float:right;*/
     font-size: 50px;
     text-align: center;
 }
