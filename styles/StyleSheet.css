@@ -20,6 +20,12 @@
     /* For WebKit
     -moz-background-size: cover;*/
 
+.main {
+    background-color: white;
+    border-radius: 25px;
+    border: palevioletred 2px dotted;
+}
+
 
 /* Mozilla
     -o-background-size: cover;*/
@@ -384,7 +390,7 @@ input {
 
 .main-about {
     border-radius: 0px 0px 25px 25px;
-    background: lavender;
+    /*background: lavender;*/
     background-repeat: no-repeat;
     /*background-size: 100% 100%;*/
     color: black;
