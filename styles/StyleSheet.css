@@ -340,7 +340,8 @@ input {
 }
 
 .logoTop {
-    font-family: logoFont;
+    /*font-family: logoFont;*/
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 110px;
     color: #b2dff9;
     letter-spacing: 1px;

@@ -20,7 +20,7 @@ function UserLogin() {
         }
         // Sign in with email and password.
         // start authorisation with email
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
             // error handling
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -52,7 +52,7 @@ function UserSignUp() {
     }
     // Sign in with email and password
     // start create account with email
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function (error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
         // error handling
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -71,26 +71,23 @@ function UserSignUp() {
 
 function sendEmailVerification() {
     // start sendemailverification
-    firebase.auth().currentUser.sendEmailVerification().then(function () {
+    firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent to user
         // alert to user
         alert('Email Verification Sent!');
     });
     // end sendemailverification
 }
+
 function sendPasswordReset() {
     var email = document.getElementById('email').value;
     // start email and password]
-    firebase.auth().sendPasswordResetEmail(email).then(function () {
+    firebase.auth().sendPasswordResetEmail(email).then(function() {
         // Password Reset Email sent to user
         // alert to user
         alert('Password Reset Email Sent!');
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
-    }).catch(function (error) {
+    }).catch(function(error) {
         // error handling
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -112,17 +109,7 @@ function sendPasswordReset() {
 function StateChanged() {
     // waiting for authentication state changes
     // start change state]
-    firebase.auth().onAuthStateChanged(function (user) {
-<<<<<<< HEAD
-
-        if (user.emailVerified) {
-            console.log('Email is verified');
-        }
-        else {
-            console.log('Email is not verified');
-        }
-=======
->>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
+    firebase.auth().onAuthStateChanged(function(user) {
         // [START_EXCLUDE silent]
         document.getElementById('verifyEmail').disabled = true;
         // [END_EXCLUDE]
@@ -145,7 +132,6 @@ function StateChanged() {
             // [END_EXCLUDE]
         } else {
             // User is signed out.
-<<<<<<< HEAD
 
             document.getElementById('userLog-status').textContent = 'Signed out';
             document.getElementById('userLog').textContent = 'Sign in';
@@ -154,19 +140,7 @@ function StateChanged() {
         }
         // user can log in again
         document.getElementById('userLog').disabled = false;
-        
 
-=======
-            
-            document.getElementById('userLog-status').textContent = 'Signed out';
-            document.getElementById('userLog').textContent = 'Sign in';
-            document.getElementById('UserAccount').textContent = 'null';
-            
-        }
-        // user can log in again
-        document.getElementById('userLog').disabled = false;
-       
->>>>>>> cda5e8a567796f737fc3e585c23d35175f9140d1
     });
     // [END change state]
     document.getElementById('userLog').addEventListener('click', UserLogin, false);
@@ -174,6 +148,6 @@ function StateChanged() {
     document.getElementById('verifyEmail').addEventListener('click', sendEmailVerification, false);
     document.getElementById('resetPass').addEventListener('click', sendPasswordReset, false);
 }
-window.onload = function () {
+window.onload = function() {
     StateChanged();
 };
