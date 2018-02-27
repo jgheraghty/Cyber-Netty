@@ -14,10 +14,10 @@ function setUpListeners() {
 
 // When Activity1 button is clicked
 function ActivityOne() {
-    var x = document.getElementById('home');
-    x.innerHTML = `
+    var one = document.getElementById('home');
+    one.innerHTML = `<h1>Stranger Danger!</h1>
 
-    Fill in the blanks activity
+    <p>Fill in the blanks activity</p>
 
     
     `;
@@ -37,16 +37,56 @@ function ActivityOne() {
 }
 
 // When Activity1 button is clicked
-function ActivityTwo() {}
+function ActivityTwo() {
+    var two = document.getElementById('home');
+    two.innerHTML = `<h1>The Internet</h1>
+
+    <p>Fill in the blanks activity</p>
+
+    
+    `;
+}
 
 // When Activity1 button is clicked
-function ActivityThree() {}
+function ActivityThree() {
+    var three = document.getElementById('home');
+    three.innerHTML = `<h1>Personal Information</h1>
+
+    <p>Fill in the blanks activity</p>
+
+    
+    `;
+}
 
 // When Activity1 button is clicked
-function ActivityFour() {}
+function ActivityFour() {
+    var four = document.getElementById('home');
+    four.innerHTML = `<h1>Pictures and Opinions</h1>
+
+    <p>Fill in the blanks activity</p>
+
+    
+    `;
+}
 
 // When Activity1 button is clicked
-function ActivityFive() {}
+function ActivityFive() {
+    var five = document.getElementById('home');
+    five.innerHTML = `<h1>Cyber Bullying</h1>
+
+    <p>Fill in the blanks activity</p>
+
+    
+    `;
+}
 
 // When Activity1 button is clicked
-function ActivitySix() {}
+function ActivitySix() {
+    var six = document.getElementById('home');
+    six.innerHTML = `<h1>Protocol</h1>
+
+    <p>Fill in the blanks activity</p>
+
+    
+    `;
+}
