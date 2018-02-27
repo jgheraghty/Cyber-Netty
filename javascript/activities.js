@@ -2,8 +2,6 @@
 "use strict";
 
 function setUpListeners() {
-
-    window.alert("Working");
     document.getElementById('a1').addEventListener("click", ActivityOne, false);
     document.getElementById('a2').addEventListener("click", ActivityTwo, false);
     document.getElementById('a3').addEventListener("click", ActivityThree, false);
@@ -18,7 +16,15 @@ function ActivityOne() {
     one.innerHTML = `<h1>Stranger Danger!</h1>
 
     <p>Fill in the blanks activity</p>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     
     `;
     /*
@@ -42,7 +48,15 @@ function ActivityTwo() {
     two.innerHTML = `<h1>The Internet</h1>
 
     <p>Fill in the blanks activity</p>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     
     `;
 }
@@ -53,8 +67,15 @@ function ActivityThree() {
     three.innerHTML = `<h1>Personal Information</h1>
 
     <p>Fill in the blanks activity</p>
-
-    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     `;
 }
 
@@ -64,8 +85,15 @@ function ActivityFour() {
     four.innerHTML = `<h1>Pictures and Opinions</h1>
 
     <p>Fill in the blanks activity</p>
-
-    
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
     `;
 }
 
@@ -75,7 +103,15 @@ function ActivityFive() {
     five.innerHTML = `<h1>Cyber Bullying</h1>
 
     <p>Fill in the blanks activity</p>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     
     `;
 }
@@ -86,7 +122,15 @@ function ActivitySix() {
     six.innerHTML = `<h1>Protocol</h1>
 
     <p>Fill in the blanks activity</p>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     
     `;
 }
