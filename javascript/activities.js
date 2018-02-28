@@ -14,17 +14,19 @@ function setUpListeners() {
 function ActivityOne() {
     var one = document.getElementById('home');
     one.innerHTML = `<h1>Stranger Danger!</h1>
-
-    <p>Fill in the blanks activity</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div>
+        <p>Match cards - what one is the odd one out?</p>
+        
+        <h2>Match the Numbers!</h2>
+        <div id="content">
+            <div id="deck"> </div>
+            <div id="cardPlace"> </div>
+            <div id="win">                    
+                <h2>Match the Numbers!</h2>
+                <button onclick="play()">Play!</button>
+            </div>
+        </div>
+    </div>
     
     `;
     /*
