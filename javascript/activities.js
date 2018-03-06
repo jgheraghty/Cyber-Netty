@@ -10,14 +10,46 @@ function setUpListeners() {
     document.getElementById('a6').addEventListener("click", ActivitySix, false);
 }
 
+// Drag and Drop for Stranger Danger
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
 // When Activity1 button is clicked
 function ActivityOne() {
     var one = document.getElementById('home');
     one.innerHTML = `<h1>Stranger Danger!</h1>
     <div>
         <p>Match cards - what one is the odd one out?</p>
-        
-        <h2>Match the Numbers!</h2>
+
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <br>
+            <!--<img id="drag1" src="images/nav-back.png" draggable="true" ondragstart="drag(event)" width="336" height="69">-->
+
+            <div id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default sd activityFont">
+                <div class="panel-body interact">Beware of people you talk to or interact with online</div>
+            </div>
+            <div id="drag2" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default sd activityFont">
+                <div class="panel-body mask">Some people use the internet as a mask to hide behind to be destructive to others</div>
+            </div>
+            <div id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default sd activityFont">
+                <div class="panel-body meet">Never meet anyone you met online in person</div>
+            </div>
+        </div>        
+    </div>    
+    `;
+
+    /*<h2>Match the Numbers!</h2>
         <div id="content">
             <div id="deck"> </div>
             <div id="cardPlace"> </div>
@@ -25,10 +57,8 @@ function ActivityOne() {
                 <h2>Match the Numbers!</h2>
                 <button onclick="play()">Play!</button>
             </div>
-        </div>
-    </div>
-    
-    `;
+        </div>*/
+
     /*
     x.parentNode.removeChild(x);
     var y = document.createElement('activity1-content');
