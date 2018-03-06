@@ -36,13 +36,13 @@ function ActivityOne() {
                 <br>
             <!--<img id="drag1" src="images/nav-back.png" draggable="true" ondragstart="drag(event)" width="336" height="69">-->
 
-            <div id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default sd activityFont">
+            <p>This is draggable <div id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default activityFont">
                 <div class="panel-body interact">Beware of people you talk to or interact with online</div>
-            </div>
-            <div id="drag2" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default sd activityFont">
+            </div></p>
+            <div id="drag2" draggable="true" ondragstart="drag(event)" width="1336" height="69" class="panel panel-default activityFont">
                 <div class="panel-body mask">Some people use the internet as a mask to hide behind to be destructive to others</div>
             </div>
-            <div id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default sd activityFont">
+            <div id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default activityFont">
                 <div class="panel-body meet">Never meet anyone you met online in person</div>
             </div>
         </div>        

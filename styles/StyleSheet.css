@@ -556,9 +556,9 @@ button {
 
 #div1 {
     width: 350px;
-    height: 70px;
+    height: 170px;
     padding: 10px;
-    background-color: indianred;
+    background-color: grey;
     /*border: 1px solid #aaaaaa;*/
 }
 
