@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
+
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
+            authDomain: "project400-cybersecurity.firebaseapp.com",
+            databaseURL: "https://project400-cybersecurity.firebaseio.com",
+            projectId: "project400-cybersecurity",
+            storageBucket: "project400-cybersecurity.appspot.com",
+            messagingSenderId: "718162010119"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- Firebase AuthUI -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'index.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: ''
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="logoTop">
+                <h1></h1>
+            </div>
+        </div>
+        <!--<div class="col-sm-4">
+            <div class="character">:D</div>
+        </div>-->
+        <div class="jumbotron">
+            <!--info-about">-->
+            <div class="container-fluid">
+                <div class="row inside-about">
+                    <div class="col-sm-12">
+                        <div class="landing-about">
+                            <div>
+                                <h1>Watch this space..</h1>
+                            </div>
+                            <br/>
+                            <div>
+                                <h2>Cyber Netty Coming Soon!</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+
+    <script src="javascript/app.js"></script>
+</footer>
+
+</html>
