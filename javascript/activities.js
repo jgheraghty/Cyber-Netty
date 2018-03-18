@@ -74,95 +74,50 @@ function ActivityOne() {
     */
 }
 
-// When Activity1 button is clicked
+// When Activity2 button is clicked
 function ActivityTwo() {
     var two = document.getElementById('home');
     two.innerHTML = `<h1>The Internet</h1>
-
-    <p>Fill in the blanks activity</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
+    <p>Key press activity</p>
     
     `;
 }
 
-// When Activity1 button is clicked
+// When Activity3 button is clicked
 function ActivityThree() {
     var three = document.getElementById('home');
     three.innerHTML = `<h1>Personal Information</h1>
 
-    <p>Fill in the blanks activity</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <p>Key press activity</p>
     `;
 }
 
-// When Activity1 button is clicked
+// When Activity4 button is clicked
 function ActivityFour() {
     var four = document.getElementById('home');
     four.innerHTML = `<h1>Pictures and Opinions</h1>
 
     <p>Fill in the blanks activity</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
     `;
 }
 
-// When Activity1 button is clicked
+// When Activity5 button is clicked
 function ActivityFive() {
     var five = document.getElementById('home');
     five.innerHTML = `<h1>Cyber Bullying</h1>
 
-    <p>Fill in the blanks activity</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <p>Another key press activity</p>
     
     `;
 }
 
-// When Activity1 button is clicked
+// When Activity6 button is clicked
 function ActivitySix() {
     var six = document.getElementById('home');
     six.innerHTML = `<h1>Protocol</h1>
 
     <p>Fill in the blanks activity</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     
     `;
 }
