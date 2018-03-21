@@ -3,6 +3,7 @@
 
 function setUpListeners() {
     document.getElementById('a1').addEventListener("click", ActivityOne, false);
+    document.getElementById('a1').addEventListener("load", StrangerModules, false);
     document.getElementById('a2').addEventListener("click", ActivityTwo, false);
     document.getElementById('a3').addEventListener("click", ActivityThree, false);
     document.getElementById('a4').addEventListener("click", ActivityFour, false);
@@ -33,48 +34,15 @@ function ActivityOne() {
 
     one.innerHTML = `<h1>Stranger Danger!</h1>
     <div>
-        <p>Match cards - what one is the odd one out?</p>
-
-        <p>Beware of people you talk to or <div id="interactSlot">?</div> with online</p>
+        <p>Beware of people you talk to or <div id="interactSlot" ondrop="dropped()">?</div> with online</p>
 
         <div id="interactDrag"><img id="module" src="images/Info_Netty.svg"/></div>      
-    </div>    
-    `;
-    alert("works");
-    mypic = document.getElementById('module');
-    mypic.addEventListener("dragstart", StartDrag, false);
-    mypic.addEventListener("dragend", DragEnd, false);
-    interactSlot = document.getElementById('interactSlot');
-    interactSlot.addEventListener("dragenter", DragEnter, false);
-    interactSlot.addEventListener("dragleave", DragLeave, false);
-    interactSlot.addEventListener("dragover", function(e) {e.preventDefault();}, false);
-    interactSlot.addEventListener("drop", Dropped, false);
+    </div> 
     
-    /*<h2>Match the Numbers!</h2>
-        <div id="content">
-            <div id="deck"> </div>
-            <div id="cardPlace"> </div>
-            <div id="win">                    
-                <h2>Match the Numbers!</h2>
-                <button onclick="play()">Play!</button>
-            </div>
-        </div>*/
-
-    /*
-    x.parentNode.removeChild(x);
-    var y = document.createElement('activity1-content');
-    //y.innerHTML = ("Stranger Danger");
-    y.style.borderRadius = "0px 0px 25px 25px";
-    y.style.color = "black";
-    y.style.backgroundColor = "purple";
-    y.style.marginTop = "80px";
-    y.style.marginRight = "290px";
-    y.style.marginLeft = "80px";
-    y.style.fontSize = "50px";
-    y.style.textAlign = "center";
-    */
-
-    /*function StrangerModules() {
+    <script src="../javascript/activities.js"></script>
+    `;
+    
+    function StrangerModules() {
         alert("works");
         mypic = document.getElementById('module');
         mypic.addEventListener("dragstart", StartDrag, false);
@@ -84,40 +52,35 @@ function ActivityOne() {
         interactSlot.addEventListener("dragleave", DragLeave, false);
         interactSlot.addEventListener("dragover", function(e) {e.preventDefault();}, false);
         interactSlot.addEventListener("drop", Dropped, false);
-    }*/
+    }
     
-    function StartDrag(e) {
+    function startDrag(e) {
         var code = '<img src="images/Info_Netty.svg"/>';
         e.dataTransfer.setData('Text', code);
     }
     
-    function Dropped(e) {
+    function dropped(e) {
         e.preventDefault();
         interactSlot.innerHTML = e.dataTransfer.getData('Text');
     }
 
-    function DragEnd(e) {
+    function dragEnd(e) {
         pic = e.target;
         pic.style.visibility = "hidden";
     }
 
-    function DragEnter(e) {
+    function dragEnter(e) {
         e.preventDefault();
         interactSlot.style.background = "skyblue";
         interactSlot.style.border = "3px solid green";
     }
 
-    function DragLeave(e) {
+    function dragLeave(e) {
         e.preventDefault();
         interactSlot.style.background = "white";
         interactSlot.style.background = "3px solid yellow";
     }
-
-    
-
-    
-
-    window.addEventListener("load", StrangerModules, false);
+    //window.addEventListener("load", StrangerModules, false);
 }
 
 // When Activity2 button is clicked

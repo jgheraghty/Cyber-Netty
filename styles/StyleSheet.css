@@ -726,7 +726,7 @@ button {
     border: 2px dotted pink;
 }
 
-#interact {
+#interactDrag {
     float: left;
     width:250px;
     height:250px;
