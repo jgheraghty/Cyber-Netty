@@ -40,7 +40,16 @@ function ActivityOne() {
         <div id="interactDrag"><img id="module" src="images/Info_Netty.svg"/></div>      
     </div>    
     `;
-
+    alert("works");
+    mypic = document.getElementById('module');
+    mypic.addEventListener("dragstart", StartDrag, false);
+    mypic.addEventListener("dragend", DragEnd, false);
+    interactSlot = document.getElementById('interactSlot');
+    interactSlot.addEventListener("dragenter", DragEnter, false);
+    interactSlot.addEventListener("dragleave", DragLeave, false);
+    interactSlot.addEventListener("dragover", function(e) {e.preventDefault();}, false);
+    interactSlot.addEventListener("drop", Dropped, false);
+    
     /*<h2>Match the Numbers!</h2>
         <div id="content">
             <div id="deck"> </div>
@@ -65,7 +74,7 @@ function ActivityOne() {
     y.style.textAlign = "center";
     */
 
-    function StrangerModules() {
+    /*function StrangerModules() {
         alert("works");
         mypic = document.getElementById('module');
         mypic.addEventListener("dragstart", StartDrag, false);
@@ -75,7 +84,7 @@ function ActivityOne() {
         interactSlot.addEventListener("dragleave", DragLeave, false);
         interactSlot.addEventListener("dragover", function(e) {e.preventDefault();}, false);
         interactSlot.addEventListener("drop", Dropped, false);
-    }
+    }*/
     
     function StartDrag(e) {
         var code = '<img src="images/Info_Netty.svg"/>';
@@ -87,7 +96,7 @@ function ActivityOne() {
         interactSlot.innerHTML = e.dataTransfer.getData('Text');
     }
 
-    /*function DragEnd(e) {
+    function DragEnd(e) {
         pic = e.target;
         pic.style.visibility = "hidden";
     }
@@ -102,7 +111,7 @@ function ActivityOne() {
         e.preventDefault();
         interactSlot.style.background = "white";
         interactSlot.style.background = "3px solid yellow";
-    }*/
+    }
 
     
 
