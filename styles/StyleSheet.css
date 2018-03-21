@@ -716,3 +716,20 @@ button {
         width: 700px;
     }
 }
+
+/* -- Stranger Danger Activity -- */
+#interactSlot {
+    float: left;
+    width:250px;
+    height:250px;
+    margin: 2px;
+    border: 2px dotted pink;
+}
+
+#interact {
+    float: left;
+    width:250px;
+    height:250px;
+    margin: 2px;
+    border: 2px dotted skyblue;
+}
