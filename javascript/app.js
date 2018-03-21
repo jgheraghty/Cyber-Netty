@@ -134,3 +134,4 @@ function handleCardDrop(event, ui) {
             opacity: 1
         });
     }
+}
