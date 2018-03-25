@@ -3,16 +3,14 @@
 
 function setUpListeners() {
     document.getElementById('a1').addEventListener("click", ActivityOne, false);
-    document.getElementById('a1').addEventListener("load", StrangerModules, false);
     document.getElementById('a2').addEventListener("click", ActivityTwo, false);
     document.getElementById('a3').addEventListener("click", ActivityThree, false);
     document.getElementById('a4').addEventListener("click", ActivityFour, false);
     document.getElementById('a5').addEventListener("click", ActivityFive, false);
     document.getElementById('a6').addEventListener("click", ActivitySix, false);
-
 }
 
-/*// Drag and Drop for Stranger Danger
+// Drag and Drop for Stranger Danger
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -25,62 +23,55 @@ function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
-}*/
+}
 
 // When Activity1 button is clicked
 function ActivityOne() {
-    
     var one = document.getElementById('home');
-
     one.innerHTML = `<h1>Stranger Danger!</h1>
     <div>
-        <p>Beware of people you talk to or <div id="interactSlot" ondrop="dropped()">?</div> with online</p>
+        <p>Match cards - what one is the odd one out?</p>
 
-        <div id="interactDrag"><img id="module" src="images/Info_Netty.svg"/></div>      
-    </div> 
-    
-    <script src="../javascript/activities.js"></script>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <br>
+            <!--<img id="drag1" src="images/nav-back.png" draggable="true" ondragstart="drag(event)" width="336" height="69">-->
+
+            <p>This is draggable <div id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default activityFont">
+                <div class="panel-body interact">Beware of people you talk to or interact with online</div>
+            </div></p>
+            <div id="drag2" draggable="true" ondragstart="drag(event)" width="1336" height="69" class="panel panel-default activityFont">
+                <div class="panel-body mask">Some people use the internet as a mask to hide behind to be destructive to others</div>
+            </div>
+            <div id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default activityFont">
+                <div class="panel-body meet">Never meet anyone you met online in person</div>
+            </div>
+        </div>        
+    </div>    
     `;
-    
-    function StrangerModules() {
-        alert("works");
-        mypic = document.getElementById('module');
-        mypic.addEventListener("dragstart", StartDrag, false);
-        mypic.addEventListener("dragend", DragEnd, false);
-        interactSlot = document.getElementById('interactSlot');
-        interactSlot.addEventListener("dragenter", DragEnter, false);
-        interactSlot.addEventListener("dragleave", DragLeave, false);
-        interactSlot.addEventListener("dragover", function(e) {e.preventDefault();}, false);
-        interactSlot.addEventListener("drop", Dropped, false);
-    }
-    
-    function startDrag(e) {
-        var code = '<img src="images/Info_Netty.svg"/>';
-        e.dataTransfer.setData('Text', code);
-    }
-    
-    function dropped(e) {
-        e.preventDefault();
-        interactSlot.innerHTML = e.dataTransfer.getData('Text');
-    }
 
-    function dragEnd(e) {
-        pic = e.target;
-        pic.style.visibility = "hidden";
-    }
+    /*<h2>Match the Numbers!</h2>
+        <div id="content">
+            <div id="deck"> </div>
+            <div id="cardPlace"> </div>
+            <div id="win">                    
+                <h2>Match the Numbers!</h2>
+                <button onclick="play()">Play!</button>
+            </div>
+        </div>*/
 
-    function dragEnter(e) {
-        e.preventDefault();
-        interactSlot.style.background = "skyblue";
-        interactSlot.style.border = "3px solid green";
-    }
-
-    function dragLeave(e) {
-        e.preventDefault();
-        interactSlot.style.background = "white";
-        interactSlot.style.background = "3px solid yellow";
-    }
-    //window.addEventListener("load", StrangerModules, false);
+    /*
+    x.parentNode.removeChild(x);
+    var y = document.createElement('activity1-content');
+    //y.innerHTML = ("Stranger Danger");
+    y.style.borderRadius = "0px 0px 25px 25px";
+    y.style.color = "black";
+    y.style.backgroundColor = "purple";
+    y.style.marginTop = "80px";
+    y.style.marginRight = "290px";
+    y.style.marginLeft = "80px";
+    y.style.fontSize = "50px";
+    y.style.textAlign = "center";
+    */
 }
 
 // When Activity2 button is clicked

@@ -7,8 +7,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/3.1.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -21,7 +20,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
 
-    <script>
+    <!--<script>
         // Initialize Firebase
         var config = {
             apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
@@ -32,7 +31,7 @@
             messagingSenderId: "718162010119"
         };
         firebase.initializeApp(config);
-    </script>
+    </script>-->
 
     <!-- Firebase AuthUI -->
     <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
@@ -62,9 +61,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="logoTop">
-                <h1>
-                    <i>Cyber Netty</i>
-                </h1>
+                <h1><i>Cyber Netty</i></h1>
             </div>
         </div>
         <!--<div class="col-sm-4">
@@ -110,13 +107,31 @@
                                     <div>
                                         <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
                                     </div>
+                                    <br>
+                                    <div>
+                                        <label for="email">Email:</label>
+                                        <br/>
+                                        <input type="email" id="email" style="padding-top:5px" />
+                                        <br/>
+                                        <br/>
+                                        <label for="password">Password:</label>
+                                        <br/>
+                                        <input type="password" id="password" style="padding-top:5px" />
+                                        <br/>
+                                        <br/>
+                                        <button id="btnLogin">Log in</button>
+                                        <button id="btnSignUp">Sign up</button>
+                                        <button id="btnLogout" class="hide">Log out</button>
+                                        <button id="btnWriteToDB" class="hide">Write</button>
+                                        <button id="btnReadFromDb">Read</button>
+
+                                    </div>
                                     <br/>
                                     <div>
-                                        <h3>Join Netty on a quest to discover important facts about cyber space, complete fun
-                                            activities and unlock activites.
+                                        <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock activites.
                                         </h3>
-                                        <script>
-                                            firebase.auth().onAuthStateChanged(function (user) {
+                                        <!--<script>
+                                            firebase.auth().onAuthStateChanged(function(user) {
                                                 if (user) {
                                                     document.getElementById("userGreeting").innerHTML = '<h1> Hey there, ' + user.displayName + '! </h1>';
                                                     //btnLogout.classList.remove('hide');
@@ -130,7 +145,7 @@
                                                 }
 
                                             });
-                                        </script>
+                                        </script>-->
                                     </div>
                                 </div>
                             </div>
@@ -148,9 +163,7 @@
                                                 <div class="panel-body interact">Beware of people you talk to or interact with online</div>
                                             </div>
                                             <div class="panel panel-default">
-                                                <div class="panel-body mask">Some people use the internet as a mask to hide behind to be destructive to
-                                                    others
-                                                </div>
+                                                <div class="panel-body mask">Some people use the internet as a mask to hide behind to be destructive to others</div>
                                             </div>
                                             <div class="panel panel-default">
                                                 <div class="panel-body meet">Never meet anyone you met online in person</div>
@@ -253,10 +266,12 @@
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
                                             <h4 class="modal-title">Activity 6</h4>
                                         </div>
-                                        <div class="modal-body">
 
-                                            <img src="images/Unsure_Netty.svg" />
-                                        </div>
+                                        <img id="activityImg" src="images/StrangerDanger.svg" />
+                                        <!--<div class="modal-body">
+
+                                            <img src="images/StrangerDanger.svg" />
+                                        </div>-->
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                         </div>
@@ -307,6 +322,7 @@
         </div>
 </body>
 <footer>
+    <script src="javascript/user.js"></script>
     <script src="javascript/app.js"></script>
     <script src="javascript/activities.js"></script>
 

@@ -37,8 +37,9 @@ body {
     margin-top: 200px;
 }
 
-form {
-    /*text-align: left;
+
+/*form {
+    text-align: left;
     position: relative;
     padding: 30px;
     width: 800px;
@@ -46,8 +47,8 @@ form {
     margin: 0 auto;
     background: white;
     border-radius: 25px;
-    opacity: 0.7;*/
-}
+    opacity: 0.7;
+}*/
 
 .loginBack {
     text-align: left;
@@ -194,12 +195,13 @@ h1 {
     top: 115px;
 }
 
-#password {
+
+/*#password {
     position: absolute;
     font-size: 20px;
     margin-top: 175px;
     margin-left: 40px;
-}
+}*/
 
 #pass {
     position: absolute;
@@ -256,6 +258,19 @@ input {
     background-color: aquamarine;
 }
 
+#btnLogout {
+    align-content: center;
+    margin-top: 50px;
+    width: 140px;
+    height: 40px;
+    font-size: 25px;
+    background-color: azure;
+}
+
+#btnLogout:hover {
+    background-color: aquamarine;
+}
+
 
 /*#para {
 	border: 1px solid #DF8081;
@@ -285,6 +300,10 @@ input {
 .activity:hover {
     background-color: teal;
     cursor: pointer;
+}
+
+.activityImg {
+    margin-right: 20px;
 }
 
 .locked {
@@ -715,21 +734,4 @@ button {
     .modal-sm {
         width: 700px;
     }
-}
-
-/* -- Stranger Danger Activity -- */
-#interactSlot {
-    float: left;
-    width:250px;
-    height:250px;
-    margin: 2px;
-    border: 2px dotted pink;
-}
-
-#interactDrag {
-    float: left;
-    width:250px;
-    height:250px;
-    margin: 2px;
-    border: 2px dotted skyblue;
 }

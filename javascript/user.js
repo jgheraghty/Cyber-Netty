@@ -1,153 +1,158 @@
-//Authentication with Firebase
+(function() {
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
+        authDomain: "project400-cybersecurity.firebaseapp.com",
+        databaseURL: "https://project400-cybersecurity.firebaseio.com",
+        projectId: "project400-cybersecurity",
+        storageBucket: "project400-cybersecurity.appspot.com",
+        messagingSenderId: "718162010119"
+    };
+    firebase.initializeApp(config);
 
-/*------------- On pressing login button ------------*/
-//User log in to site via Firebase Authentication
-function UserLogin() {
-    if (firebase.auth().currentUser) {
-        // start logOut
-        firebase.auth().logOut();
-        // end logOut
-    } else {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        if (email.length < 6) {
-            alert('Please enter your parents email address.');
-            return;
+    /*
+    // auth.signInWithEmailAndPassword(email, password);
+    // auth.createUserWithEmailAndPassword(email, password);
+    */
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+            btnLogout.classList.remove('hide');
+            btnWriteToDB.classList.remove('hide');
+            btnLogin.classList.add('hide');
+            btnSignUp.classList.add('hide');
+            console.log('Logged in');
+        } else {
+            btnLogout.classList.add('hide');
+            btnWriteToDB.classList.add('hide');
+            btnLogin.classList.remove('hide');
+            btnSignUp.classList.remove('hide');
+            console.log('Logged out');
         }
-        if (password.length < 6) {
-            alert('Please enter a safe password.');
-            return;
-        }
-        // Sign in with email and password.
-        // start authorisation with email
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-            // error handling
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // wrong password input
-            if (errorCode === 'auth/wrong-password') {
-                alert('Wrong password.');
-            } else {
-                alert(errorMessage);
-            }
-            console.log(error);
-            document.getElementById('userLog').disabled = false;
+    });
+
+    const btnLogin = document.getElementById('btnLogin');
+    const btnSignUp = document.getElementById('btnSignUp');
+    const btnLogout = document.getElementById('btnLogout');
+    const btnWriteToDB = document.getElementById('btnWriteToDB');
+    const btnReadFromDb = document.getElementById('btnReadFromDb');
+    const txtEmail = document.getElementById('email');
+    const txtPassword = document.getElementById('password');
+
+    //////////////////////////////////////////
+    // Log in
+    //////////////////////////////////////////
+    btnLogin.addEventListener('click', e => {
+        const email = txtEmail.value;
+        const password = txtPassword.value;
+        const auth = firebase.auth();
+
+        auth.signInWithEmailAndPassword(email, password).catch(e => {
+            console.log(e);
         });
-        // end authorisation with email
+    });
+
+    //////////////////////////////////////////
+    // Sign up
+    //////////////////////////////////////////
+    btnSignUp.addEventListener('click', e => {
+        const email = txtEmail.value;
+        const password = txtPassword.value;
+        ``
+        const auth = firebase.auth();
+
+        auth.createUserWithEmailAndPassword(email, password).catch(e => {
+            console.log(e);
+        });
+    });
+
+    //////////////////////////////////////////
+    // log out
+    //////////////////////////////////////////
+    btnLogout.addEventListener('click', e => {
+        firebase.auth().signOut();
+    })
+
+    //////////////////////////////////////////
+    // write to db (user id needed)
+    //////////////////////////////////////////
+    btnWriteToDB.addEventListener('click', e => {
+        // Get a reference to the database service
+        var userId = firebase.auth().currentUser.uid;
+        const data = {
+            complete: true,
+            score: 78,
+            date: '01/01/1990'
+        };
+        writeUserData(userId, 3, data);
+        // save the user's profile into Firebase so we can list users,
+        // use them in Security and Firebase Rules, and show profiles
+    });
+
+    function writeUserData(userId, activityId, data) {
+        firebase.database().ref('users/' + userId + '/activity/' + activityId).set(data);
     }
-    document.getElementById('userLog').disabled = true;
-}
-/*------------- On pressing sign up button ------------*/
 
-function UserSignUp() {
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    if (email.length < 6) {
-        alert('Please enter your parents email address.');
-        return;
+    //////////////////////////////////////////
+    // read from db once
+    //////////////////////////////////////////
+    btnReadFromDb.addEventListener('click', e => {
+        readUserData();
+    });
+
+    function readUserData(userId) {
+        // 2u067jzWiNdHVTcJGNMedHduB8m2
+        return firebase.database().ref('/users/2u067jzWiNdHVTcJGNMedHduB8m2/').once('value')
+            .then(function(snapshot) {
+                console.log(snapshot.val());
+            })
+            .catch(e => {
+                console.log(e);
+            });
     }
-    if (password.length < 6) {
-        alert('Please enter a safe password.');
-        return;
-    }
-    // Sign in with email and password
-    // start create account with email
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        // error handling
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // Weak password
-        if (errorCode == 'auth/weak-password') {
-            alert('The password you entered is not safe enough.');
-        } else {
-            alert(errorMessage);
-        }
-        console.log(error);
-    });
-    // end create account with email
-}
 
-/*------------- Verification email ------------*/
-
-function sendEmailVerification() {
-    // start sendemailverification
-    firebase.auth().currentUser.sendEmailVerification().then(function() {
-        // Email Verification sent to user
-        // alert to user
-        alert('Email Verification Sent!');
-    });
-    // end sendemailverification
-}
-
-function sendPasswordReset() {
-    var email = document.getElementById('email').value;
-    // start email and password]
-    firebase.auth().sendPasswordResetEmail(email).then(function() {
-        // Password Reset Email sent to user
-        // alert to user
-        alert('Password Reset Email Sent!');
-
-    }).catch(function(error) {
-        // error handling
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // email invalid error
-        if (errorCode == 'auth/invalid-email') {
-            alert(errorMessage);
-        } else if (errorCode == 'auth/user-not-found') {
-            alert(errorMessage);
-        }
-        console.log(error);
-    });
-    // end email and password
-}
-/**
- * StateChanged handles setting up UI event listeners and registering Firebase auth listeners:
- *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
- *    out, and that is where we update the UI.
- */
-function StateChanged() {
-    // waiting for authentication state changes
-    // start change state]
-    firebase.auth().onAuthStateChanged(function(user) {
-        // [START_EXCLUDE silent]
-        document.getElementById('verifyEmail').disabled = true;
-        // [END_EXCLUDE]
-        if (user) {
-            // User is signed in.
-            var displayName = user.displayName;
-            var email = user.email;
-            var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL;
-            var isAnonymous = user.isAnonymous;
-            var uid = user.uid;
-            var providerData = user.providerData;
-            // [START_EXCLUDE]
-            document.getElementById('userLog-status').textContent = 'Signed in';
-            document.getElementById('userLog').textContent = 'Sign out';
-            document.getElementById('UserAccount').textContent = JSON.stringify(user, null, '  ');
-            if (!emailVerified) {
-                document.getElementById('verifyEmail').disabled = false;
-            }
-            // [END_EXCLUDE]
-        } else {
-            // User is signed out.
-
-            document.getElementById('userLog-status').textContent = 'Signed out';
-            document.getElementById('userLog').textContent = 'Sign in';
-            document.getElementById('UserAccount').textContent = 'null';
-
-        }
-        // user can log in again
-        document.getElementById('userLog').disabled = false;
-
-    });
-    // [END change state]
-    document.getElementById('userLog').addEventListener('click', UserLogin, false);
-    document.getElementById('UserSign').addEventListener('click', UserSignUp, false);
-    document.getElementById('verifyEmail').addEventListener('click', sendEmailVerification, false);
-    document.getElementById('resetPass').addEventListener('click', sendPasswordReset, false);
-}
-window.onload = function() {
-    StateChanged();
-};
+    //////////////////////////////////////////
+    // More read stuff
+    //////////////////////////////////////////
+    /*
+      // get elements
+      const preObject = document.getElementById('object');
+  
+      // create references
+      const dbRefObject = firebase.database().ref().child('user');
+      const interestsRefObject = dbRefObject.child('interests');
+      // Live sync data
+      dbRefObject.on('value', snap => {
+        console.log(snap.val());
+        const user = snap.val();
+        const output = document.getElementById('output');
+        output.innerHTML += user.name;
+        output.innerHTML += '<br/>';
+        
+        output.innerHTML += user.age;
+        output.innerHTML += '<br/>';
+        
+        output.innerHTML += user.address;
+        output.innerHTML += '<br/>';
+      });
+  
+      interestsRefObject.on('child_added', snap => {
+        // value
+        console.log(snap.val());
+        // key
+        console.log(snap.key);
+  
+        const interestsOutput = document.getElementById('interests');
+        interestsOutput.innerHTML += (`<p id="i${snap.key}">${snap.val()}</p>`);
+      });
+  
+      interestsRefObject.on('child_changed', snap => {
+        const interestElement = document.getElementById(`i${snap.key}`);
+        interestElement.innerHTML = `${snap.val()}`;
+      });
+  
+      interestsRefObject.on('child_removed', snap => {
+        const interestElement = document.getElementById(`i${snap.key}`);
+        interestElement.remove();
+      });
+    */
+}());
