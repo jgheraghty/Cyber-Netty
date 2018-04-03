@@ -705,7 +705,7 @@ button {
 }
 
 
-/* -- Stranger Danger Information -- */
+/* -- Stranger Danger Activity -- */
 
 .activityFont {
     font-size: 25px;
@@ -723,6 +723,9 @@ button {
     background-color: tomato;
 }
 
+#true, #false {
+    display:inline-block;
+}
 
 /* -- The Internet Information -- */
 
