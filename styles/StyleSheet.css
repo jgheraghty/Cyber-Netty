@@ -713,6 +713,7 @@ button {
 
 .interact {
     background-color: blueviolet;
+    border-radius: 10px;
 }
 
 .meet {
@@ -721,11 +722,14 @@ button {
 
 .mask {
     background-color: tomato;
+    border-radius: 20px;
 }
 
-#true, #false {
-    display:inline-block;
+#true,
+#false {
+    display: inline-block;
 }
+
 
 /* -- The Internet Information -- */
 

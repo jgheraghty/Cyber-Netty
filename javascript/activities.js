@@ -28,32 +28,19 @@ function drop(ev) {
 // When Activity1 button is clicked
 function ActivityOne() {
     var one = document.getElementById('home');
-    one.innerHTML = `<h1>Stranger Danger!</h1>
+    one.innerHTML = `
     <div>
-        <!--<p>Match cards - what one is the odd one out?</p>
+        <div class="panel panel-default">
+            <div class="panel-body mask">Stranger Danger</div>                    
+        </div>
 
-        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                <br>
-            <img id="drag1" src="images/nav-back.png" draggable="true" ondragstart="drag(event)" width="336" height="69">-->
+        <div class="panel-body">True or False: You should never meet anyone you met online in person?</div>
+            <br>
+            <button type="button" id="true">True</button>
+            <button type="button" id="false">False</button>        
+        </div>
 
-            <!--<p>This is draggable <div id="drag1" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default activityFont">
-                <div class="panel-body interact">Beware of people you talk to or interact with online</div>
-            </div></p>
-            <div id="drag2" draggable="true" ondragstart="drag(event)" width="1336" height="69" class="panel panel-default activityFont">
-                <div class="panel-body mask">Some people use the internet as a mask to hide behind to be destructive to others</div>
-            </div>
-            <div id="drag3" draggable="true" ondragstart="drag(event)" width="336" height="69" class="panel panel-default activityFont">
-                <div class="panel-body meet">Never meet anyone you met online in person</div>-->
-
-                <div class="panel-body interact">True or False: You should never meet anyone you met online in person?</div>
-                <br>
-                <button type="button" id="true">True</button>
-                <button type="button" id="false">False</button>
-                
-            </div>
-
-            <input type="submit" value="Submit">
-        </div>        
+        <input type="submit" value="Submit">        
     </div>    
     `;
 
@@ -85,16 +72,17 @@ function ActivityOne() {
 // When Activity2 button is clicked
 function ActivityTwo() {
     var two = document.getElementById('home');
-    two.innerHTML = `<h1>The Internet</h1>
-
+    two.innerHTML = `
+    <div class="panel panel-default">
+        <div class="panel-body mask">The Internet</div>                    
+    </div>
     <form>
-  <input type="radio" name="gender" value="male" checked> Male<br>
-  <input type="radio" name="gender" value="female"> Female<br>
-  <input type="radio" name="gender" value="other"> Other  
-</form> 
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other  
+    </form> 
 
-<input type="submit" value="Submit">
-    
+    <input type="submit" value="Submit">
     `;
 }
 
@@ -104,7 +92,7 @@ function ActivityThree() {
     three.innerHTML = `<h1>Personal Information</h1>
 
     <form action="">
-Everything is <input type="text" name="FirstName" value="Mickey"><br>
+Everything is <input type="text" name="publicWord" value=""><br>
 <br>
 <input type="submit" value="Submit">
 </form>
