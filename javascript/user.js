@@ -19,6 +19,7 @@
             document.getElementById("userGreeting").innerHTML = '<h1>' + firebaseUser.displayName + ', Welcome to Cyber Netty! </h1>';
             activities.classList.remove('hide');
             joinNetty.classList.add('hide');
+            navAlign.classList.remove('navbar-right');
             btnLogout.classList.remove('hide');
             btnWriteToDB.classList.remove('hide');
             btnLogin.classList.add('hide');
@@ -27,6 +28,7 @@
         } else {
             activities.classList.add('hide');
             joinNetty.classList.remove('hide');
+            navAlign.classList.add('navbar-right');
             btnLogout.classList.add('hide');
             btnWriteToDB.classList.add('hide');
             btnLogin.classList.remove('hide');

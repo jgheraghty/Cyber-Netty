@@ -259,8 +259,9 @@ input {
 }
 
 #btnLogout {
-    align-content: center;
-    margin-top: 10px;
+    float: left;
+    /*align-content: center;
+    margin-top: 10px;*/
     padding: 20px;
     width: 220px;
     height: 60px;
@@ -274,8 +275,26 @@ input {
     background-color: aquamarine;
 }
 
+#btnHome {
+    float: left;
+    /*align-content: center;
+    /*margin-top: 10px;*/
+    padding: 20px;
+    width: 220px;
+    height: 60px;
+    font-size: 30px;
+    background-color: azure;
+    color: #f9a4a7;
+    text-align: center;
+}
+
+#btnHome:hover {
+    background-color: aquamarine;
+}
+
 #joinNetty {
-    align-content: center;
+    float: left;
+    /*align-content: center;
     /*margin-top: 10px;*/
     padding: 20px;
     width: 220px;
@@ -476,7 +495,10 @@ input {
 }
 
 .btnStranger {
-    background-image: url("StrangerDanger_Button.JPG");
+    background-image: url("../images/StrangerDanger_Button.JPG");
+    border: none;
+    height: 285px;
+    width: 240px;
 }
 
 
