@@ -40,7 +40,7 @@ function ActivityOne() {
             <button type="button" id="false">False</button>        
         </div>
 
-        <input type="submit" value="Submit">        
+        <input class="btnSubmit" type="submit" value="Submit">        
     </div>    
     `;
 
@@ -72,17 +72,19 @@ function ActivityOne() {
 // When Activity2 button is clicked
 function ActivityTwo() {
     var two = document.getElementById('home');
-    two.innerHTML = `
+    two.innerHTML = `         
+
     <div class="panel panel-default">
         <div class="panel-body mask">The Internet</div>                    
     </div>
+<div class="panel-body">What is the internet?</div>
     <form>
-        <input type="radio" name="gender" value="male" checked> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-        <input type="radio" name="gender" value="other"> Other  
+        <input type="radio" name="internet" value="this" checked> This<br>
+        <input type="radio" name="internet" value="that"> That<br>
+        <input type="radio" name="internet" value="other"> Other  
     </form> 
 
-    <input type="submit" value="Submit">
+    <input class="btnSubmit" type="submit" value="Submit">
     `;
 }
 

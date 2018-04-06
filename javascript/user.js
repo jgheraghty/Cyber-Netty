@@ -16,12 +16,17 @@
     */
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
+            document.getElementById("userGreeting").innerHTML = '<h1>' + firebaseUser.displayName + ', Welcome to Cyber Netty! </h1>';
+            activities.classList.remove('hide');
+            joinNetty.classList.add('hide');
             btnLogout.classList.remove('hide');
             btnWriteToDB.classList.remove('hide');
             btnLogin.classList.add('hide');
             btnSignUp.classList.add('hide');
             console.log('Logged in');
         } else {
+            activities.classList.add('hide');
+            joinNetty.classList.remove('hide');
             btnLogout.classList.add('hide');
             btnWriteToDB.classList.add('hide');
             btnLogin.classList.remove('hide');
