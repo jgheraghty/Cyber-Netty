@@ -40,7 +40,7 @@ function ActivityOne() {
             <button type="button" id="false">False</button>        
         </div>
 
-        <input class="btnSubmit" type="submit" value="Submit">        
+        <button onclick="TrueorFalse()" class="btnSubmit" type="submit">Submit</button>        
     </div>    
     `;
 
@@ -69,6 +69,10 @@ function ActivityOne() {
     */
 }
 
+function TrueorFalse() {
+
+}
+
 // When Activity2 button is clicked
 function ActivityTwo() {
     var two = document.getElementById('home');
@@ -84,7 +88,7 @@ function ActivityTwo() {
         <input type="radio" name="internet" value="other"> Other  
     </form> 
 
-    <input class="btnSubmit" type="submit" value="Submit">
+    <button id="correctInternet" class="btnSubmit" type="submit">Submit</button>
     `;
 }
 
@@ -96,18 +100,31 @@ function ActivityThree() {
     <form action="">
 Everything is <input type="text" name="publicWord" value=""><br>
 <br>
-<input type="submit" value="Submit">
+<button onclick="PInfo()" class="btnSubmit" type="submit">Submit</button>
 </form>
     `;
+}
+
+function PInfo() {
+
 }
 
 // When Activity4 button is clicked
 function ActivityFour() {
     var four = document.getElementById('home');
-    four.innerHTML = `<h1>Pictures and Opinions</h1>
+    four.innerHTML = `
+    <div class="panel panel-default">
+    <div class="panel-body mask">Pictures and Opinions</div>                    
+</div>
+<div class="panel-body">Click the correct boxes</div>
 
-    <p>Fill in the blanks activity</p>
+
+<button onclick="PicsandOpins()" class="btnSubmit" type="submit">Submit</button>
     `;
+}
+
+function PicsandOpins() {
+
 }
 
 // When Activity5 button is clicked

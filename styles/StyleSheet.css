@@ -259,54 +259,58 @@ input {
 }
 
 #btnLogout {
-    float: left;
-    /*align-content: center;
+    /*float: left;
+    align-content: center;
     margin-top: 10px;*/
-    padding: 20px;
-    width: 220px;
+    /*padding: 20px;*/
+    /*width: 220px;
     height: 60px;
     font-size: 30px;
-    background-color: azure;
-    color: #f9a4a7;
+    background-color: azure;*/
+    color: #ffffff;
     text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
 }
 
-#btnLogout:hover {
-    background-color: aquamarine;
+#btnLogout:hover,
+#btnLogout:active {
+    background-color: #f9a4a7;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
 }
 
 #btnHome {
-    float: left;
-    /*align-content: center;
-    /*margin-top: 10px;*/
-    padding: 20px;
-    width: 220px;
-    height: 60px;
-    font-size: 30px;
-    background-color: azure;
-    color: #f9a4a7;
+    color: #ffffff;
     text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+    margin-left: 100px;
 }
 
-#btnHome:hover {
-    background-color: aquamarine;
+#btnHome:hover,
+#btnHome:active {
+    background-color: #f9a4a7;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
 }
 
 #joinNetty {
-    float: left;
-    /*align-content: center;
-    /*margin-top: 10px;*/
-    padding: 20px;
-    width: 220px;
-    height: 60px;
-    font-size: 30px;
-    background-color: azure;
-    color: #f9a4a7;
+    color: #ffffff;
     text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+    margin-left: 100px;
 }
 
-#joinNetty:hover {
-    background-color: aquamarine;
+#joinNetty:hover,
+#joinNetty:active {
+    background-color: #f9a4a7;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
 }
 
 
