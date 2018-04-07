@@ -302,7 +302,6 @@ input {
     text-align: center;
     padding: 60px 30px 60px 30px;
     display: inline-block;
-    margin-left: 100px;
 }
 
 #joinNetty:hover,
@@ -325,6 +324,10 @@ input {
 
 
 /*activities Styles*/
+
+.modal-content {
+    background-color: #93d6ed;
+}
 
 .activityList {
     margin-bottom: 120px;
@@ -378,15 +381,16 @@ input {
 }
 
 .logoTop {
-    /*font-family: logoFont;*/
+    /*font-family: logoFont;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 110px;
     color: #b2dff9;
     letter-spacing: 1px;
-    float: left;
-    /*font-size: 650px;*/
+    float: left;*/
+    /*font-size: 650px;
     margin-top: 100px;
-    margin-left: 120px;
+    margin-left: 120px;*/
+    background-image: url("../images/CyberNetty_Logo.png");
 }
 
 .character {

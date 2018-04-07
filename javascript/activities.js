@@ -2,12 +2,12 @@
 "use strict";
 
 function setUpListeners() {
-    document.getElementById('a1').addEventListener("click", ActivityOne, false);
-    document.getElementById('a2').addEventListener("click", ActivityTwo, false);
-    document.getElementById('a3').addEventListener("click", ActivityThree, false);
-    document.getElementById('a4').addEventListener("click", ActivityFour, false);
-    document.getElementById('a5').addEventListener("click", ActivityFive, false);
-    document.getElementById('a6').addEventListener("click", ActivitySix, false);
+    document.getElementById('a1').addEventListener("click", StrangerDanger, false);
+    document.getElementById('a2').addEventListener("click", TheInternet, false);
+    document.getElementById('a3').addEventListener("click", Sharing, false);
+    document.getElementById('a4').addEventListener("click", PersonalInformation, false);
+    document.getElementById('a5').addEventListener("click", CyberBullying, false);
+    document.getElementById('a6').addEventListener("click", Protocol, false);
 }
 
 // Drag and Drop for Stranger Danger
@@ -26,7 +26,7 @@ function drop(ev) {
 }
 
 // When Activity1 button is clicked
-function ActivityOne() {
+function StrangerDanger() {
     var one = document.getElementById('home');
     one.innerHTML = `
     <div>
@@ -74,7 +74,7 @@ function TrueorFalse() {
 }
 
 // When Activity2 button is clicked
-function ActivityTwo() {
+function TheInternet() {
     var two = document.getElementById('home');
     two.innerHTML = `         
 
@@ -92,25 +92,29 @@ function ActivityTwo() {
     `;
 }
 
+function correctInternet() {
+
+}
+
 // When Activity3 button is clicked
-function ActivityThree() {
+function Sharing() {
     var three = document.getElementById('home');
     three.innerHTML = `<h1>Personal Information</h1>
 
     <form action="">
 Everything is <input type="text" name="publicWord" value=""><br>
 <br>
-<button onclick="PInfo()" class="btnSubmit" type="submit">Submit</button>
+<button onclick="Share()" class="btnSubmit" type="submit">Submit</button>
 </form>
     `;
 }
 
-function PInfo() {
+function Share() {
 
 }
 
 // When Activity4 button is clicked
-function ActivityFour() {
+function PersonalInformation() {
     var four = document.getElementById('home');
     four.innerHTML = `
     <div class="panel panel-default">
@@ -118,27 +122,50 @@ function ActivityFour() {
 </div>
 <div class="panel-body">Click the correct boxes</div>
 
+<form action="">
+<input type="checkbox" name="pandos" value="One">This
+<br>
+<input type="checkbox" name="pandos" value="Two">This 
+<br>
+<input type="checkbox" name="pandos" value="Three">That
+<br>
+<input type="checkbox" name="pandos" value="Four">And That 
+</form>
 
-<button onclick="PicsandOpins()" class="btnSubmit" type="submit">Submit</button>
+<button onclick="PInfo()" class="btnSubmit" type="submit">Submit</button>
     `;
 }
 
-function PicsandOpins() {
+function PInfo() {
 
 }
 
 // When Activity5 button is clicked
-function ActivityFive() {
+function CyberBullying() {
     var five = document.getElementById('home');
-    five.innerHTML = `<h1>Cyber Bullying</h1>
+    five.innerHTML = `
+    <div class="panel panel-default">
+    <div class="panel-body mask">Cyber Bullying</div>                    
+</div>
+<div class="panel-body"></div>
+<form>
+        <input type="radio" name="bully" value="this" checked> This<br>
+        <input type="radio" name="bully" value="that"> That<br>
+        <input type="radio" name="bully" value="other"> Other  
+    </form>
 
-    <p>Another key press activity</p>
+
+<button onclick="CyberBully()" class="btnSubmit" type="submit">Submit</button>
     
     `;
 }
 
+function CyberBully() {
+
+}
+
 // When Activity6 button is clicked
-function ActivitySix() {
+function Protocol() {
     var six = document.getElementById('home');
     six.innerHTML = `<h1>Protocol</h1>
 
