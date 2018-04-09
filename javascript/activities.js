@@ -44,18 +44,20 @@ function StrangerDanger() {
     </div> --> 
 
     <form id="quiz" name="quiz">
-    <p>Question One</p>
+
+    <p>_______ of people you talk to or interact with online</p>
     <input id="textbox" type="text" name="question1"/>
 
-    <p>Question Two</p>
-    <input id="mc" type="radio" name="question2" value="Ans1">Ans1<br>
-    <input id="mc" type="radio" name="question2" value="Ans2">Ans2<br>
+    <p>Some people use the internet as a _____ to hide behind to be destructive to others</p>
+    <input id="mc" type="radio" name="question2" value="hat">Hat<br>    
+    <input id="mc" type="radio" name="question2" value="beach ball">Beach Ball<br>
+    <input id="mc" type="radio" name="question2" value="mask">Mask<br>
 
-    <p>Question Three</p>
-    <input id="mc" type="radio" name="question3" value="Ans1">Ans1<br>
-    <input id="mc" type="radio" name="question3" value="Ans2">Ans2<br>
+    <p>You should never meet anyone you met online in person</p>
+    <input id="mc" type="radio" name="question3" value="true">True<br>
+    <input id="mc" type="radio" name="question3" value="false">False<br>
 
-    <input id="button" type="button" value="I'm finished" onclick="Check()">
+    <input id="button" type="button" value="Submit" onclick="Check()">
     </form>
 
     <div id="after_submit">
