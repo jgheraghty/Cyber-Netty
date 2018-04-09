@@ -3,18 +3,18 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="841.89px" height="595.28px" viewBox="0 0 841.89 595.28" enable-background="new 0 0 841.89 595.28" xml:space="preserve">
-<g id="Stranger_Danger">
-	<g>
+<g id="Stranger_Danger" display="none">
+	<g display="inline">
 		<path fill="#FFFFFF" d="M670,361c0,6.627-5.373,12-12,12H448c-6.627,0-12-5.373-12-12V113c0-6.627,5.373-12,12-12h210
 			c6.627,0,12,5.373,12,12V361z"/>
 		<path fill="none" stroke="#F7A4A7" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="1.9987,1.9987" d="M670,361
 			c0,6.627-5.373,12-12,12H448c-6.627,0-12-5.373-12-12V113c0-6.627,5.373-12,12-12h210c6.627,0,12,5.373,12,12V361z"/>
 	</g>
-	
-		<text transform="matrix(1 0 0 1 483.1816 328.6406)" display="none" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="280">1</text>
-	<path fill="#94D5EC" d="M666.406,356.656c0,6.413-5.199,11.612-11.613,11.612H451.57c-6.413,0-11.613-5.199-11.613-11.612V116.658
-		c0-6.414,5.2-11.612,11.613-11.612h203.223c6.414,0,11.613,5.199,11.613,11.612V356.656z"/>
-	<g id="Don_x27_t_Know">
+	<text transform="matrix(1 0 0 1 483.1816 328.6406)" fill="#FFFFFF" font-family="'MyriadPro-Regular'" font-size="280">1</text>
+	<path display="inline" fill="#94D5EC" d="M666.406,356.656c0,6.413-5.199,11.612-11.613,11.612H451.57
+		c-6.413,0-11.613-5.199-11.613-11.612V116.658c0-6.414,5.2-11.612,11.613-11.612h203.223c6.414,0,11.613,5.199,11.613,11.612
+		V356.656z"/>
+	<g id="Don_x27_t_Know" display="inline">
 		<path fill="#0C0C0C" stroke="#94D5EC" stroke-miterlimit="10" d="M534.839,268.29c0,0,2.882,23.167,2.136,36.5
 			s27.413,6.5,27.413,6.5s-1.16-15.5,3.007-37C554.896,273.458,534.839,268.29,534.839,268.29z"/>
 		<path fill="#0C0C0C" stroke="#94D5EC" stroke-miterlimit="10" d="M534.839,256.184c0,0,4.306,28.741,0.056,41.863
@@ -82,9 +82,10 @@
 			c1.25,8.25,3.5,17,0,23.499c-2-8.749-3-17.749-5.75-20.999s-11-13-19.25-14.5s-21.75-2.25-30,1.5s-20.75,9.5-25.75,25.25
 			c-0.75,4.5-2.25,16.999-1.25,22.249C511.896,228.79,507.396,217.291,509.646,205.791z"/>
 	</g>
-	<circle fill="none" stroke="#F7A4A7" stroke-width="20" stroke-miterlimit="10" cx="551.5" cy="233.834" r="94.5"/>
 	
-		<line fill="none" stroke="#F7A4A7" stroke-width="20" stroke-miterlimit="10" x1="481.797" y1="297.64" x2="616.604" y2="162.833"/>
+		<circle display="inline" fill="none" stroke="#F7A4A7" stroke-width="20" stroke-miterlimit="10" cx="551.5" cy="233.834" r="94.5"/>
+	
+		<line display="inline" fill="none" stroke="#F7A4A7" stroke-width="20" stroke-miterlimit="10" x1="481.797" y1="297.64" x2="616.604" y2="162.833"/>
 </g>
 <g id="Netty" display="none">
 	<g id="Don_x27_t_Know_1_" display="inline">
@@ -207,5 +208,8 @@
 	<path display="inline" fill="#94D5EC" d="M533.406,304.656c0,6.413-5.199,11.612-11.613,11.612H318.57
 		c-6.413,0-11.613-5.199-11.613-11.612V64.658c0-6.414,5.2-11.612,11.613-11.612h203.223c6.414,0,11.613,5.199,11.613,11.612
 		V304.656z"/>
+</g>
+<g id="Logo_-_Top">
+	<text transform="matrix(1 0 0 1 21.1069 328)" fill="#94D5EC" font-family="'VarianeScript'" font-size="270">Cyber Netty</text>
 </g>
 </svg>

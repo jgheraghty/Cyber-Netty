@@ -29,7 +29,7 @@ function drop(ev) {
 function StrangerDanger() {
     var one = document.getElementById('home');
     one.innerHTML = `
-    <div>
+    <!--<div>
         <div class="panel panel-default">
             <div class="panel-body mask">Stranger Danger</div>                    
         </div>
@@ -41,7 +41,27 @@ function StrangerDanger() {
         </div>
 
         <button onclick="TrueorFalse()" class="btnSubmit" type="submit">Submit</button>        
-    </div>    
+    </div> --> 
+
+    <form id="quiz" name="quiz">
+    <p>Question One</p>
+    <input id="textbox" type="text" name="question1"/>
+
+    <p>Question Two</p>
+    <input id="mc" type="radio" name="question2" value="Ans1">Ans1<br>
+    <input id="mc" type="radio" name="question2" value="Ans2">Ans2<br>
+
+    <p>Question Three</p>
+    <input id="mc" type="radio" name="question3" value="Ans1">Ans1<br>
+    <input id="mc" type="radio" name="question3" value="Ans2">Ans2<br>
+
+    <input id="button" type="button" value="I'm finished" onclick="Check()">
+    </form>
+
+    <div id="after_submit">
+    <p id="number_correct">
+    <p id="message"></p>
+
     `;
 
     /*<h2>Match the Numbers!</h2>
@@ -67,6 +87,44 @@ function StrangerDanger() {
     y.style.fontSize = "50px";
     y.style.textAlign = "center";
     */
+}
+
+function Check() {
+
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var correct = 0;
+
+    if (question1 == "Ans1") {
+        correct++;
+    }
+
+    if (question2 == "Ans2") {
+        correct++;
+    }
+
+    if (question3 == "Ans3") {
+        correct++;
+    }
+
+    var messages = ["You did it!", "Almost there..", "Try again"];
+
+    var range;
+
+    if (correct < 1) {
+        range = 2;
+    }
+    if (correct > 0 && correct < 3) {
+        range = 1;
+    }
+    if (correct > 2) {
+        range = 0;
+    }
+
+    document.getElementById('after_submit').style.visibility = "visible";
+    document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
+    document.getElementById('message').innerHTML = messages[range];
 }
 
 function TrueorFalse() {

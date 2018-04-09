@@ -104,7 +104,7 @@ body {
 
 .form-control {
     height: 60px;
-    font-size: 28px;
+    /*font-size: 28px;*/
     border: 3px solid #555;
 }
 
@@ -760,9 +760,56 @@ button {
 
 /* -- Stranger Danger Activity -- */
 
-.activityFont {
-    font-size: 25px;
+#quiz {
+    margin-left: 10px;
+    padding: 10px 20px 10px 20px;
+    width: 400px;
+    font-size: 35px;
 }
+
+input {
+    margin-bottom: 20px;
+}
+
+#textbox {
+    height: 45px;
+    font-size: 26px;
+    border-radius: 5px;
+    /*border: lightgreen;*/
+    padding-left: 5px;
+}
+
+#button {
+    background: green;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    transition-duration: .5s;
+    margin-top: 15px;
+}
+
+#button:hover {
+    background: white;
+    border: 1px solid green;
+    color: black;
+    cursor: pointer;
+}
+
+#after_submit {
+    visibility: hidden;
+}
+
+#mc {
+    width: 25px;
+    height: 25px;
+}
+
+
+/*.activityFont {
+    font-size: 25px;
+}*/
 
 .interact {
     background-color: blueviolet;
