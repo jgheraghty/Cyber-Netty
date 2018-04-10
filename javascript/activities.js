@@ -2,7 +2,7 @@
 "use strict";
 
 function setUpListeners() {
-    document.getElementById('a1').addEventListener("click", StrangerDangerActivity, false);
+    document.getElementById('a1').addEventListener("click", StscorerDangerActivity, false);
     document.getElementById('a2').addEventListener("click", TheInternetActivity, false);
     document.getElementById('a3').addEventListener("click", SharingActivity, false);
     document.getElementById('a4').addEventListener("click", PersonalInformationActivity, false);
@@ -10,7 +10,7 @@ function setUpListeners() {
     document.getElementById('a6').addEventListener("click", ProtocolActivity, false);
 }
 
-// Drag and Drop for Stranger Danger
+// Drag and Drop for Stscorer Danger
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -26,12 +26,12 @@ function drop(ev) {
 }
 
 // When Activity1 button is clicked
-function StrangerDangerActivity() {
+function StscorerDangerActivity() {
     var one = document.getElementById('home');
     one.innerHTML = `
     <!--<div>
         <div class="panel panel-default">
-            <div class="panel-body mask">Stranger Danger</div>                    
+            <div class="panel-body mask">Stscorer Danger</div>                    
         </div>
 
         <div class="panel-body">True or False: You should never meet anyone you met online in person?</div>
@@ -57,7 +57,7 @@ function StrangerDangerActivity() {
     <input id="mc" type="radio" name="question3" value="true">True<br>
     <input id="mc" type="radio" name="question3" value="false">False<br>
 
-    <input id="button" type="button" value="Submit" onclick="StrangerDanger()">
+    <input id="button" type="button" value="Submit" onclick="StscorerDanger()">
     </form>
 
     <div id="after_submit">
@@ -79,7 +79,7 @@ function StrangerDangerActivity() {
     /*
     x.parentNode.removeChild(x);
     var y = document.createElement('activity1-content');
-    //y.innerHTML = ("Stranger Danger");
+    //y.innerHTML = ("Stscorer Danger");
     y.style.borderRadius = "0px 0px 25px 25px";
     y.style.color = "black";
     y.style.backgroundColor = "purple";
@@ -91,7 +91,7 @@ function StrangerDangerActivity() {
     */
 }
 
-function StrangerDanger() {
+function StscorerDanger() {
 
     var question1 = document.quiz.question1.value;
     var question2 = document.quiz.question2.value;
@@ -112,21 +112,21 @@ function StrangerDanger() {
 
     var messages = ["You did it!", "Not quite!", "Try again"];
 
-    var range;
+    var score;
 
     if (correct < 1) {
-        range = 2;
+        score = 2;
     }
     if (correct > 0 && correct < 3) {
-        range = 1;
+        score = 1;
     }
     if (correct > 2) {
-        range = 0;
+        score = 0;
     }
 
     document.getElementById('after_submit').style.visibility = "visible";
     document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
-    document.getElementById('message').innerHTML = messages[range];
+    document.getElementById('message').innerHTML = messages[score];
 }
 
 // When Activity2 button is clicked
@@ -148,8 +148,15 @@ function TheInternetActivity() {
 
     <form id="quiz" name="quiz">
 
-    <p class="questions">Question: The Internet is a </p>
-    <input id="textbox" type="text" name="question1"/><p class="questions"> of networks, a networking infrastructure. It</p><input id="textbox" type="text" name="question2"/><p class="questions"> globally, forming a network in which any computer can</p><input id="textbox" type="text" name="question3"/><p class="questions"> with any other computer, as long as they are both connected to the</p><input id="textbox" type="text" name="question4"/><p class="questions">.</p>
+    <p class="questions">Question:</p>
+    <p>The Internet is a</p>
+    <input id="textbox" type="text" name="question1"/>
+    <p> of networks, a networking infrastructure. It</p>
+    <input id="textbox" type="text" name="question2"/>
+    <p> globally, forming a network in which any computer can</p>
+    <input id="textbox" type="text" name="question3"/>
+    <p> with any other computer, as long as they are both connected to the</p>
+    <input id="textbox" type="text" name="question4"/><p>.</p>
 
     <input id="button" type="button" value="Submit" onclick="TheInternet()">
     </form>
@@ -165,37 +172,45 @@ function TheInternet() {
     var question1 = document.quiz.question1.value;
     var question2 = document.quiz.question2.value;
     var question3 = document.quiz.question3.value;
+    var question4 = document.quiz.question4.value;
     var correct = 0;
 
-    if (question1 == "Ans1") {
+    if (question1 == "massive network") {
         correct++;
     }
 
-    if (question2 == "Ans2") {
+    if (question2 == "connects millions of computers together") {
         correct++;
     }
 
-    if (question3 == "Ans3") {
+    if (question3 == "communicate") {
         correct++;
     }
 
-    var messages = ["You did it!", "Almost there..", "Try again"];
+    if (question4 == "internet") {
+        correct++;
+    }
 
-    var range;
+    var messages = ["You did it!", "Almost there..", "Three more..", "Try again"];
+
+    var score;
 
     if (correct < 1) {
-        range = 2;
+        score = 3;
     }
-    if (correct > 0 && correct < 3) {
-        range = 1;
+    if (correct > 0 && correct < 4) {
+        score = 2;
     }
     if (correct > 2) {
-        range = 0;
+        score = 1;
+    }
+    if (correct > 1) {
+        score = 0;
     }
 
     document.getElementById('after_submit').style.visibility = "visible";
     document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
-    document.getElementById('message').innerHTML = messages[range];
+    document.getElementById('message').innerHTML = messages[score];
 }
 
 // When Activity3 button is clicked
