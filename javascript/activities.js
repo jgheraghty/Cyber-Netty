@@ -2,12 +2,12 @@
 "use strict";
 
 function setUpListeners() {
-    document.getElementById('a1').addEventListener("click", StrangerDanger, false);
-    document.getElementById('a2').addEventListener("click", TheInternet, false);
-    document.getElementById('a3').addEventListener("click", Sharing, false);
-    document.getElementById('a4').addEventListener("click", PersonalInformation, false);
-    document.getElementById('a5').addEventListener("click", CyberBullying, false);
-    document.getElementById('a6').addEventListener("click", Protocol, false);
+    document.getElementById('a1').addEventListener("click", StrangerDangerActivity, false);
+    document.getElementById('a2').addEventListener("click", TheInternetActivity, false);
+    document.getElementById('a3').addEventListener("click", SharingActivity, false);
+    document.getElementById('a4').addEventListener("click", PersonalInformationActivity, false);
+    document.getElementById('a5').addEventListener("click", CyberBullyingActivity, false);
+    document.getElementById('a6').addEventListener("click", ProtocolActivity, false);
 }
 
 // Drag and Drop for Stranger Danger
@@ -26,7 +26,7 @@ function drop(ev) {
 }
 
 // When Activity1 button is clicked
-function StrangerDanger() {
+function StrangerDangerActivity() {
     var one = document.getElementById('home');
     one.innerHTML = `
     <!--<div>
@@ -57,7 +57,7 @@ function StrangerDanger() {
     <input id="mc" type="radio" name="question3" value="true">True<br>
     <input id="mc" type="radio" name="question3" value="false">False<br>
 
-    <input id="button" type="button" value="Submit" onclick="Check()">
+    <input id="button" type="button" value="Submit" onclick="StrangerDanger()">
     </form>
 
     <div id="after_submit">
@@ -91,7 +91,76 @@ function StrangerDanger() {
     */
 }
 
-function Check() {
+function StrangerDanger() {
+
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var correct = 0;
+
+    if (question1 == "Beware") {
+        correct++;
+    }
+
+    if (question2 == "mask") {
+        correct++;
+    }
+
+    if (question3 == "true") {
+        correct++;
+    }
+
+    var messages = ["You did it!", "Not quite!", "Try again"];
+
+    var range;
+
+    if (correct < 1) {
+        range = 2;
+    }
+    if (correct > 0 && correct < 3) {
+        range = 1;
+    }
+    if (correct > 2) {
+        range = 0;
+    }
+
+    document.getElementById('after_submit').style.visibility = "visible";
+    document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
+    document.getElementById('message').innerHTML = messages[range];
+}
+
+// When Activity2 button is clicked
+function TheInternetActivity() {
+    var two = document.getElementById('home');
+    two.innerHTML = `         
+
+    <!--<div class="panel panel-default">
+        <div class="panel-body mask">The Internet</div>                    
+    </div>
+<div class="panel-body">What is the internet?</div>
+    <form>
+        <input type="radio" name="internet" value="this" checked> This<br>
+        <input type="radio" name="internet" value="that"> That<br>
+        <input type="radio" name="internet" value="other"> Other  
+    </form> 
+
+    <button id="correctInternet" class="btnSubmit" type="submit">Submit</button>-->
+
+    <form id="quiz" name="quiz">
+
+    <p class="questions">Question: The Internet is a </p>
+    <input id="textbox" type="text" name="question1"/><p class="questions"> of networks, a networking infrastructure. It</p><input id="textbox" type="text" name="question2"/><p class="questions"> globally, forming a network in which any computer can</p><input id="textbox" type="text" name="question3"/><p class="questions"> with any other computer, as long as they are both connected to the</p><input id="textbox" type="text" name="question4"/><p class="questions">.</p>
+
+    <input id="button" type="button" value="Submit" onclick="TheInternet()">
+    </form>
+
+    <div id="after_submit">
+    <p id="number_correct">
+    <p id="message"></p>
+    `;
+}
+
+function TheInternet() {
 
     var question1 = document.quiz.question1.value;
     var question2 = document.quiz.question2.value;
@@ -129,35 +198,8 @@ function Check() {
     document.getElementById('message').innerHTML = messages[range];
 }
 
-function TrueorFalse() {
-
-}
-
-// When Activity2 button is clicked
-function TheInternet() {
-    var two = document.getElementById('home');
-    two.innerHTML = `         
-
-    <div class="panel panel-default">
-        <div class="panel-body mask">The Internet</div>                    
-    </div>
-<div class="panel-body">What is the internet?</div>
-    <form>
-        <input type="radio" name="internet" value="this" checked> This<br>
-        <input type="radio" name="internet" value="that"> That<br>
-        <input type="radio" name="internet" value="other"> Other  
-    </form> 
-
-    <button id="correctInternet" class="btnSubmit" type="submit">Submit</button>
-    `;
-}
-
-function correctInternet() {
-
-}
-
 // When Activity3 button is clicked
-function Sharing() {
+function SharingActivityActivity() {
     var three = document.getElementById('home');
     three.innerHTML = `<h1>Personal Information</h1>
 
@@ -174,7 +216,7 @@ function Share() {
 }
 
 // When Activity4 button is clicked
-function PersonalInformation() {
+function PersonalInformationActivityActivity() {
     var four = document.getElementById('home');
     four.innerHTML = `
     <div class="panel panel-default">
@@ -201,7 +243,7 @@ function PInfo() {
 }
 
 // When Activity5 button is clicked
-function CyberBullying() {
+function CyberBullyingActivityActivity() {
     var five = document.getElementById('home');
     five.innerHTML = `
     <div class="panel panel-default">
@@ -225,9 +267,9 @@ function CyberBully() {
 }
 
 // When Activity6 button is clicked
-function Protocol() {
+function ProtocolActivity() {
     var six = document.getElementById('home');
-    six.innerHTML = `<h1>Protocol</h1>
+    six.innerHTML = `<h1>ProtocolActivity</h1>
 
     <p>Fill in the blanks activity</p>
     
