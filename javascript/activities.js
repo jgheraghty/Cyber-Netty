@@ -45,15 +45,15 @@ function StrangerDanger() {
 
     <form id="quiz" name="quiz">
 
-    <p>_______ of people you talk to or interact with online</p>
+    <p class="questions">Question 1: _______ of people you talk to or interact with online</p>
     <input id="textbox" type="text" name="question1"/>
 
-    <p>Some people use the internet as a _____ to hide behind to be destructive to others</p>
+    <p class="questions">Question 2: Some people use the internet as a _____ to hide behind to be destructive to others</p>
     <input id="mc" type="radio" name="question2" value="hat">Hat<br>    
     <input id="mc" type="radio" name="question2" value="beach ball">Beach Ball<br>
     <input id="mc" type="radio" name="question2" value="mask">Mask<br>
 
-    <p>You should never meet anyone you met online in person</p>
+    <p class="questions">Question 3: You should never meet anyone you met online in person</p>
     <input id="mc" type="radio" name="question3" value="true">True<br>
     <input id="mc" type="radio" name="question3" value="false">False<br>
 
