@@ -161,6 +161,11 @@ function TheInternetActivity() {
     <p> with any other computer, as long as they are both connected to the</p>
     <input id="textbox" type="text" name="question4"/><p>.</p>
 
+    <h2>Suggested words:</h2>
+    <p>communicate</p>
+    <p>massive network</p>
+    <p>connects millions of computers together</p>
+
     <input id="button" type="button" value="Submit" onclick="TheInternet()">
     </form>
 
@@ -221,19 +226,19 @@ function SharingActivityActivity() {
     var three = document.getElementById('home');
     three.innerHTML = `<form id="quiz" name="quiz">
 
-    <p class="questions">Question 1: </p>
-    <input id="mc" type="radio" name="question1" value=""><br>
-    <input id="mc" type="radio" name="question1" value=""><br>
-    <input id="mc" type="radio" name="question1" value=""><br>
+    <p class="questions">Question 1: The internet is like.. </p>
+    <input id="mc" type="radio" name="question1" value="option1">Floating through the sky in a hot air balloon<br>
+    <input id="mc" type="radio" name="question1" value="option2">Hanging out with Netty on the beach<br>
+    <input id="mc" type="radio" name="question1" value="option3">Standing on the street, shouting into a megaphone<br>
 
-    <p class="questions">Question 2: </p>
+    <!--<p class="questions">Question 2: </p>
     <input id="mc" type="radio" name="question2" value=""><br>    
     <input id="mc" type="radio" name="question2" value=""><br>
 
     <p class="questions">Question 3: </p>
     <input id="mc" type="radio" name="question3" value=""><br>
     <input id="mc" type="radio" name="question3" value=""><br>
-    <input id="mc" type="radio" name="question3" value=""><br>
+    <input id="mc" type="radio" name="question3" value=""><br>-->
 
     <input id="button" type="button" value="Submit" onclick="Share()">
     </form>
@@ -247,27 +252,30 @@ function SharingActivityActivity() {
 
 function Share() {
     var question1 = document.quiz.question1.value;
-    var question2 = document.quiz.question2.value;
-    var question3 = document.quiz.question3.value;
+    /*var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;*/
     var correct = 0;
 
-    if (question1 == "") {
+    if (question1 == "option3") {
         correct++;
     }
 
-    if (question2 == "") {
+    /*if (question2 == "") {
         correct++;
     }
 
     if (question3 == "") {
         correct++;
-    }
+    }*/
 
     var messages = ["You did it!", "Not quite!", "Try again"];
 
     var score;
 
-    if (correct < 1) {
+    if (correct) {
+        score = 1;
+    }
+    /*if (correct < 1) {
         score = 2;
     }
     if (correct > 0 && correct < 3) {
@@ -275,7 +283,7 @@ function Share() {
     }
     if (correct > 2) {
         score = 0;
-    }
+    }*/
 
     document.getElementById('after_submit').style.visibility = "visible";
     document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
@@ -288,19 +296,18 @@ function PersonalInformationActivityActivity() {
     four.innerHTML = `
     <form id="quiz" name="quiz">
 
-    <p class="questions">Question 1: </p>
-    <input id="mc" type="radio" name="question1" value=""><br>
-    <input id="mc" type="radio" name="question1" value=""><br>
-    <input id="mc" type="radio" name="question1" value=""><br>
+    <p class="questions">Question 1: True or False, it's okay to give your password to your friends </p>
+    <input id="mc" type="radio" name="question1" value="true">True<br>
+    <input id="mc" type="radio" name="question1" value="false">False<br>
 
-    <p class="questions">Question 2: </p>
-    <input id="mc" type="radio" name="question2" value=""><br>    
-    <input id="mc" type="radio" name="question2" value=""><br>
+    <p class="questions">Question 2: Why must you never share your important details online?</p>
+    <input id="mc" type="radio" name="question2" value="identity">Someone could steal your identity<br>    
+    <input id="mc" type="radio" name="question2" value="disappear">Your information will disappear<br>
 
-    <p class="questions">Question 3: </p>
-    <input id="mc" type="radio" name="question3" value=""><br>
-    <input id="mc" type="radio" name="question3" value=""><br>
-    <input id="mc" type="radio" name="question3" value=""><br>
+    <p class="questions">Question 3: What important details should you never put online</p>
+    <input id="mc" type="radio" name="question3" value="option1">Shoe size, best friend, favourite food<br>
+    <input id="mc" type="radio" name="question3" value="option2">Full name, date of birth, address and password<br>
+    <input id="mc" type="radio" name="question3" value="option3">Favourite colour, favourite game<br>
 
     <input id="button" type="button" value="Submit" onclick="PInfo()">
     </form>
@@ -327,15 +334,15 @@ function PInfo() {
     var question3 = document.quiz.question3.value;
     var correct = 0;
 
-    if (question1 == "") {
+    if (question1 == "false") {
         correct++;
     }
 
-    if (question2 == "") {
+    if (question2 == "identity") {
         correct++;
     }
 
-    if (question3 == "") {
+    if (question3 == "option2") {
         correct++;
     }
 
@@ -370,6 +377,11 @@ function CyberBullyingActivityActivity() {
     <p> to harass, threaten, embarrass, or </p>
     <input id="textbox" type="text" name="question2"/>
     <p>another person.</p>
+
+    <h2>Suggested words:</h2>
+    <p>target</p>
+    <p>technology</p>
+    
     
     <input id="button" type="button" value="Submit" onclick="CyberBully()">
     </form>
