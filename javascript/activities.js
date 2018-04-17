@@ -2,7 +2,7 @@
 "use strict";
 
 function setUpListeners() {
-    document.getElementById('a1').addEventListener("click", StscorerDangerActivity, false);
+    document.getElementById('a1').addEventListener("click", StrangerDangerActivity, false);
     document.getElementById('a2').addEventListener("click", TheInternetActivity, false);
     document.getElementById('a3').addEventListener("click", SharingActivity, false);
     document.getElementById('a4').addEventListener("click", PersonalInformationActivity, false);
@@ -26,7 +26,7 @@ function drop(ev) {
 }
 
 // When Activity1 button is clicked
-function StscorerDangerActivity() {
+function StrangerDangerActivity() {
     var one = document.getElementById('home');
     one.innerHTML = `
     <!--<div>
@@ -46,7 +46,10 @@ function StscorerDangerActivity() {
     <form id="quiz" name="quiz">
 
     <p class="questions">Question 1: _______ of people you talk to or interact with online</p>
-    <input id="textbox" type="text" name="question1"/>
+    <!--<input id="textbox" type="text" name="question1"/>-->
+    <input id="mc" type="radio" name="question1" value="take care">Take Care<br>
+    <input id="mc" type="radio" name="question1" value="beware">Beware<br>
+    <input id="mc" type="radio" name="question1" value="think">Think<br>
 
     <p class="questions">Question 2: Some people use the internet as a _____ to hide behind to be destructive to others</p>
     <input id="mc" type="radio" name="question2" value="hat">Hat<br>    
@@ -57,7 +60,7 @@ function StscorerDangerActivity() {
     <input id="mc" type="radio" name="question3" value="true">True<br>
     <input id="mc" type="radio" name="question3" value="false">False<br>
 
-    <input id="button" type="button" value="Submit" onclick="StscorerDanger()">
+    <input id="button" type="button" value="Submit" onclick="StrangerDanger()">
     </form>
 
     <div id="after_submit">
@@ -91,14 +94,14 @@ function StscorerDangerActivity() {
     */
 }
 
-function StscorerDanger() {
+function StrangerDanger() {
 
     var question1 = document.quiz.question1.value;
     var question2 = document.quiz.question2.value;
     var question3 = document.quiz.question3.value;
     var correct = 0;
 
-    if (question1 == "Beware") {
+    if (question1 == "beware") {
         correct++;
     }
 
@@ -216,30 +219,97 @@ function TheInternet() {
 // When Activity3 button is clicked
 function SharingActivityActivity() {
     var three = document.getElementById('home');
-    three.innerHTML = `<h1>Personal Information</h1>
+    three.innerHTML = `<form id="quiz" name="quiz">
 
-    <form action="">
-Everything is <input type="text" name="publicWord" value=""><br>
-<br>
-<button onclick="Share()" class="btnSubmit" type="submit">Submit</button>
-</form>
+    <p class="questions">Question 1: </p>
+    <input id="mc" type="radio" name="question1" value=""><br>
+    <input id="mc" type="radio" name="question1" value=""><br>
+    <input id="mc" type="radio" name="question1" value=""><br>
+
+    <p class="questions">Question 2: </p>
+    <input id="mc" type="radio" name="question2" value=""><br>    
+    <input id="mc" type="radio" name="question2" value=""><br>
+
+    <p class="questions">Question 3: </p>
+    <input id="mc" type="radio" name="question3" value=""><br>
+    <input id="mc" type="radio" name="question3" value=""><br>
+    <input id="mc" type="radio" name="question3" value=""><br>
+
+    <input id="button" type="button" value="Submit" onclick="Share()">
+    </form>
+
+    <div id="after_submit">
+    <p id="number_correct">
+    <p id="message"></p>
+
     `;
 }
 
 function Share() {
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var correct = 0;
 
+    if (question1 == "") {
+        correct++;
+    }
+
+    if (question2 == "") {
+        correct++;
+    }
+
+    if (question3 == "") {
+        correct++;
+    }
+
+    var messages = ["You did it!", "Not quite!", "Try again"];
+
+    var score;
+
+    if (correct < 1) {
+        score = 2;
+    }
+    if (correct > 0 && correct < 3) {
+        score = 1;
+    }
+    if (correct > 2) {
+        score = 0;
+    }
+
+    document.getElementById('after_submit').style.visibility = "visible";
+    document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
+    document.getElementById('message').innerHTML = messages[score];
 }
 
 // When Activity4 button is clicked
 function PersonalInformationActivityActivity() {
     var four = document.getElementById('home');
     four.innerHTML = `
-    <div class="panel panel-default">
-    <div class="panel-body mask">Pictures and Opinions</div>                    
-</div>
-<div class="panel-body">Click the correct boxes</div>
+    <form id="quiz" name="quiz">
 
-<form action="">
+    <p class="questions">Question 1: </p>
+    <input id="mc" type="radio" name="question1" value=""><br>
+    <input id="mc" type="radio" name="question1" value=""><br>
+    <input id="mc" type="radio" name="question1" value=""><br>
+
+    <p class="questions">Question 2: </p>
+    <input id="mc" type="radio" name="question2" value=""><br>    
+    <input id="mc" type="radio" name="question2" value=""><br>
+
+    <p class="questions">Question 3: </p>
+    <input id="mc" type="radio" name="question3" value=""><br>
+    <input id="mc" type="radio" name="question3" value=""><br>
+    <input id="mc" type="radio" name="question3" value=""><br>
+
+    <input id="button" type="button" value="Submit" onclick="PInfo()">
+    </form>
+
+    <div id="after_submit">
+    <p id="number_correct">
+    <p id="message"></p>
+
+<!--<form action="">
 <input type="checkbox" name="pandos" value="One">This
 <br>
 <input type="checkbox" name="pandos" value="Two">This 
@@ -247,46 +317,105 @@ function PersonalInformationActivityActivity() {
 <input type="checkbox" name="pandos" value="Three">That
 <br>
 <input type="checkbox" name="pandos" value="Four">And That 
-</form>
-
-<button onclick="PInfo()" class="btnSubmit" type="submit">Submit</button>
+</form>-->
     `;
 }
 
 function PInfo() {
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var correct = 0;
 
+    if (question1 == "") {
+        correct++;
+    }
+
+    if (question2 == "") {
+        correct++;
+    }
+
+    if (question3 == "") {
+        correct++;
+    }
+
+    var messages = ["You did it!", "Not quite!", "Try again"];
+
+    var score;
+
+    if (correct < 1) {
+        score = 2;
+    }
+    if (correct > 0 && correct < 3) {
+        score = 1;
+    }
+    if (correct > 2) {
+        score = 0;
+    }
+
+    document.getElementById('after_submit').style.visibility = "visible";
+    document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
+    document.getElementById('message').innerHTML = messages[score];
 }
 
 // When Activity5 button is clicked
 function CyberBullyingActivityActivity() {
     var five = document.getElementById('home');
     five.innerHTML = `
-    <div class="panel panel-default">
-    <div class="panel-body mask">Cyber Bullying</div>                    
-</div>
-<div class="panel-body"></div>
-<form>
-        <input type="radio" name="bully" value="this" checked> This<br>
-        <input type="radio" name="bully" value="that"> That<br>
-        <input type="radio" name="bully" value="other"> Other  
+    <form id="quiz" name="quiz">
+
+    <p class="questions">Question:</p>
+    <p>A Cyber Bullying is the use of </p>
+    <input id="textbox" type="text" name="question1"/>
+    <p> to harass, threaten, embarrass, or </p>
+    <input id="textbox" type="text" name="question2"/>
+    <p>another person.</p>
+    
+    <input id="button" type="button" value="Submit" onclick="CyberBully()">
     </form>
 
-
-<button onclick="CyberBully()" class="btnSubmit" type="submit">Submit</button>
+    <div id="after_submit">
+    <p id="number_correct">
+    <p id="message"></p>
     
     `;
 }
 
 function CyberBully() {
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var correct = 0;
 
+    if (question1 == "technology") {
+        correct++;
+    }
+
+    if (question2 == "target") {
+        correct++;
+    }
+
+    var messages = ["You did it!", "Try again"];
+
+    var score;
+
+    if (correct < 1) {
+        score = 2;
+    }
+    if (correct > 0 && correct < 2) {
+        score = 1;
+    }
+
+    document.getElementById('after_submit').style.visibility = "visible";
+    document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
+    document.getElementById('message').innerHTML = messages[score];
 }
 
 // When Activity6 button is clicked
 function ProtocolActivity() {
     var six = document.getElementById('home');
     six.innerHTML = `<h1>ProtocolActivity</h1>
-
-    <p>Fill in the blanks activity</p>
     
     `;
 }
+
+function Protocol() {}
