@@ -312,6 +312,21 @@ input {
     display: inline-block;
 }
 
+#progress {
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
+#progress:hover,
+#progress:active {
+    background-color: #f9a4a7;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
 
 /*#para {
 	border: 1px solid #DF8081;

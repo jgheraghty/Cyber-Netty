@@ -279,7 +279,7 @@ function Share() {
 }
 
 // When Activity4 button is clicked
-function PersonalInformationActivityActivity() {
+function PersonalInformationActivity() {
     var four = document.getElementById('home');
     four.innerHTML = `
     <form id="quiz" name="quiz">
@@ -360,7 +360,7 @@ function PInfo() {
 }
 
 // When Activity5 button is clicked
-function CyberBullyingActivityActivity() {
+function CyberBullyingActivity() {
     var five = document.getElementById('home');
     five.innerHTML = `
     <form id="quiz" name="quiz">

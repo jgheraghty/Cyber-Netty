@@ -13,7 +13,9 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             document.getElementById("userGreeting").innerHTML = '<h1>' + firebaseUser.displayName + ', Welcome to Cyber Netty! </h1>';
+            document.getElementById("progressRep").innerHTML = '<p>' + firebaseUser.readUserData(1, correct) + '</p>';
             activities.classList.remove('hide');
+            progress.classList.remove('hide');
             joinNetty.classList.add('hide');
             navAlign.classList.remove('navbar-right');
             btnLogout.classList.remove('hide');
@@ -23,6 +25,7 @@
             console.log('Logged in');
         } else {
             activities.classList.add('hide');
+            progress.classList.add('hide');
             joinNetty.classList.remove('hide');
             navAlign.classList.add('navbar-right');
             btnLogout.classList.add('hide');

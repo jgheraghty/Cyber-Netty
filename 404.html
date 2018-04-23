@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Home</title>
+    <title>404 - Page Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap Core CSS -->
@@ -68,24 +68,36 @@
             <div class="character">:D</div>
         </div>-->
         <div class="jumbotron info-about">
-            <nav class="navbar navbar-default">
+            <nav class="navbar">
                 <div class="container-fluid navBar">
                     <div class="navbar-header">
                         <!--<a class="navbar-brand" href="index.html">Cyber Secure</a>-->
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="index.html">Home
-                                    <!--<span class="glyphicon glyphicon-home home"></span>-->
-                                </a>
+                                <a id="btnHome" href="index.html">Home
+                                            <!--<span class="glyphicon glyphicon-home home"></span>-->
+                                        </a>
+                            </li>
+                        </ul>
+                        <ul id="navAlign" class="nav navbar-nav navbar-right">
+                            <li>
+                                <a id="joinNetty" class="hide" href="join.html">Join Netty
+                                            <!--<span id="authentication" class="glyphicon glyphicon-user user"></span>-->
+                                        </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-left">
+                            <li>
+                                <a id="progress" class="hide" href="progress.html">Progress</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="join.html">Join Netty
-                                    <!--<span id="authentication" class="glyphicon glyphicon-user user"></span>-->
-                                </a>
+                                <a id="btnLogout" class="hide">Log Out</a>
+                                <!--<button id="btnLogout" class="hide">Log out</button>-->
                             </li>
                         </ul>
+
                     </div>
                 </div>
             </nav>
