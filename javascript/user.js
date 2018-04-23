@@ -1,6 +1,5 @@
 (function() {
     // Initialize Firebase
-    databaseTest();
     var config = {
         apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
         authDomain: "project400-cybersecurity.firebaseapp.com",
@@ -11,10 +10,6 @@
     };
     firebase.initializeApp(config);
 
-    /*
-    // auth.signInWithEmailAndPassword(email, password);
-    // auth.createUserWithEmailAndPassword(email, password);
-    */
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             document.getElementById("userGreeting").innerHTML = '<h1>' + firebaseUser.displayName + ', Welcome to Cyber Netty! </h1>';
@@ -103,16 +98,6 @@
         readUserData();
     });
 
-    function readUserData() {
-        var userId = firebase.auth().currentUser.uid;
-        return firebase.database().ref('users/' + userId).once('value')
-            .then(function(snapshot) {
-                console.log(snapshot.val());
-            })
-            .catch(e => {
-                console.log(e);
-            });
-    }
 
     //////////////////////////////////////////
     // More read stuff

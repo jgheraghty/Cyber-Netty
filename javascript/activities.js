@@ -68,30 +68,6 @@ function StrangerDangerActivity() {
     <p id="message"></p>
 
     `;
-
-    /*<h2>Match the Numbers!</h2>
-        <div id="content">
-            <div id="deck"> </div>
-            <div id="cardPlace"> </div>
-            <div id="win">                    
-                <h2>Match the Numbers!</h2>
-                <button onclick="play()">Play!</button>
-            </div>
-        </div>*/
-
-    /*
-    x.parentNode.removeChild(x);
-    var y = document.createElement('activity1-content');
-    //y.innerHTML = ("Stscorer Danger");
-    y.style.borderRadius = "0px 0px 25px 25px";
-    y.style.color = "black";
-    y.style.backgroundColor = "purple";
-    y.style.marginTop = "80px";
-    y.style.marginRight = "290px";
-    y.style.marginLeft = "80px";
-    y.style.fontSize = "50px";
-    y.style.textAlign = "center";
-    */
 }
 
 function StrangerDanger() {
@@ -129,13 +105,12 @@ function StrangerDanger() {
 
     const data = {
         complete: true,
-        score: 'number_correct'
+        score: correct
     };
     writeUserData(1, data);
 
-
     document.getElementById('after_submit').style.visibility = "visible";
-    document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
+    document.getElementById('number_correct').innerHTML = "You got " + correct + "/3 correct";
     document.getElementById('message').innerHTML = messages[score];
 }
 
@@ -275,7 +250,7 @@ function Share() {
         correct++;
     }*/
 
-    var messages = ["You did it!", "Not quite!", "Try again"];
+    var messages = ["You did it!"]; //, "Not quite!", "Try again"];
 
     var score;
 
