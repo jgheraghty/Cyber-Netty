@@ -134,14 +134,7 @@ function TheInternetActivity() {
     <form id="quiz" name="quiz">
 
     <p class="questions">Question:</p>
-    <p>The Internet is a</p>
-    <input id="textbox" type="text" name="question1"/>
-    <p> of networks, a networking infrastructure. It</p>
-    <input id="textbox" type="text" name="question2"/>
-    <p> globally, forming a network in which any computer can</p>
-    <input id="textbox" type="text" name="question3"/>
-    <p> with any other computer, as long as they are both connected to the</p>
-    <input id="textbox" type="text" name="question4"/><p>.</p>
+    <p>The Internet is a </p><input id="textbox" type="text" name="question1"/><p> of networks, a networking infrastructure. It </p><input id="textbox" type="text" name="question2"/><p> globally, forming a network in which any computer can </p><input id="textbox" type="text" name="question3"/><p> with any other computer, as long as they are both connected to the </p><input id="textbox" type="text" name="question4"/><p>.</p>
 
     <h2>Suggested words:</h2>
     <p>communicate</p>
@@ -199,7 +192,7 @@ function TheInternet() {
     }
 
     document.getElementById('after_submit').style.visibility = "visible";
-    document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
+    document.getElementById('number_correct').innerHTML = "You got " + correct + "/4 correct";
     document.getElementById('message').innerHTML = messages[score];
 }
 
@@ -268,7 +261,7 @@ function Share() {
     }*/
 
     document.getElementById('after_submit').style.visibility = "visible";
-    document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
+    document.getElementById('number_correct').innerHTML = "You got " + correct + "/1 correct";
     document.getElementById('message').innerHTML = messages[score];
 }
 
