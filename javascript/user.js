@@ -1,5 +1,6 @@
 (function() {
     // Initialize Firebase
+    databaseTest();
     var config = {
         apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
         authDomain: "project400-cybersecurity.firebaseapp.com",
@@ -84,20 +85,16 @@
     //////////////////////////////////////////
     btnWriteToDB.addEventListener('click', e => {
         // Get a reference to the database service
-        var userId = firebase.auth().currentUser.uid;
         const data = {
             complete: true,
             score: 78,
             date: '01/01/1990'
         };
-        writeUserData(userId, 3, data);
+        writeUserData(9, data);
         // save the user's profile into Firebase so we can list users,
         // use them in Security and Firebase Rules, and show profiles
     });
 
-    function writeUserData(userId, activityId, data) {
-        firebase.database().ref('users/' + userId + '/activity/' + activityId).set(data);
-    }
 
     //////////////////////////////////////////
     // read from db once
@@ -106,9 +103,9 @@
         readUserData();
     });
 
-    function readUserData(userId) {
-        // 2u067jzWiNdHVTcJGNMedHduB8m2
-        return firebase.database().ref('/users/2u067jzWiNdHVTcJGNMedHduB8m2/').once('value')
+    function readUserData() {
+        var userId = firebase.auth().currentUser.uid;
+        return firebase.database().ref('users/' + userId).once('value')
             .then(function(snapshot) {
                 console.log(snapshot.val());
             })

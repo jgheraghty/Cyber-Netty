@@ -127,6 +127,13 @@ function StrangerDanger() {
         score = 0;
     }
 
+    const data = {
+        complete: true,
+        score: 'number_correct'
+    };
+    writeUserData(1, data);
+
+
     document.getElementById('after_submit').style.visibility = "visible";
     document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
     document.getElementById('message').innerHTML = messages[score];
@@ -222,7 +229,7 @@ function TheInternet() {
 }
 
 // When Activity3 button is clicked
-function SharingActivityActivity() {
+function SharingActivity() {
     var three = document.getElementById('home');
     three.innerHTML = `<form id="quiz" name="quiz">
 
