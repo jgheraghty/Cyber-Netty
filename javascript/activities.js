@@ -191,6 +191,13 @@ function TheInternet() {
         score = 0;
     }
 
+    const data = {
+        complete: true,
+        score: correct
+    };
+    writeUserData(2, data);
+
+
     document.getElementById('after_submit').style.visibility = "visible";
     document.getElementById('number_correct').innerHTML = "You got " + correct + "/4 correct";
     document.getElementById('message').innerHTML = messages[score];
@@ -259,6 +266,12 @@ function Share() {
     if (correct > 2) {
         score = 0;
     }*/
+
+    const data = {
+        complete: true,
+        score: correct
+    };
+    writeUserData(3, data);
 
     document.getElementById('after_submit').style.visibility = "visible";
     document.getElementById('number_correct').innerHTML = "You got " + correct + "/1 correct";
@@ -335,6 +348,12 @@ function PInfo() {
         score = 0;
     }
 
+    const data = {
+        complete: true,
+        score: correct
+    };
+    writeUserData(4, data);
+
     document.getElementById('after_submit').style.visibility = "visible";
     document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
     document.getElementById('message').innerHTML = messages[score];
@@ -391,6 +410,12 @@ function CyberBully() {
     if (correct > 0 && correct < 2) {
         score = 1;
     }
+
+    const data = {
+        complete: true,
+        score: correct
+    };
+    writeUserData(5, data);
 
     document.getElementById('after_submit').style.visibility = "visible";
     document.getElementById('number_correct').innerHTML = "You got " + correct + " correct";
