@@ -396,16 +396,11 @@ input {
 }
 
 .logoTop {
-    /*font-family: logoFont;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 110px;
-    color: #b2dff9;
-    letter-spacing: 1px;
-    float: left;*/
-    /*font-size: 650px;
-    margin-top: 100px;
-    margin-left: 120px;
-    background-image: url("../images/CyberNetty_Logo.png");*/
+    float: left;
+    margin-top: 35px;
+    margin-left: 100px;
+    width: 300px;
+    height: 140px;
 }
 
 .character {
@@ -474,7 +469,7 @@ input {
     /*width: 200px;
     height: 150px;
     margin-top: 80px;*/
-    margin-right: 290px;
+    /*margin-right: 290px;*/
     /*margin-left: 80px;*/
     font-size: 50px;
     /*text-align: center;*/
@@ -591,185 +586,12 @@ h4 {
     user-select: none;
 }
 
-
-/* Winner message */
-
-#win {
-    position: absolute;
-    left: 650px;
-    top: 550px;
-    width: 400;
-    height: 100;
-    z-index: 100;
-    background: green;
-    border: 2px solid #333;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-    box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
-    padding: 20px;
-}
-
-
-/*#win h2 {
-	width: 400px;
-	color: white;
-	margin-top:280px;
-	position:absolute;
-	text-align:center;
-	margin: 0 0 25px 0; 
-	padding: 0 0 10px 0; 
-	font-weight: bold; 
-	border-bottom: 
-	3px solid #443022; 
-	display: block; 
-	font-size: 16px; 
-}*/
-
 button {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
     color: green;
     width: 100px;
     height: 30px;
     font-size: 18px;
-}
-
-.wideBox {
-    clear: both;
-    text-align: left;
-    margin: 70px;
-    padding: 10px;
-    background: #ebedf2;
-    /*border: 1px solid #333;*/
-}
-
-.wideBox h1 {
-    font-weight: bold;
-    margin: 20px;
-    color: #666;
-    font-size: 1.5em;
-}
-
-#cardPlace {
-    margin: 50px auto 0 auto;
-    background: skyblue;
-}
-
-
-/* ------ */
-
-#div1 {
-    width: 350px;
-    height: 170px;
-    padding: 10px;
-    background-color: grey;
-    /*border: 1px solid #aaaaaa;*/
-}
-
-
-/* The initial pile of unsorted cards */
-
-#deck {
-    margin: 0 auto;
-    background: purple
-}
-
-#cardPlace,
-#deck {
-    width: 580px;
-    height: 250px;
-    padding: 10px;
-    border: 2px dotted white;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-    box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-}
-
-
-/* Individual cards and places */
-
-#cardPlace div,
-#deck div {
-    float: left;
-    width: 100px;
-    height: 78px;
-    padding: 10px;
-    padding-top: 40px;
-    padding-bottom: 0;
-    border: 2px solid #333;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    margin: 0 0 0 0px;
-    background: pink;
-}
-
-#cardPlace div:first-child,
-#deck div:first-child {
-    margin-left: 0;
-}
-
-#cardPlace div.hovered {
-    background: green;
-}
-
-#cardPlace div {
-    border-style: dashed;
-}
-
-#deck div {
-    background: green;
-    color: pink;
-    font-size: 40px;
-    text-shadow: 0 0 3px black;
-}
-
-#deck div.ui-draggable-dragging {
-    -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-    box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
-}
-
-
-/* Individually coloured cards */
-
-#card1.correct {
-    background: red;
-}
-
-#card2.correct {
-    background: orange;
-}
-
-#card3.correct {
-    background: yellow;
-}
-
-#card4.correct {
-    background: lightgreen;
-}
-
-#card5.correct {
-    background: green;
-}
-
-#card6.correct {
-    background: blue;
-}
-
-#card7.correct {
-    background: cyan;
-}
-
-#card8.correct {
-    background: violet;
-}
-
-#card9.correct {
-    background: purple;
-}
-
-#card10.correct {
-    background: indigo;
 }
 
 
@@ -863,5 +685,98 @@ input {
 @media (min-width: 768px) {
     .modal-sm {
         width: 700px;
+    }
+}
+
+
+/*.logoTop {
+    float: left;
+    margin-top: 20px;
+    margin-left: 60px;
+    width: 800px;
+    height: 150px;
+}*/
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .jumbotron p {
+        font-size: 11px;
+    }
+    .info-about {
+        border-radius: 5px;
+        background: #81cbec;
+        background-repeat: no-repeat;
+        /*background-size: 100% 100%;*/
+        color: black;
+        /*opacity: 0.7;*/
+        padding: 5px;
+        /*width: 200px;
+        height: 150px;*/
+        /*margin-top: 200px;*/
+        margin-right: 35px;
+        margin-left: 35px;
+        /*font-size: 11px;
+        text-align: center;*/
+    }
+    .inside-about {
+        border-radius: 0px 0px 25px 25px;
+        background: lavender;
+        background-repeat: no-repeat;
+        /*background-size: 100% 100%;*/
+        color: black;
+        /*opacity: 0.7;*/
+        padding: 20px;
+        /*width: 200px;
+        height: 150px;*/
+        margin-top: auto;
+        margin-right: 1px;
+        margin-left: 1px;
+        font-size: 11px;
+        /*text-align: center;*/
+    }
+    .logoTop {
+        float: left;
+        margin-top: 25px;
+        margin-left: 20px;
+        width: 120px;
+        height: 40px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    .example {
+        background: green;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .example {
+        background: blue;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .example {
+        background: orange;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    .example {
+        background: pink;
     }
 }

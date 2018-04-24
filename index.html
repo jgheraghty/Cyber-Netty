@@ -60,9 +60,8 @@
 <body onload="setUpListeners()">
     <div class="row">
         <div class="col-sm-12">
-            <div class="logoTop">
-                <h1><i>Cyber Netty</i></h1>
-                <!--<img src="../images/CyberNetty_Logo.png" />-->
+            <div>
+                <img class="logoTop" src="./images/CyberNetty_Logo.png" />
             </div>
         </div>
         <!--<div class="col-sm-4">
@@ -76,7 +75,7 @@
                         <!--<a class="navbar-brand" href="index.html">Cyber Secure</a>-->
                         <ul class="nav navbar-nav">
                             <li>
-                                <a id="btnHome" href="index.html">Home
+                                <a id="btnHome" href="media-test.html">Home
                                     <!--<span class="glyphicon glyphicon-home home"></span>-->
                                 </a>
                             </li>
@@ -115,36 +114,36 @@
             <div class="container-fluid">
                 <div class="row inside-about">
                     <div class="row">
-                        <div class="col-sm-12">
-                            <div class="col-sm-8 main">
-                                <div id="home" class="main-about">
-                                    <div>
-                                        <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
-                                    </div>
-                                    <br>
-                                    <div class="hide">
-                                        <label for="email">Email:</label>
-                                        <br/>
-                                        <input type="email" id="email" style="padding-top:5px" />
-                                        <br/>
-                                        <br/>
-                                        <label for="password">Password:</label>
-                                        <br/>
-                                        <input type="password" id="password" style="padding-top:5px" />
-                                        <br/>
-                                        <br/>
-                                        <button id="btnLogin">Log in</button>
-                                        <button id="btnSignUp">Sign up</button>
-                                        <!--<button id="btnLogout" class="hide">Log out</button>-->
-                                        <button id="btnWriteToDB" class="hide">Write</button>
-                                        <button id="btnReadFromDb">Read</button>
-
-                                    </div>
+                        <!--<div class="col-sm-12">-->
+                        <div class="col-sm-8 main">
+                            <div id="home" class="main-about">
+                                <div>
+                                    <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
+                                </div>
+                                <br>
+                                <div class="hide">
+                                    <label for="email">Email:</label>
                                     <br/>
-                                    <div>
-                                        <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock activites.
-                                        </h3>
-                                        <!--<script>
+                                    <input type="email" id="email" style="padding-top:5px" />
+                                    <br/>
+                                    <br/>
+                                    <label for="password">Password:</label>
+                                    <br/>
+                                    <input type="password" id="password" style="padding-top:5px" />
+                                    <br/>
+                                    <br/>
+                                    <button id="btnLogin">Log in</button>
+                                    <button id="btnSignUp">Sign up</button>
+                                    <!--<button id="btnLogout" class="hide">Log out</button>-->
+                                    <button id="btnWriteToDB" class="hide">Write</button>
+                                    <button id="btnReadFromDb">Read</button>
+
+                                </div>
+                                <br/>
+                                <div>
+                                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock activites.
+                                    </h3>
+                                    <!--<script>
                                             firebase.auth().onAuthStateChanged(function(user) {
                                                 if (user) {
                                                     document.getElementById("userGreeting").innerHTML = '<h1> Hey there, ' + user.displayName + '! </h1>';
@@ -160,162 +159,162 @@
 
                                             });
                                         </script>-->
-                                    </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Activity 1 -->
-                            <div class="modal fade" id="Activity1" role="dialog">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Stranger Danger</h4>
-                                        </div>
-                                        <div class="modal-body activityFont">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body interact">Beware of people you talk to or interact with online</div>
-                                            </div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-body mask">Some people use the internet as a mask to hide behind to be destructive to others</div>
-                                            </div>
-                                            <div class="panel panel-default">
-                                                <div class="panel-body meet">Never meet anyone you met online in person</div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
+                        <!-- Activity 1 -->
+                        <div class="modal fade" id="Activity1" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Stranger Danger</h4>
                                     </div>
-                                </div>
-                            </div>
-
-                            <!-- Activity 2 -->
-                            <div class="modal fade" id="Activity2" role="dialog">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">The Internet</h4>
-                                        </div>
-                                        <div class="modal-body activityFont">
-                                            <div class="panel panel-default">
-                                                <div class="panel-body internet">Definition of the internet</div>
-                                            </div>
-                                            <p>The Internet is a massive network of networks, a networking infrastructure. It connects millions of computers together globally, forming a network in which any computer can communicate with any other computer
-                                                as long as they are both connected to the internet.</p>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Activity 3 -->
-                            <div class="modal fade" id="Activity3" role="dialog">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Sharing</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Posting online is like standing on the street, shouting into a megaphone: Everyone can see your pictures and your opinions. Once you put it out there, you can't take it back.</p>
-
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Activity 4 -->
-                            <div class="modal fade" id="Activity4" role="dialog">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Personal Information</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Never put your personal information online</p>
-                                            <p> - Full Name </p>
-                                            <p> - Age </p>
-                                            <p> - Address </p>
-                                            <p> - Phone Number </p>
-                                            <p> - Password </p>
-
-                                            <p>Your personal information is your identity - if you put this online, someone could steal it.</p>
-
-                                            <p>And remember, you should never give your passwords to anyone.. Not even your friends!</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Activity 5 -->
-                            <div class="modal fade" id="Activity5" role="dialog">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Activity 5</h4>
-                                        </div>
-                                        <div class="modal-body">
-
-                                            <img src="images/Unsure_Netty.svg" />
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Activity 6 -->
-                            <div class="modal fade" id="Activity6" role="dialog">
-                                <div class="modal-dialog modal-sm">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Activity 6</h4>
-                                        </div>
-
-                                        <img id="activityImg" src="images/StrangerDanger.png" />
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div id="activities" class="activity-about">
+                                    <div class="modal-body activityFont">
                                         <div class="panel panel-default">
-                                            <div class="panel-heading">Activities</div>
-                                            <div class="panel-body">
-                                                <p>Click to play each activity</p>
-                                                <button id="a1" type="button activity-1" class="btn btn-info btn-lg btnStranger" data-toggle="modal" data-target="#Activity1"></button>
-                                                <button id="a2" type="button activity-2" class="btn btn-info btn-lg btnInternet" data-toggle="modal" data-target="#Activity2">2</button>
-                                                <button id="a3" type="button activity-3" class="btn btn-info btn-lg btnSharing" data-toggle="modal" data-target="#Activity3">3</button>
-                                                <button id="a4" type="button activity-4" class="btn btn-info btn-lg btnPicsOpins" data-toggle="modal" data-target="#Activity4">4</button>
-                                                <button id="a5" type="button activity-5" class="btn btn-info btn-lg btnBully" data-toggle="modal" data-target="#Activity5">5</button>
-                                                <button id="a6" type="button activity-6" class="btn btn-info btn-lg btnProtocol" data-toggle="modal" data-target="#Activity6">6</button>
-                                            </div>
+                                            <div class="panel-body interact">Beware of people you talk to or interact with online</div>
                                         </div>
-                                        <!--<img src="Netty.png" class="img-rounded" alt="Information Netty">-->
+                                        <div class="panel panel-default">
+                                            <div class="panel-body mask">Some people use the internet as a mask to hide behind to be destructive to others</div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-body meet">Never meet anyone you met online in person</div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
 
-                                <!--<div class="col-sm-4">
+                        <!-- Activity 2 -->
+                        <div class="modal fade" id="Activity2" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">The Internet</h4>
+                                    </div>
+                                    <div class="modal-body activityFont">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body internet">Definition of the internet</div>
+                                        </div>
+                                        <p>The Internet is a massive network of networks, a networking infrastructure. It connects millions of computers together globally, forming a network in which any computer can communicate with any other computer as
+                                            long as they are both connected to the internet.</p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 3 -->
+                        <div class="modal fade" id="Activity3" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Sharing</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Posting online is like standing on the street, shouting into a megaphone: Everyone can see your pictures and your opinions. Once you put it out there, you can't take it back.</p>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 4 -->
+                        <div class="modal fade" id="Activity4" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Personal Information</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Never put your personal information online</p>
+                                        <p> - Full Name </p>
+                                        <p> - Age </p>
+                                        <p> - Address </p>
+                                        <p> - Phone Number </p>
+                                        <p> - Password </p>
+
+                                        <p>Your personal information is your identity - if you put this online, someone could steal it.</p>
+
+                                        <p>And remember, you should never give your passwords to anyone.. Not even your friends!</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 5 -->
+                        <div class="modal fade" id="Activity5" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Activity 5</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <img src="images/Unsure_Netty.svg" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 6 -->
+                        <div class="modal fade" id="Activity6" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">Activity 6</h4>
+                                    </div>
+
+                                    <img id="activityImg" src="images/StrangerDanger.png" />
+
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div id="activities" class="activity-about">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Activities</div>
+                                        <div class="panel-body">
+                                            <p>Click to play each activity</p>
+                                            <button id="a1" type="button activity-1" class="btn btn-info btn-lg btnStranger" data-toggle="modal" data-target="#Activity1"></button>
+                                            <button id="a2" type="button activity-2" class="btn btn-info btn-lg btnInternet" data-toggle="modal" data-target="#Activity2">2</button>
+                                            <button id="a3" type="button activity-3" class="btn btn-info btn-lg btnSharing" data-toggle="modal" data-target="#Activity3">3</button>
+                                            <button id="a4" type="button activity-4" class="btn btn-info btn-lg btnPicsOpins" data-toggle="modal" data-target="#Activity4">4</button>
+                                            <button id="a5" type="button activity-5" class="btn btn-info btn-lg btnBully" data-toggle="modal" data-target="#Activity5">5</button>
+                                            <button id="a6" type="button activity-6" class="btn btn-info btn-lg btnProtocol" data-toggle="modal" data-target="#Activity6">6</button>
+                                        </div>
+                                    </div>
+                                    <!--<img src="Netty.png" class="img-rounded" alt="Information Netty">-->
+                                </div>
+                            </div>
+
+                            <!--<div class="col-sm-4">
                                     <div class="netty-about">
                                         <div class="panel panel-default">
                                             <div class="panel-heading">Information</div>
@@ -331,7 +330,7 @@
                                         </div>
                                     </div>
                                 </div>-->
-                            </div>
+                            <!--</div>-->
                         </div>
                     </div>
                 </div>
