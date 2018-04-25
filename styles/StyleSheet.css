@@ -1,16 +1,5 @@
 /*StyleSheet*/
 
-
-/*---Custom Font---*/
-
-
-/*@font-face {
-    font-family: logoFont;
-    src: url(Wicked_Mouse_Demo.otf);
-    font-weight: bold;
-}*/
-
-
 /* Background blue = #81dbfe */
 
 .main {
@@ -598,9 +587,9 @@ button {
 /* -- Stranger Danger Activity -- */
 
 #quiz {
-    margin-left: 10px;
+    margin-left: 2px;
     padding: 10px 20px 10px 20px;
-    width: 150%;
+    width: 100%;
     font-size: 35px;
 }
 
@@ -758,8 +747,8 @@ input {
 /* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (min-width: 768px) {
-    .example {
-        background: blue;
+    .jumbotron p {
+        font-size: 18px;
     }
 }
 
