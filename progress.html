@@ -55,6 +55,17 @@
         ui.start('#firebaseui-auth-container', uiConfig);
     </script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+
+    </script>
+
 </head>
 
 <body onload="setUpListeners()">
@@ -83,7 +94,7 @@
                                         </a>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-left">
+                        <ul class="nav navbar-nav">
                             <li>
                                 <a id="progress" class="hide" href="progress.html">Progress</a>
                             </li>

@@ -55,6 +55,17 @@
         ui.start('#firebaseui-auth-container', uiConfig);
     </script>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+
+    </script>
+
 </head>
 
 <body onload="setUpListeners()">
@@ -126,7 +137,7 @@
                                     <div>
                                         <p>The page you entered does not exist.</p>
                                         <h3>What do you do now?</h3>
-                                        <p>Check the URL you have entered and try again. Otherwise, click <span class="glyphicon glyphicon-home"></span> to go Home.
+                                        <p>Check the URL you have entered and try again. Otherwise, click <span class="glyphicon glyphicon-home"></span>                                            to go Home.
                                         </p>
 
 
