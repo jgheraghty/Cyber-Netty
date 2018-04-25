@@ -29,6 +29,18 @@ function drop(ev) {
 function StrangerDangerActivity() {
     var one = document.getElementById('home');
     one.innerHTML = `
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+
+    </script>
+
     <!--<div>
         <div class="panel panel-default">
             <div class="panel-body mask">Stscorer Danger</div>                    
@@ -117,19 +129,18 @@ function StrangerDanger() {
 // When Activity2 button is clicked
 function TheInternetActivity() {
     var two = document.getElementById('home');
-    two.innerHTML = `         
+    two.innerHTML = `
 
-    <!--<div class="panel panel-default">
-        <div class="panel-body mask">The Internet</div>                    
-    </div>
-<div class="panel-body">What is the internet?</div>
-    <form>
-        <input type="radio" name="internet" value="this" checked> This<br>
-        <input type="radio" name="internet" value="that"> That<br>
-        <input type="radio" name="internet" value="other"> Other  
-    </form> 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    <button id="correctInternet" class="btnSubmit" type="submit">Submit</button>-->
+        gtag('config', 'UA-118121632-1');
+
+    </script>       
 
     <form id="quiz" name="quiz">
 
@@ -206,7 +217,20 @@ function TheInternet() {
 // When Activity3 button is clicked
 function SharingActivity() {
     var three = document.getElementById('home');
-    three.innerHTML = `<form id="quiz" name="quiz">
+    three.innerHTML = `
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+
+    </script>
+
+    <form id="quiz" name="quiz">
 
     <p class="questions">Question 1: The internet is like.. </p>
     <input id="mc" type="radio" name="question1" value="option1">Floating through the sky in a hot air balloon<br>
@@ -282,6 +306,18 @@ function Share() {
 function PersonalInformationActivity() {
     var four = document.getElementById('home');
     four.innerHTML = `
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+
+    </script>
+
     <form id="quiz" name="quiz">
 
     <p class="questions">Question 1: True or False, it's okay to give your password to your friends </p>
@@ -363,6 +399,18 @@ function PInfo() {
 function CyberBullyingActivity() {
     var five = document.getElementById('home');
     five.innerHTML = `
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+
+    </script>
+
     <form id="quiz" name="quiz">
 
     <p class="questions">Question:</p>
