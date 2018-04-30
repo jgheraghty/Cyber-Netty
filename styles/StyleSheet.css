@@ -24,7 +24,7 @@ body {
 }
 
 .jumbotron {
-    margin-top: 200px;
+    margin-top: 180px;
 }
 
 
@@ -650,6 +650,9 @@ input {
     .jumbotron p {
         font-size: 18px;
     }
+    /*.jumbotron {
+    margin-top: 40px;
+}*/
 }
 
 

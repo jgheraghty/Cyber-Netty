@@ -1,4 +1,4 @@
-(function() {
+(function () {
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
@@ -17,7 +17,7 @@
             activities.classList.remove('hide');
             progress.classList.remove('hide');
             joinNetty.classList.add('hide');
-            navAlign.classList.remove('navbar-right');
+            joinNetty.classList.remove('navbar-right');
             btnLogout.classList.remove('hide');
             btnWriteToDB.classList.remove('hide');
             btnLogin.classList.add('hide');
