@@ -10,9 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <link href="styles/StyleSheet.css" rel="stylesheet" />
 
@@ -59,11 +59,13 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
         gtag('js', new Date());
 
         gtag('config', 'UA-118121632-1');
-
     </script>
 
 </head>
@@ -75,27 +77,19 @@
                 <img class="logoTop" src="./images/CyberNetty_Logo.png" />
             </div>
         </div>
-        <!--<div class="col-sm-4">
-            <div class="character">:D</div>
-        </div>-->
 
         <div class="jumbotron info-about">
-            <nav class="navbar">
+            <!--<nav class="navbar">
                 <div class="container-fluid navBar">
                     <div class="navbar-header">
-                        <!--<a class="navbar-brand" href="index.html">Cyber Secure</a>-->
                         <ul class="nav navbar-nav">
                             <li>
-                                <a id="btnHome" href="media-test.html">Home
-                                    <!--<span class="glyphicon glyphicon-home home"></span>-->
-                                </a>
+                                <a id="btnHome" href="index.html">Home</a>
                             </li>
                         </ul>
                         <ul id="navAlign" class="nav navbar-nav navbar-right">
                             <li>
-                                <a id="joinNetty" class="hide" href="join.html">Join Netty
-                                    <!--<span id="authentication" class="glyphicon glyphicon-user user"></span>-->
-                                </a>
+                                <a id="joinNetty" class="hide" href="join.html">Join Netty</a>
                             </li>
                         </ul>
                         <ul class="nav navbar-nav">
@@ -106,21 +100,76 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a id="btnLogout" class="hide">Log Out</a>
-                                <!--<button id="btnLogout" class="hide">Log out</button>-->
                             </li>
                         </ul>
 
                     </div>
                 </div>
+            </nav>-->
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container navBar">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a id="btnHome" class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a id="joinNetty" class="nav-item navbar-right nav-link" href="join.html">Join Netty</a>
+                            <a id="progress" class="nav-item nav-link hide" href="progress.html">Progress</a>
+                            <a id="btnLogout" class="nav-item navbar-right hide">Log Out</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
 
-            <!--<li><a href="signup.html"><span class="glyphicon glyphicon-user user"></span></a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-log-in login"></span></a></li>-->
-            <!--<li>
-                                <a href="activities.html">
-                                    <span id="activities" class="glyphicon glyphicon-book info hide"></span>
-                                </a>
-                            </li>-->
+            <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">Hidden brand</a>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>-->
+
+            <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">Hidden brand</a>
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>-->
 
             <div class="container-fluid">
                 <div class="row inside-about">
@@ -152,8 +201,7 @@
                                 </div>
                                 <br/>
                                 <div>
-                                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities
-                                        and unlock activites.
+                                    <h3>Join Netty on a quest to discover important facts about cyber space, complete fun activities and unlock activites.
                                     </h3>
                                     <!--<script>
                                             firebase.auth().onAuthStateChanged(function(user) {
@@ -174,6 +222,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Activities -->
 
                         <!-- Activity 1 -->
                         <div class="modal fade" id="Activity1" role="dialog">
@@ -213,10 +263,8 @@
                                         <div class="panel panel-default">
                                             <div class="panel-body internet">Definition of the internet</div>
                                         </div>
-                                        <p>The Internet is a massive network of networks, a networking infrastructure. It connects
-                                            millions of computers together globally, forming a network in which any computer
-                                            can communicate with any other computer as long as they are both connected to
-                                            the internet.</p>
+                                        <p>The Internet is a massive network of networks, a networking infrastructure. It connects millions of computers together globally, forming a network in which any computer can communicate with any other computer as
+                                            long as they are both connected to the internet.</p>
 
                                     </div>
                                     <div class="modal-footer">
@@ -235,9 +283,7 @@
                                         <h4 class="modal-title">Sharing</h4>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Posting online is like standing on the street, shouting into a megaphone: Everyone
-                                            can see your pictures and your opinions. Once you put it out there, you can't
-                                            take it back.</p>
+                                        <p>Posting online is like standing on the street, shouting into a megaphone: Everyone can see your pictures and your opinions. Once you put it out there, you can't take it back.</p>
 
                                     </div>
                                     <div class="modal-footer">
@@ -263,8 +309,7 @@
                                         <p> - Phone Number </p>
                                         <p> - Password </p>
 
-                                        <p>Your personal information is your identity - if you put this online, someone could
-                                            steal it.</p>
+                                        <p>Your personal information is your identity - if you put this online, someone could steal it.</p>
 
                                         <p>And remember, you should never give your passwords to anyone.. Not even your friends!</p>
                                     </div>
@@ -327,27 +372,8 @@
                                             <button id="a6" type="button activity-6" class="btn btn-info btn-lg btnProtocol" data-toggle="modal" data-target="#Activity6">6</button>
                                         </div>
                                     </div>
-                                    <!--<img src="Netty.png" class="img-rounded" alt="Information Netty">-->
                                 </div>
                             </div>
-
-                            <!--<div class="col-sm-4">
-                                    <div class="netty-about">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">Information</div>
-                                            <div class="panel-body">
-                                                <p>Click for information on each activity</p>
-                                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Activity1">1</button>
-                                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Activity2">2</button>
-                                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Activity3">3</button>
-                                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Activity4">4</button>
-                                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Activity5">5</button>
-                                                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#Activity6">6</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
-                            <!--</div>-->
                         </div>
                     </div>
                 </div>

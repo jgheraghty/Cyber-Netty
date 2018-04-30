@@ -1,5 +1,6 @@
 /*StyleSheet*/
 
+
 /* Background blue = #81dbfe */
 
 .main {
@@ -247,15 +248,8 @@ input {
     background-color: aquamarine;
 }
 
-#btnLogout {
-    /*float: left;
-    align-content: center;
-    margin-top: 10px;*/
-    /*padding: 20px;*/
-    /*width: 220px;
-    height: 60px;
-    font-size: 30px;
-    background-color: azure;*/
+
+/*#btnLogout {
     color: #ffffff;
     text-align: center;
     padding: 60px 30px 60px 30px;
@@ -314,20 +308,10 @@ input {
     text-align: center;
     padding: 60px 30px 60px 30px;
     display: inline-block;
-}
-
-
-/*#para {
-	border: 1px solid #DF8081;
-	padding: 30px;
-	margin-left: 237px;
-	margin-right: 237px;
-	margin-top: 10px;
-	background: white;
 }*/
 
 
-/*activities Styles*/
+/* -- Activity Information -- */
 
 .modal-content {
     background-color: #93d6ed;
@@ -340,7 +324,6 @@ input {
 .activity {
     border: whitesmoke solid 3px;
     background-color: peachpuff;
-    /*text-align: center;*/
     height: 100px;
     font-size: 30px;
     padding: 60px;
@@ -377,11 +360,9 @@ input {
 .info-home {
     border: whitesmoke solid 3px;
     background-color: #ffffff;
-    /*text-align: center;*/
     height: 100px;
     font-size: 60px;
     margin-top: 400px;
-    /*padding: 60px;*/
 }
 
 .logoTop {
@@ -400,105 +381,65 @@ input {
     border-radius: 30px;
     background: #81cbec;
     background-repeat: no-repeat;
-    /*background-size: 100% 100%;*/
     color: black;
-    /*opacity: 0.7;*/
     padding: 20px;
-    /*width: 200px;
-    height: 150px;*/
-    /*margin-top: 200px;*/
     margin-right: 100px;
     margin-left: 100px;
     font-size: 50px;
-    /*text-align: center;*/
 }
 
 .inside-about {
     border-radius: 0px 0px 25px 25px;
     background: lavender;
     background-repeat: no-repeat;
-    /*background-size: 100% 100%;*/
     color: black;
-    /*opacity: 0.7;*/
     padding: 20px;
-    /*width: 200px;
-    height: 150px;*/
     margin-top: auto;
     margin-right: auto;
     margin-left: auto;
     font-size: 50px;
-    /*text-align: center;*/
 }
 
 .landing-about {
     border-radius: 0px 0px 25px 25px;
-    /*background: lavender;*/
     background-repeat: no-repeat;
-    /*background-size: 100% 100%;*/
     color: #81cbec;
-    /*opacity: 0.7;*/
     padding: 20px;
-    /*width: 200px;
-        height: 150px;
-        margin-top: 80px;*/
     margin-right: 290px;
-    /*margin-left: 80px;*/
     font-size: 50px;
     text-align: center;
 }
 
 .main-about {
     border-radius: 0px 0px 25px 25px;
-    /*background: lavender;*/
     background-repeat: no-repeat;
-    /*background-size: 100% 100%;*/
     color: black;
-    /*opacity: 0.7;*/
     padding: 20px;
-    /*width: 200px;
-    height: 150px;
-    margin-top: 80px;*/
-    /*margin-right: 290px;*/
-    /*margin-left: 80px;*/
     font-size: 50px;
-    /*text-align: center;*/
 }
 
 .activity-about {
-    /*border-radius: 0px 0px 25px 25px;*/
     border-radius: 25px;
     background: #9de659;
     background-repeat: no-repeat;
-    /*background-size: 100% 100%;*/
     color: black;
-    /*opacity: 0.7;*/
     padding: 20px;
-    /*width: 260px;*/
     height: 470px;
-    /*margin-top: 200px;*/
     margin-right: auto;
     margin-left: auto;
-    /*float:right;*/
     font-size: 50px;
-    /*text-align: center;*/
 }
 
 .netty-about {
     border-radius: 25px;
     background: #9de659;
     background-repeat: no-repeat;
-    /*background-size: 100% 100%;*/
     color: black;
-    /*opacity: 0.7;*/
     padding: 20px;
-    /*width: 260px;*/
     height: 470px;
-    /*margin-top: 20px;*/
     margin-right: auto;
     margin-left: auto;
-    /*float:right;*/
     font-size: 50px;
-    /*text-align: center;*/
 }
 
 .btnStranger {
@@ -509,18 +450,31 @@ input {
 }
 
 
-/*.info-about img {
-    width: 100%;
-    height: auto;
-}*/
+/* -- Progress Page -- */
+
+.incomplete {
+    background-color: #f7c88c;
+    margin-top: 10px;
+    padding: 35px;
+    color: white;
+}
+
+.complete {
+    background-color: #bdd80e;
+    margin-top: 10px;
+    padding: 35px;
+    color: white;
+}
 
 
-/* Navbar */
+/* -- -- */
+
+
+/* -- Navbar -- */
 
 .navBar {
     background: #81cbec;
     height: 100px;
-    /*border: dotted 2px white;*/
 }
 
 .navbar-default {
@@ -529,7 +483,6 @@ input {
 
 .home::before,
 .info::before {
-    /*color: #fff66c;*/
     color: white;
     font-size: 65px;
     margin-left: 60px;
@@ -538,7 +491,6 @@ input {
 
 .login::before,
 .user::before {
-    /*color: #fff66c;*/
     color: white;
     font-size: 65px;
     margin-left: 60px;
@@ -549,42 +501,21 @@ input {
     font-size: 40px;
 }
 
-
-/*----------Match activity----------*/
-
-
-/*body {
-  margin: 30px;
-  font-family: "Georgia", serif;
-  line-height: 1.8em;
-  color: #333;
-}*/
-
 h1,
 h2,
 h3,
 h4 {
-    /*font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;*/
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 }
 
 #content {
-    /*margin: 80px 70px;*/
     text-align: center;
     -webkit-user-select: none;
     user-select: none;
 }
 
-button {
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-    color: green;
-    width: 100px;
-    height: 30px;
-    font-size: 18px;
-}
 
-
-/* -- Stranger Danger Activity -- */
+/* -- Activities -- */
 
 #quiz {
     margin-left: 2px;
@@ -601,7 +532,6 @@ input {
     height: 45px;
     font-size: 26px;
     border-radius: 5px;
-    /*border: lightgreen;*/
     padding-left: 5px;
 }
 
@@ -609,7 +539,7 @@ input {
     background: green;
     border: none;
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
     color: white;
     font-size: 16px;
     transition-duration: .5s;
@@ -640,11 +570,6 @@ input {
     font-size: 40px;
 }
 
-
-/*.activityFont {
-    font-size: 25px;
-}*/
-
 .interact {
     background-color: blueviolet;
     border-radius: 10px;
@@ -664,27 +589,18 @@ input {
     display: inline-block;
 }
 
-
-/* -- The Internet Information -- */
-
 .internet {
     background-color: indianred;
 }
+
+
+/* -- Media Queries -- */
 
 @media (min-width: 768px) {
     .modal-sm {
         width: 700px;
     }
 }
-
-
-/*.logoTop {
-    float: left;
-    margin-top: 20px;
-    margin-left: 60px;
-    width: 800px;
-    height: 150px;
-}*/
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -697,33 +613,21 @@ input {
         border-radius: 5px;
         background: #81cbec;
         background-repeat: no-repeat;
-        /*background-size: 100% 100%;*/
         color: black;
-        /*opacity: 0.7;*/
         padding: 5px;
-        /*width: 200px;
-        height: 150px;*/
-        /*margin-top: 200px;*/
         margin-right: 35px;
         margin-left: 35px;
-        /*font-size: 11px;
-        text-align: center;*/
     }
     .inside-about {
         border-radius: 0px 0px 25px 25px;
         background: lavender;
         background-repeat: no-repeat;
-        /*background-size: 100% 100%;*/
         color: black;
-        /*opacity: 0.7;*/
         padding: 20px;
-        /*width: 200px;
-        height: 150px;*/
         margin-top: auto;
         margin-right: 1px;
         margin-left: 1px;
         font-size: 11px;
-        /*text-align: center;*/
     }
     .logoTop {
         float: left;
@@ -737,11 +641,7 @@ input {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
-@media only screen and (min-width: 600px) {
-    .example {
-        background: green;
-    }
-}
+@media only screen and (min-width: 600px) {}
 
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -755,17 +655,9 @@ input {
 
 /* Large devices (laptops/desktops, 992px and up) */
 
-@media only screen and (min-width: 992px) {
-    .example {
-        background: orange;
-    }
-}
+@media only screen and (min-width: 992px) {}
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 
-@media only screen and (min-width: 1200px) {
-    .example {
-        background: pink;
-    }
-}
+@media only screen and (min-width: 1200px) {}

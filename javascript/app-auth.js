@@ -18,7 +18,7 @@
     const SignUp = document.getElementById("btnSignUp");
     const Logout = document.getElementById("btnLogout");
 
-    //Add login event
+    //Add Login event
     btnLogin.addEventListener('click', e => {
         //Get email and password
         const email = txtEmail.value;
@@ -31,7 +31,7 @@
         })
     })
 
-    //Add sign up event
+    //Add Sign Up event
     btnSignUp.addEventListener('click', e => {
         const email = txtEmail.value;
         const pass = txtPassword.value;
@@ -43,6 +43,7 @@
         })
     })
 
+    //Add Log Out event
     btnLogout.addEventListener('click', e => {
         firebase.auth().signOut();
     })

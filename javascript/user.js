@@ -13,7 +13,7 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             document.getElementById("userGreeting").innerHTML = '<h1>' + firebaseUser.displayName + ', Welcome to Cyber Netty! </h1>';
-            document.getElementById("progressRep").innerHTML = '<p>' + firebaseUser.readUserData(1, correct) + '</p>';
+            //document.getElementById("progressRep").innerHTML = '';
             activities.classList.remove('hide');
             progress.classList.remove('hide');
             joinNetty.classList.add('hide');

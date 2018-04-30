@@ -41,24 +41,9 @@ function StrangerDangerActivity() {
 
     </script>
 
-    <!--<div>
-        <div class="panel panel-default">
-            <div class="panel-body mask">Stscorer Danger</div>                    
-        </div>
-
-        <div class="panel-body">True or False: You should never meet anyone you met online in person?</div>
-            <br>
-            <button type="button" id="true">True</button>
-            <button type="button" id="false">False</button>        
-        </div>
-
-        <button onclick="TrueorFalse()" class="btnSubmit" type="submit">Submit</button>        
-    </div> --> 
-
     <form id="quiz" name="quiz">
 
     <p class="questions">Question 1: _______ of people you talk to or interact with online</p>
-    <!--<input id="textbox" type="text" name="question1"/>-->
     <input id="mc" type="radio" name="question1" value="take care">Take Care<br>
     <input id="mc" type="radio" name="question1" value="beware">Beware<br>
     <input id="mc" type="radio" name="question1" value="think">Think<br>
@@ -237,15 +222,6 @@ function SharingActivity() {
     <input id="mc" type="radio" name="question1" value="option2">Hanging out with Netty on the beach<br>
     <input id="mc" type="radio" name="question1" value="option3">Standing on the street, shouting into a megaphone<br>
 
-    <!--<p class="questions">Question 2: </p>
-    <input id="mc" type="radio" name="question2" value=""><br>    
-    <input id="mc" type="radio" name="question2" value=""><br>
-
-    <p class="questions">Question 3: </p>
-    <input id="mc" type="radio" name="question3" value=""><br>
-    <input id="mc" type="radio" name="question3" value=""><br>
-    <input id="mc" type="radio" name="question3" value=""><br>-->
-
     <input id="button" type="button" value="Submit" onclick="Share()">
     </form>
 
@@ -258,39 +234,21 @@ function SharingActivity() {
 
 function Share() {
     var question1 = document.quiz.question1.value;
-    /*var question2 = document.quiz.question2.value;
-    var question3 = document.quiz.question3.value;*/
+    
     var correct = 0;
 
     if (question1 == "option3") {
         correct++;
     }
 
-    /*if (question2 == "") {
-        correct++;
-    }
-
-    if (question3 == "") {
-        correct++;
-    }*/
-
-    var messages = ["You did it!"]; //, "Not quite!", "Try again"];
+    var messages = ["You did it!"];
 
     var score;
 
     if (correct) {
         score = 1;
     }
-    /*if (correct < 1) {
-        score = 2;
-    }
-    if (correct > 0 && correct < 3) {
-        score = 1;
-    }
-    if (correct > 2) {
-        score = 0;
-    }*/
-
+    
     const data = {
         complete: true,
         score: correct
@@ -340,15 +298,6 @@ function PersonalInformationActivity() {
     <p id="number_correct">
     <p id="message"></p>
 
-<!--<form action="">
-<input type="checkbox" name="pandos" value="One">This
-<br>
-<input type="checkbox" name="pandos" value="Two">This 
-<br>
-<input type="checkbox" name="pandos" value="Three">That
-<br>
-<input type="checkbox" name="pandos" value="Four">And That 
-</form>-->
     `;
 }
 

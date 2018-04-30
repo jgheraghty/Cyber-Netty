@@ -16,11 +16,6 @@ function readUserData() {
 
 function readUserActivityData() {
     var userId = firebase.auth().currentUser.uid;
-    return firebase.database().ref('users/' + userId + '/activity/').once('value')
-        .then(function(snapshot) {
-            console.log(snapshot.val());
-        })
-        .catch(e => {
-            console.log(e);
-        });
+    //var userId = 'k1E9WdhdQVQHjuJoJc2trg9O5j02';
+    return firebase.database().ref('users/' + userId + '/activity/').once('value');
 }
