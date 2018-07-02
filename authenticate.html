@@ -9,8 +9,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cyber Netty</title>
+    <title>CyberNetty &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
+    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="author" content="gettemplates.co" />
 
     <!-- Facebook and Twitter integration -->
     <meta property="og:title" content="" />
@@ -46,13 +49,26 @@
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
-	<![endif]-->
+    <![endif]-->
 
-    <link href="css/StyleSheet.css" rel="stylesheet" />
+    <!--<link href="css/StyleSheet.css" rel="stylesheet" />-->
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
+            authDomain: "project400-cybersecurity.firebaseapp.com",
+            databaseURL: "https://project400-cybersecurity.firebaseio.com",
+            projectId: "project400-cybersecurity",
+            storageBucket: "project400-cybersecurity.appspot.com",
+            messagingSenderId: "718162010119"
+        };
+        firebase.initializeApp(config);
+    </script>
 
     <!-- Firebase AuthUI -->
     <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
@@ -89,7 +105,6 @@
         gtag('config', 'UA-118121632-1');
     </script>
 
-
 </head>
 
 <body>
@@ -107,7 +122,7 @@
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
+							<li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About</a></li>
                             <li class="has-dropdown">
                                 <a href="services.html">Services</a>
@@ -128,7 +143,7 @@
                                 </ul>
                             </li>
                             <li class="active"><a href="portfolio.html">Join</a></li>
-                            <li><a href="authenticate.html">Join</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -136,45 +151,17 @@
                 </div>
         </nav>
 
-        <div class="gtco-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel owl-carousel-fullwidth">
-                        <div class="item">
-                            <a href="#">
-                                <img src="images/children_in_school.jpeg" alt="Children in School">
-                                <div class="slider-copy">
-                                    <h2>Architecture #1</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="images/social_networks.jpeg" alt="Social Networks">
-                                <div class="slider-copy">
-                                    <h2>Architecture #1</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="images/mobile_phones.jpeg" alt="Mobile Phones">
-                                <div class="slider-copy">
-                                    <h2>Architecture #1</h2>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="gtco-section">
             <div class="gtco-container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-                        <h2>Cyber Netty</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                <div class="row gtco-heading">
+                    <div class="col-md-7 text-left">
+                        <h2>Join Netty</h2>
+                        <div>
+                            <div class="authentication" id="firebaseui-auth-container"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-push-2 text-center">
+                        <p class="mt-md"><a href="#" class="btn btn-special btn-block">Contact us</a></p>
                     </div>
                 </div>
                 <!--<div class="row">
@@ -254,7 +241,7 @@
         </div>
         <!-- END Work -->
 
-        <!--<div class="gtco-section">
+        <div class="gtco-section">
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-md-6 gtco-news">
@@ -287,20 +274,20 @@
                         <p><a href="#" class="btn btn-sm btn-special">More News</a></p>
                     </div>
                     <!-- END News -->
-        <!--<div class="col-md-5 col-md-push-1 gtco-testimonials">
-            <h2>Testimonials</h2>
-            <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
-                <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
-            </blockquote>
-            <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
-                <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
-            </blockquote>
+                    <div class="col-md-5 col-md-push-1 gtco-testimonials">
+                        <h2>Testimonials</h2>
+                        <blockquote>
+                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
+                            <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
+                        </blockquote>
+                        <blockquote>
+                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
+                            <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>-->
-        <!--</div>-->
         <!-- END  -->
 
         <div class="gtco-section gto-features">
@@ -344,7 +331,7 @@
             <div class="gtco-container">
                 <div class="row row-pb-md">
                     <div class="col-md-4 gtco-widget gtco-footer-paragraph">
-                        <h3>Cyber Netty</h3>
+                        <h3>CyberNetty</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod.</p>
                     </div>
                     <div class="col-md-4">
@@ -415,10 +402,8 @@
 
         <!-- Main -->
         <script src="js/main.js"></script>
-        <script type="text/javascript" src="js/database.js"></script>
-        <script type="text/javascript" src="js/user.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/activities.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/activities.js"></script>
 
 </body>
 

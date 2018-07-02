@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
+
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+
+    <!-- Firebase AuthUI -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'index.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: ''
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+    </script>
+
+</head>
+
+<body onload="setUpListeners()">
+    <div class="row">
+        <div class="col-sm-12">
+            <div>
+                <img class="logoTop" src="./images/CyberNetty_Logo.png" />
+            </div>
+        </div>
+
+        <div class="jumbotron info-about">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container navBar">
+                    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>-->
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a id="btnHome" class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                            <a id="joinNetty" class="nav-item navbar-right nav-link" href="join.html">Join Netty</a>
+                            <a id="progress" class="nav-item nav-link hide" href="progress.html">Progress</a>
+                            <a id="btnLogout" class="nav-item navbar-right hide">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <div class="row inside-about">
+                    <div class="row">
+                        <!--<div class="col-sm-12">-->
+                        <div class="col-sm-8 main">
+                            <div id="home" class="main-about">
+                                <div>
+                                    <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
+                                </div>
+                                <br>
+                                <div class="hide">
+                                    <label for="email">Email:</label>
+                                    <br/>
+                                    <input type="email" id="email" style="padding-top:5px" />
+                                    <br/>
+                                    <br/>
+                                    <label for="password">Password:</label>
+                                    <br/>
+                                    <input type="password" id="password" style="padding-top:5px" />
+                                    <br/>
+                                    <br/>
+                                    <button id="btnLogin">Log in</button>
+                                    <button id="btnSignUp">Sign up</button>
+                                    <!--<button id="btnLogout" class="hide">Log out</button>-->
+                                    <button id="btnWriteToDB" class="hide">Write</button>
+                                    <button id="btnReadFromDb">Read</button>
+
+                                </div>
+
+                                <br/>
+                                <div>
+                                    <h3>Join Netty on a quest to discover important facts about the internet.</h3>
+
+                                    <h4>Created for you and your child to enter the online world safely together, through interactive information activities. View your childs progress after each activity completion.
+                                    </h4>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Activities -->
+
+                        <!-- Activity 1 -->
+                        <div class="modal fade" id="Activity1" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title">Stranger Danger</h3>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <img src="images/Stranger_Danger.png" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 2 -->
+                        <div class="modal fade" id="Activity2" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title">The Internet</h3>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <img src="images/The_Internet.png" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 3 -->
+                        <div class="modal fade" id="Activity3" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title">Sharing</h3>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <img src="images/Sharing.png" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 4 -->
+                        <div class="modal fade" id="Activity4" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title">Personal Information</h3>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <img src="images/Personal_Information.png" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 5 -->
+                        <div class="modal fade" id="Activity5" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title">Cyber Bullying</h3>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <img src="images/Cyber_Bullying.png" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Activity 6 -->
+                        <div class="modal fade" id="Activity6" role="dialog">
+                            <div class="modal-dialog modal-sm">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h3 class="modal-title">Protocol</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img id="activityImg" src="images/Protocol_Image.png" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div id="activities" class="activity-about">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Activities</div>
+                                        <div class="panel-body">
+                                            <p>Click to play each activity</p>
+                                            <button id="a1" type="button activity-1" class="btn btn-info btn-lg btnStranger" data-toggle="modal" data-target="#Activity1">Stranger Danger</button>
+                                            <button id="a2" type="button activity-2" class="btn btn-info btn-lg btnInternet" data-toggle="modal" data-target="#Activity2">The Internet</button>
+                                            <button id="a3" type="button activity-3" class="btn btn-info btn-lg btnSharing" data-toggle="modal" data-target="#Activity3">Sharing</button>
+                                            <button id="a4" type="button activity-4" class="btn btn-info btn-lg btnPicsOpins" data-toggle="modal" data-target="#Activity4">Personal Information</button>
+                                            <button id="a5" type="button activity-5" class="btn btn-info btn-lg btnBully" data-toggle="modal" data-target="#Activity5">Cyber Bullying</button>
+                                            <button id="a6" type="button activity-6" class="btn btn-info btn-lg btnProtocol" data-toggle="modal" data-target="#Activity6">Protocol</button>
+                                        </div>
+                                    </div>
+                                    <!--<img src="Netty.png" class="img-rounded" alt="Information Netty">-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+<footer>
+    <script type="text/javascript" src="javascript/database.js"></script>
+    <script type="text/javascript" src="javascript/user.js"></script>
+    <script type="text/javascript" src="javascript/app.js"></script>
+    <script type="text/javascript" src="javascript/activities.js"></script>
+
+</footer>
+
+</html>
