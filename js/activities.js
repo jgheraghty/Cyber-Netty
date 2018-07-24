@@ -57,7 +57,7 @@ function StrangerDangerActivity() {
     <input id="mc" type="radio" name="question3" value="true">True<br>
     <input id="mc" type="radio" name="question3" value="false">False<br>
 
-    <input id="button" type="button" value="Submit" onclick="StrangerDanger()">
+    <input id="button" type="button" class="btn btn-info" value="Submit" onclick="StrangerDanger()">
     </form>
 
     <div id="after_submit">
@@ -234,7 +234,7 @@ function SharingActivity() {
 
 function Share() {
     var question1 = document.quiz.question1.value;
-    
+
     var correct = 0;
 
     if (question1 == "option3") {
@@ -248,7 +248,7 @@ function Share() {
     if (correct) {
         score = 1;
     }
-    
+
     const data = {
         complete: true,
         score: correct

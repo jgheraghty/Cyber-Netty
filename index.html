@@ -26,20 +26,21 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="styles/icomoon.css">
     <!-- Themify Icons-->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="styles/themify-icons.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
 
-    <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Carousel  -->
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
 
-    <!-- Theme style  -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Theme styles  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -47,8 +48,6 @@
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
-
-    <link href="css/StyleSheet.css" rel="stylesheet" />
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -92,7 +91,7 @@
 
 </head>
 
-<body>
+<body onload="setUpListeners()">
 
     <div class="gtco-loader"></div>
 
@@ -106,28 +105,18 @@
                         <div id="gtco-logo"><a href="index.html">CyberNetty</div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
-						<ul>
-							<li><a href="index.html">Home</a></li>
+						<ul>							
+                            <li><a class="active" href="index.html">Home</a></li>
                             <li><a href="about.html">About Cyber Netty</a></li>
-                            <!--<li class="has-dropdown">
-									<a href="services.html">Services</a>
-									<ul class="dropdown">
-										<li><a href="#">Web Design</a></li>
-										<li><a href="#">eCommerce</a></li>
-										<li><a href="#">Branding</a></li>
-										<li><a href="#">API</a></li>
-									</ul>
-								</li>
-								<li class="has-dropdown">
-									<a href="#">Dropdown</a>
-									<ul class="dropdown">
-										<li><a href="#">HTML5</a></li>
-										<li><a href="#">CSS3</a></li>
-										<li><a href="#">Sass</a></li>
-										<li><a href="#">jQuery</a></li>
-									</ul>
-								</li>-->
-                            <li><a href="authenticate.html">Join Netty</a></li>
+                            <li id="loggedIn" class="has-dropdown hide">
+                                <a href="#">My Account</a>
+                                <ul class="dropdown">
+                                    <li><a href="dashboard.html">Parent Dashboard</a></li>
+                                    <li><a id="progress" href="progress.html">Progress</a></li>
+                                    <li><a id="btnLogout" href="index.html">Log Out</a></li>
+                                </ul>
+                            </li>
+                            <li><a id="joinNetty" class="hide" href="authenticate.html">Join Netty</a></li>
                             </ul>
                         </div>
                     </div>
@@ -143,7 +132,7 @@
                             <a href="#">
                                 <img src="images/children_in_school.jpeg" alt="Children in School">
                                 <div class="slider-copy">
-                                    <h2>Cyber Bullying</h2>
+                                    <h2>Information on Cyber Bullying</h2>
                                 </div>
                             </a>
                         </div>
@@ -172,7 +161,28 @@
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-                        <h2>Cyber Netty</h2>
+                        <div>
+                            <h1 id="userGreeting">Welcome to Cyber Netty!</h1>
+                        </div>
+                        <br>
+                        <div class="hide">
+                            <label for="email">Email:</label>
+                            <br/>
+                            <input type="email" id="email" style="padding-top:5px" />
+                            <br/>
+                            <br/>
+                            <label for="password">Password:</label>
+                            <br/>
+                            <input type="password" id="password" style="padding-top:5px" />
+                            <br/>
+                            <br/>
+                            <button id="btnLogin">Log in</button>
+                            <button id="btnSignUp">Sign up</button>
+                            <!--<button id="btnLogout" class="hide">Log out</button>-->
+                            <button id="btnWriteToDB" class="hide">Write</button>
+                            <button id="btnReadFromDb">Read</button>
+                        </div>
+
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
                     </div>
                 </div>
@@ -331,7 +341,7 @@
                             <div class="copy">
                                 <h3>Activities</h3>
                                 <p>Lorem ipsum dolor sit ameteista, consectetur adipiscing is not elitistaris.</p>
-                                <p><a href="activities.html" class="gtco-more">Continue Reading..</a></p>
+                                <p><a href="services.html" class="gtco-more">Continue Reading..</a></p>
                             </div>
                         </div>
                     </div>
@@ -414,7 +424,7 @@
         <script src="js/main.js"></script>
         <script type="text/javascript" src="js/database.js"></script>
         <script type="text/javascript" src="js/user.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/app-auth.js"></script>
         <script type="text/javascript" src="js/activities.js"></script>
 
 </body>

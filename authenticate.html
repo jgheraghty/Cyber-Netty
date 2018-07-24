@@ -1,18 +1,13 @@
 <!DOCTYPE HTML>
-<!--
-	Aesthetic by gettemplates.co
-	Twitter: http://twitter.com/gettemplateco
-	URL: http://gettemplates.co
--->
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CyberNetty &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
+    <title>CyberNetty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
-    <meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+    <meta name="description" content="Internet safety tool for parents" />
+    <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
     <meta name="author" content="gettemplates.co" />
 
     <!-- Facebook and Twitter integration -->
@@ -29,20 +24,20 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
 
     <!-- Animate.css -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="styles/animate.css">
     <!-- Icomoon Icon Fonts-->
-    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="styles/icomoon.css">
     <!-- Themify Icons-->
-    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="styles/themify-icons.css">
     <!-- Bootstrap  -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
 
     <!-- Owl Carousel  -->
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
 
     <!-- Theme style  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -51,7 +46,7 @@
 	<script src="js/respond.min.js"></script>
     <![endif]-->
 
-    <!--<link href="css/StyleSheet.css" rel="stylesheet" />-->
+    <!--<link href="styles/StyleSheet.css" rel="stylesheet" />-->
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -122,27 +117,17 @@
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="about.html">About Cyber Netty</a></li>
                             <!--<li class="has-dropdown">
-                                <a href="services.html">Services</a>
+                                <a href="#">My Account</a>
                                 <ul class="dropdown">
-                                    <li><a href="#">Web Design</a></li>
-                                    <li><a href="#">eCommerce</a></li>
-                                    <li><a href="#">Branding</a></li>
-                                    <li><a href="#">API</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-dropdown">
-                                <a href="#">Dropdown</a>
-                                <ul class="dropdown">
-                                    <li><a href="#">HTML5</a></li>
-                                    <li><a href="#">CSS3</a></li>
-                                    <li><a href="#">Sass</a></li>
-                                    <li><a href="#">jQuery</a></li>
+                                    <li><a href="dashboard.html">Parent Dashboard</a></li>
+                                    <li><a id="progress" href="progress.html">Progress</a></li>
+                                    <li><a id="btnLogout">Log Out</a></li>
                                 </ul>
                             </li>-->
-                            <li><a href="authenticate.html">Join Netty</a></li>
+                            <li><a id="joinNetty" class="active" href="authenticate.html">Join Netty</a></li>
                             </ul>
                         </div>
                     </div>
@@ -160,8 +145,10 @@
                         </div>
                     </div>
                     <div class="col-md-3 col-md-push-2 text-center">
-                        <p class="mt-md"><a href="join-netty-as-parent.html" class="btn btn-block">Join as Parent</a><br>
-                            <a href="join-netty-as-child.html" class="btn btn-special btn-block">Join as Child</a></p>
+                        <div class="authentication" id="firebaseui-auth-container"></div>
+
+                        <!--<p class="mt-md"><a href="join-netty-as-parent.html" class="btn btn-block">Join as Parent</a><br>
+                            <a href="join-netty-as-child.html" class="btn btn-special btn-block">Join as Child</a></p>-->
                     </div>
                 </div>
                 <!--<div class="row">
@@ -241,7 +228,7 @@
         </div>
         <!-- END Work -->
 
-        <div class="gtco-section">
+        <!--<div class="gtco-section">
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-md-6 gtco-news">
@@ -274,23 +261,23 @@
                         <p><a href="#" class="btn btn-sm btn-special">More News</a></p>
                     </div>
                     <!-- END News -->
-                    <div class="col-md-5 col-md-push-1 gtco-testimonials">
-                        <h2>Testimonials</h2>
-                        <blockquote>
-                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
-                            <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
-                        </blockquote>
-                        <blockquote>
-                            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
-                            <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
+        <!--<div class="col-md-5 col-md-push-1 gtco-testimonials">
+            <h2>Testimonials</h2>
+            <blockquote>
+                <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
+                <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
+            </blockquote>
+            <blockquote>
+                <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
+                <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
+            </blockquote>
         </div>
+        </div>
+    </div>
+    </div>-->
         <!-- END  -->
 
-        <div class="gtco-section gto-features">
+        <!--<div class="gtco-section gto-features">
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-md-4">
@@ -325,7 +312,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
         <footer id="gtco-footer" class="gtco-section" role="contentinfo">
             <div class="gtco-container">

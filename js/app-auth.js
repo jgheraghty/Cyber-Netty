@@ -1,5 +1,7 @@
+alert();
+
 //Authentication
-(function () {
+(function() {
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
@@ -14,9 +16,9 @@
     //Get elements
     const Email = document.getElementById("txtEmail");
     const Password = document.getElementById("txtPassword");
-    const Login = document.getElementById("btnLogin");
-    const SignUp = document.getElementById("btnSignUp");
-    const Logout = document.getElementById("btnLogout");
+    const Join = document.getElementById("joinNetty");
+    const loggedIn = document.getElementById("loggedIn");
+
 
     //Add Login event
     btnLogin.addEventListener('click', e => {
@@ -52,13 +54,12 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log(firebaseUser);
-            btnLogout.classList.remove('hide');
-        }
-        else {
+            loggedIn.classList.remove('hide');
+            //btnLogout.classList.remove('hide');
+        } else {
             console.log('not logged in');
-            btnLogout.classList.add('hide');
+            loggedIn.classList.add('hide');
+            //btnLogout.classList.add('hide');
         }
     })
 });
-
-
