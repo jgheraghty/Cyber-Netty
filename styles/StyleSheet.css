@@ -275,9 +275,12 @@ input {
     text-align: center;
     padding: 60px 30px 60px 30px;
     display: inline-block;
-}
+}*/
 
-#joinNetty {
+.join {}
+
+
+/*#joinNetty {
     color: #ffffff;
     text-align: center;
     padding: 60px 30px 60px 30px;

@@ -46,19 +46,6 @@
     const txtPassword = document.getElementById('password');
 
     //////////////////////////////////////////
-    // Join
-    //////////////////////////////////////////
-    Join.addEventListener('click', e => {
-        const email = txtEmail.value;
-        const password = txtPassword.value;
-        const auth = firebase.auth();
-
-        auth.signInWithEmailAndPassword(email, password).catch(e => {
-            console.log(e);
-        });
-    });
-
-    //////////////////////////////////////////
     // Log in
     //////////////////////////////////////////
     btnLogin.addEventListener('click', e => {
