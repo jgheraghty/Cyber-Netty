@@ -3,6 +3,11 @@ function writeUserData(activityId, data) {
     firebase.database().ref('users/' + userId + '/activity/' + activityId).set(data);
 }
 
+function writeUserQuizData(data) {
+    var userId = firebase.auth().currentUser.uid;
+    return firebase.database().ref('users/' + userId + '/quiz/').set(data);
+}
+
 function readUserData() {
     var userId = firebase.auth().currentUser.uid;
     return firebase.database().ref('users/' + userId).once('value')
@@ -16,6 +21,10 @@ function readUserData() {
 
 function readUserActivityData() {
     var userId = firebase.auth().currentUser.uid;
-    //var userId = 'k1E9WdhdQVQHjuJoJc2trg9O5j02';
     return firebase.database().ref('users/' + userId + '/activity/').once('value');
+}
+
+function readUserQuizData() {
+    var userId = firebase.auth().currentUser.uid;
+    return firebase.database().ref('users/' + userId + '/quiz/').once('value');
 }
