@@ -1,24 +1,14 @@
 <!DOCTYPE HTML>
+
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CyberNetty</title>
+    <title>Cyber Netty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Internet safety tool for parents" />
     <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
-
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
-    <meta property="og:description" content="" />
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:image" content="" />
-    <meta name="twitter:url" content="" />
-    <meta name="twitter:card" content="" />
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
 
@@ -35,17 +25,16 @@
     <link rel="stylesheet" href="styles/owl.carousel.min.css">
     <link rel="stylesheet" href="styles/owl.theme.default.min.css">
 
-    <!-- Theme style  -->
+    <!-- Theme styles  -->
     <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
-    <![endif]-->
-
-    <!--<link href="styles/StyleSheet.css" rel="stylesheet" />-->
+	<![endif]-->
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -64,28 +53,6 @@
         firebase.initializeApp(config);
     </script>
 
-    <!-- Firebase AuthUI -->
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-    <script type="text/javascript">
-        // FirebaseUI config.
-        var uiConfig = {
-            signInSuccessUrl: 'index.html',
-            signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                firebase.auth.EmailAuthProvider.PROVIDER_ID
-            ],
-            // Terms of service url.
-            tosUrl: ''
-        };
-
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
     <script>
@@ -98,6 +65,7 @@
 
         gtag('config', 'UA-118121632-1');
     </script>
+
 
 </head>
 
@@ -112,21 +80,34 @@
 
                 <div class="row">
                     <div class="col-sm-2 col-xs-12">
-                        <div id="gtco-logo"><a href="index.html">CyberNetty</div>
-					</div>
-					<div class="col-xs-10 text-right menu-1">
-						<ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Cyber Netty</a></li>
-                            <li class="has-dropdown">
+                        <div id="gtco-logo">
+                            <a href="index.html">CyberNetty</div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li>
+                                <a class="active" href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="page-about.html">About Cyber Netty</a>
+                            </li>
+                            <li id="loggedIn" class="has-dropdown">
                                 <a href="#">My Account</a>
                                 <ul class="dropdown">
-                                    <li><a href="dashboard.html">Parent Dashboard</a></li>
-                                    <li><a id="progress" href="netty-progress.html">Progress</a></li>
-                                    <li><a id="btnLogout">Log Out</a></li>
+                                    <li>
+                                        <a id="dashboard" href="page-dashboard.html">Parent Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a id="progress" href="page-progress.html">Progress</a>
+                                    </li>
+                                    <li>
+                                        <a id="btnLogout" href="index.html">Log Out</a>
+                                    </li>
                                 </ul>
                             </li>
-                            <!--<li><a id="joinNetty" class="active" href="authenticate.html">Join Netty</a></li>-->
+                            <li id="joinNetty">
+                                <a href="page-authenticate.html">Join Netty</a>
+                            </li>
                             </ul>
                         </div>
                     </div>
@@ -134,21 +115,66 @@
                 </div>
         </nav>
 
-        <div class="gtco-section">
-            <div class="gtco-container">
-                <div class="row gtco-heading">
-                    <div class="col-md-7 text-left">
-                        <h2>Activity Progress</h2>
-                        <div id="progressRep">
-
+        <div class="gtco-container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel owl-carousel-fullwidth">
+                        <div class="item">
+                            <a href="#">
+                                <img src="images/children_in_school.jpeg" alt="Children in School">
+                                <div class="slider-copy">
+                                    <h2>Information on Cyber Bullying</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img src="images/social_networks.jpeg" alt="Social Networks">
+                                <div class="slider-copy">
+                                    <h2>Current Social Networking Trends</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="#">
+                                <img src="images/mobile_phones.jpeg" alt="Mobile Phones">
+                                <div class="slider-copy">
+                                    <h2>Children and Mobile Phones</h2>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-md-3 col-md-push-2 text-center">
-                        <img src="images/Netty.png" alt="netty" />
-                        <!--<div class="authentication" id="firebaseui-auth-container"></div>-->
+                </div>
+            </div>
+        </div>
 
-                        <!--<p class="mt-md"><a href="join-netty-as-parent.html" class="btn btn-block">Join as Parent</a><br>
-                            <a href="join-netty-as-child.html" class="btn btn-special btn-block">Join as Child</a></p>-->
+        <div class="gtco-section">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
+                        <div>
+                            <h1>Welcome to Cyber Netty!</h1>
+                        </div>
+                        <br>
+                        <div class="hide">
+                            <label for="email">Email:</label>
+                            <br/>
+                            <input type="email" id="email" style="padding-top:5px" />
+                            <br/>
+                            <br/>
+                            <label for="password">Password:</label>
+                            <br/>
+                            <input type="password" id="password" style="padding-top:5px" />
+                            <br/>
+                            <br/>
+                            <button id="btnLogin">Log in</button>
+                            <button id="btnSignUp">Sign up</button>
+                            <!--<button id="btnLogout" class="hide">Log out</button>-->
+                            <button id="btnWriteToDB" class="hide">Write</button>
+                            <button id="btnReadFromDb">Read</button>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
                     </div>
                 </div>
                 <!--<div class="row">
@@ -273,20 +299,22 @@
             </blockquote>
         </div>
         </div>
-    </div>
     </div>-->
+        <!--</div>-->
         <!-- END  -->
 
-        <!--<div class="gtco-section gto-features">
+        <div class="gtco-section gto-features">
             <div class="gtco-container">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="feature-left">
                             <i class="ti-zip icon"></i>
                             <div class="copy">
-                                <h3>Architect</h3>
+                                <h3>Cyber Bullying</h3>
                                 <p>Lorem ipsum dolor sit ameteista, consectetur adipiscing is not elitistaris.</p>
-                                <p><a href="#" class="gtco-more">Learn more</a></p>
+                                <p>
+                                    <a href="cyberbullying.html" class="gtco-more">Continue Reading..</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -294,9 +322,11 @@
                         <div class="feature-left">
                             <i class="ti-hummer icon"></i>
                             <div class="copy">
-                                <h3>Planning</h3>
+                                <h3>App Trends</h3>
                                 <p>Lorem ipsum dolor sit ameteista, consectetur adipiscing is not elitistaris.</p>
-                                <p><a href="#" class="gtco-more">Learn more</a></p>
+                                <p>
+                                    <a href="trends.html" class="gtco-more">Continue Reading..</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -306,13 +336,15 @@
                             <div class="copy">
                                 <h3>Activities</h3>
                                 <p>Lorem ipsum dolor sit ameteista, consectetur adipiscing is not elitistaris.</p>
-                                <p><a href="#" class="gtco-more">Learn more</a></p>
+                                <p>
+                                    <a href="page-activities.html" class="gtco-more">Continue Reading..</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>-->
+        </div>
 
         <footer id="gtco-footer" class="gtco-section" role="contentinfo">
             <div class="gtco-container">
@@ -326,11 +358,21 @@
                             <div class="col-md-6 gtco-footer-link">
                                 <h3>Links</h3>
                                 <ul class="gtco-list-link">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="#">App Trends</a></li>
-                                    <li><a href="#">Cyber Bullying</a></li>
-                                    <li><a href="netty-activities.html">Activities</a></li>
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">App Trends</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cyber Bullying</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-activities.html">Activities</a>
+                                    </li>
                                 </ul>
                             </div>
                             <!--<div class="col-md-6 gtco-footer-link">
@@ -359,7 +401,9 @@
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-6 text-left">
-                            <p><small>&copy; Copyright 2018</small></p>
+                            <p>
+                                <small>&copy; Copyright 2018</small>
+                            </p>
                         </div>
 
                     </div>
@@ -371,7 +415,9 @@
         </div>
 
         <div class="gototop js-top">
-            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+            <a href="#" class="js-gotop">
+                <i class="icon-arrow-up"></i>
+            </a>
         </div>
 
         <!-- jQuery -->
@@ -387,9 +433,8 @@
 
         <!-- Main -->
         <script src="js/main.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/activities.js"></script>
-        <script src="js/progress.js"></script>
+        <script type="text/javascript" src="js/database.js"></script>
+        <script src="js/page-about.js"></script>
 
 </body>
 
