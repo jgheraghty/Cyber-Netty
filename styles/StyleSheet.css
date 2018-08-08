@@ -386,7 +386,7 @@ input {
     background: #f2D681;
     background-repeat: no-repeat;
     color: black;
-    padding: 20px;
+    /*padding: 20px;*/
     margin-right: 100px;
     margin-left: 100px;
     font-size: 20px;
