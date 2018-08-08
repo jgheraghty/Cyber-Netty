@@ -277,9 +277,6 @@ input {
     display: inline-block;
 }*/
 
-.join {}
-
-
 /*#joinNetty {
     color: #ffffff;
     text-align: center;
@@ -382,14 +379,17 @@ input {
 }
 
 .info-about {
-    border-radius: 30px;
-    background: #81cbec;
+    border-radius: 15px;
+    /*background: #81cbec;
+    background: #52D681;
+    background: #f2D681*/
     background-repeat: no-repeat;
     color: black;
     padding: 20px;
     margin-right: 100px;
     margin-left: 100px;
-    font-size: 50px;
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 .inside-about {
@@ -541,19 +541,37 @@ input {
 }
 
 #button {
-    background: green;
+    background: #52D681;
     border: none;
     border-radius: 5px;
-    padding: 15px;
+    padding: 8px;
     color: white;
-    font-size: 16px;
+    font-size: 15px;
     transition-duration: .5s;
     margin-top: 15px;
 }
 
 #button:hover {
     background: white;
-    border: 1px solid green;
+    /*border: 1px solid #52D681;*/
+    color: black;
+    cursor: pointer;
+}
+
+#buttonSubmit {
+    background: #52D681;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-size: 15px;
+    transition-duration: .5s;
+    margin-top: 15px;
+}
+
+#buttonSubmit:hover {
+    background: white;
+    /*border: 1px solid #52D681;*/
     color: black;
     cursor: pointer;
 }

@@ -10,21 +10,6 @@ function setUpListeners() {
     document.getElementById('a6').addEventListener("click", ProtocolActivity, false);
 }
 
-// Drag and Drop for Stscorer Danger
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-
 // When Activity1 button is clicked
 function StrangerDangerActivity() {
     var one = document.getElementById('home');
@@ -420,11 +405,14 @@ function CyberBully() {
 }
 
 // When Activity6 button is clicked
-function ProtocolActivity() {
-    var six = document.getElementById('home');
+function ParentActivity() {
+    /*var six = document.getElementById('home');
     six.innerHTML = `<h1>ProtocolActivity</h1>
     
-    `;
+    `;*/
+    //document.getElementById("a6").addEventListener('click', function() {
+    window.location.assign("page-quizzes.html");
+    //});
 }
 
 function Protocol() {}

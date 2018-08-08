@@ -1,19 +1,10 @@
 (function() {
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
-        authDomain: "project400-cybersecurity.firebaseapp.com",
-        databaseURL: "https://project400-cybersecurity.firebaseio.com",
-        projectId: "project400-cybersecurity",
-        storageBucket: "project400-cybersecurity.appspot.com",
-        messagingSenderId: "718162010119"
-    };
-    firebase.initializeApp(config);
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
-            document.getElementById("userGreeting").innerHTML = '<h1>' + firebaseUser.displayName + ', Welcome to Cyber Netty! </h1>';
+            // document.getElementById("userGreeting").innerHTML = '<h1>' + firebaseUser.displayName + ', Welcome to Cyber Netty! </h1>';
             //document.getElementById("progressRep").innerHTML = '';
+            /*
             loggedIn.classList.remove('hide');
             activities.classList.remove('hide');
             progress.classList.remove('hide');
@@ -22,8 +13,10 @@
             btnWriteToDB.classList.remove('hide');
             btnLogin.classList.add('hide');
             btnSignUp.classList.add('hide');
+            */
             console.log('Logged in');
         } else {
+            /*
             loggedIn.classList.add('hide');
             activities.classList.add('hide');
             progress.classList.add('hide');
@@ -32,10 +25,12 @@
             btnWriteToDB.classList.add('hide');
             btnLogin.classList.remove('hide');
             btnSignUp.classList.remove('hide');
+            */
             console.log('Logged out');
         }
     });
 
+    /*
     const Join = document.getElementById('joinNetty');
     const btnLogin = document.getElementById('btnLogin');
     const btnSignUp = document.getElementById('btnSignUp');
@@ -44,10 +39,12 @@
     const btnReadFromDb = document.getElementById('btnReadFromDb');
     const txtEmail = document.getElementById('email');
     const txtPassword = document.getElementById('password');
+    */
 
     //////////////////////////////////////////
     // Log in
     //////////////////////////////////////////
+    /*
     btnLogin.addEventListener('click', e => {
         const email = txtEmail.value;
         const password = txtPassword.value;

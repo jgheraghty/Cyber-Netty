@@ -1,5 +1,3 @@
-alert();
-
 //Authentication
 (function() {
     // Initialize Firebase

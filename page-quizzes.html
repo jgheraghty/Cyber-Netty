@@ -3,224 +3,212 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>CyberNetty</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Internet safety tool for parents" />
-  <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CyberNetty</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Internet safety tool for parents" />
+    <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
 
-  <!-- Facebook and Twitter integration -->
-  <meta property="og:title" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <meta name="twitter:title" content="" />
-  <meta name="twitter:image" content="" />
-  <meta name="twitter:url" content="" />
-  <meta name="twitter:card" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="styles/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="styles/icomoon.css">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="styles/themify-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
 
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="styles/animate.css">
-  <!-- Icomoon Icon Fonts-->
-  <link rel="stylesheet" href="styles/icomoon.css">
-  <!-- Themify Icons-->
-  <link rel="stylesheet" href="styles/themify-icons.css">
-  <!-- Bootstrap  -->
-  <link rel="stylesheet" href="styles/bootstrap.css">
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
 
-  <!-- Owl Carousel  -->
-  <link rel="stylesheet" href="styles/owl.carousel.min.css">
-  <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+    <!-- Theme styles  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
 
-  <!-- Theme styles  -->
-  <link rel="stylesheet" href="styles/style.css">
-  <link href="styles/StyleSheet.css" rel="stylesheet" />
-
-  <!-- Modernizr JS -->
-  <script src="js/modernizr-2.6.2.min.js"></script>
-  <!-- FOR IE9 below -->
-  <!--[if lt IE 9]>
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+    <!-- FOR IE9 below -->
+    <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
     <![endif]-->
 
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
 
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
-      authDomain: "project400-cybersecurity.firebaseapp.com",
-      databaseURL: "https://project400-cybersecurity.firebaseio.com",
-      projectId: "project400-cybersecurity",
-      storageBucket: "project400-cybersecurity.appspot.com",
-      messagingSenderId: "718162010119"
-    };
-    firebase.initializeApp(config);
-  </script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
+            authDomain: "project400-cybersecurity.firebaseapp.com",
+            databaseURL: "https://project400-cybersecurity.firebaseio.com",
+            projectId: "project400-cybersecurity",
+            storageBucket: "project400-cybersecurity.appspot.com",
+            messagingSenderId: "718162010119"
+        };
+        firebase.initializeApp(config);
+    </script>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-118121632-1');
-  </script>
+        gtag('config', 'UA-118121632-1');
+    </script>
 
 </head>
 
 <body>
 
-  <div class="gtco-loader"></div>
+    <div class="gtco-loader"></div>
 
-  <div id="page">
+    <div id="page">
 
-    <nav class="gtco-nav" role="navigation">
-      <div class="gtco-container">
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
 
-        <div class="row">
-          <div class="col-sm-2 col-xs-12">
-            <div id="gtco-logo">
-              <a href="index.html">CyberNetty</div>
+                <div class="row">
+                    <div class="col-sm-2 col-xs-12">
+                        <div id="gtco-logo">
+                            <a href="index.html">CyberNetty</div>
           </div>
           <div class="col-xs-10 text-right menu-1">
             <ul>
               <li>
                 <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="page-about.html">About Cyber Netty</a>
-              </li>
-              <li id="loggedIn" class="has-dropdown">
-                <a href="#">My Account</a>
-                <ul class="dropdown">
-                  <li>
-                    <a id="dashboard" href="page-dashboard.html">Parent Dashboard</a>
-                  </li>
-                  <li>
-                    <a id="progress" href="page-progress.html">Progress</a>
-                  </li>
-                  <li>
-                    <a id="btnLogout" href="index.html">Log Out</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a id="joinNetty" class="join hide" href="page-authenticate.html">Join Netty</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+                            </li>
+                            <li>
+                                <a href="page-about.html">About Cyber Netty</a>
+                            </li>
+                            <li id="loggedIn" class="has-dropdown">
+                                <a href="#">My Account</a>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a id="dashboard" href="page-dashboard.html">Parent Dashboard</a>
+                                    </li>
+                                    <li>
+                                        <a id="progress" href="page-progress.html">Progress</a>
+                                    </li>
+                                    <li>
+                                        <a id="btnLogout" href="index.html">Log Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a id="joinNetty" class="join hide" href="page-authenticate.html">Join Netty</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
 
-      </div>
-    </nav>
-
-    <div class="container info-about">
-      <div class="row">
-        <div class="col-md-6">
-          Netty Image
-        </div>
-        <div id="quiz" class="col-md-6">
-          
-        </div>
-        <button id="buttonSubmit">Submit</button>
-      </div>
-    </div>
-
-      <!-- END  -->
-
-      <footer id="gtco-footer" class="gtco-section" role="contentinfo">
-        <div class="gtco-container">
-          <div class="row row-pb-md">
-            <div class="col-md-4 gtco-widget gtco-footer-paragraph">
-              <h3>Cyber Netty</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus
-                euismod.
-              </p>
-            </div>
-            <div class="col-md-4">
-              <div class="row">
-                <div class="col-md-6 gtco-footer-link">
-                  <h3>Links</h3>
-                  <ul class="gtco-list-link">
-                    <li>
-                      <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                      <a href="page-about.html">About</a>
-                    </li>
-                    <li>
-                      <a href="#">App Trends</a>
-                    </li>
-                    <li>
-                      <a href="#">Cyber Bullying</a>
-                    </li>
-                    <li>
-                      <a href="page-activities.html">Activities</a>
-                    </li>
-                  </ul>
                 </div>
+        </nav>
 
-              </div>
-            </div>
-            <div class="col-md-4 gtco-footer-subscribe">
-              <form class="form-inline">
-                <div class="form-group">
-                  <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                  <input type="email" class="form-control" id="" placeholder="Email">
-                </div>
-                <button type="submit" class="btn btn-primary">Send</button>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div class="gtco-copyright">
-          <div class="gtco-container">
+        <div class="container info-about">
             <div class="row">
-              <div class="col-md-6 text-left">
-                <p>
-                  <small>&copy; Copyright 2018</small>
-                </p>
-              </div>
+                <div class="col-md-6">
+                    Netty Image
+                </div>
+                <div id="quiz" class="col-md-6">
 
+                </div>
+                <button id="buttonSubmit">Submit</button>
             </div>
-          </div>
         </div>
-      </footer>
-      <!-- END footer -->
 
-    </div>
+        <!-- END  -->
 
-    <div class="gototop js-top">
-      <a href="#" class="js-gotop">
-        <i class="icon-arrow-up"></i>
-      </a>
-    </div>
+        <footer id="gtco-footer" class="gtco-section" role="contentinfo">
+            <div class="gtco-container">
+                <div class="row row-pb-md">
+                    <div class="col-md-4 gtco-widget gtco-footer-paragraph">
+                        <h3>Cyber Netty</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6 gtco-footer-link">
+                                <h3>Links</h3>
+                                <ul class="gtco-list-link">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">App Trends</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cyber Bullying</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-activities.html">Activities</a>
+                                    </li>
+                                </ul>
+                            </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <!-- jQuery Easing -->
-    <script src="js/jquery.easing.1.3.js"></script>
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Waypoints -->
-    <script src="js/jquery.waypoints.min.js"></script>
-    <!-- Carousel -->
-    <script src="js/owl.carousel.min.js"></script>
-    <!-- Main -->
-    <script src="js/main.js"></script>
-    <script type="text/javascript" src="js/database.js"></script>
-    <script type="text/javascript" src="js/page-quizzes.js"></script>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gtco-footer-subscribe">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control" id="" placeholder="Email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="gtco-copyright">
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <p>
+                                <small>&copy; Copyright 2018</small>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END footer -->
+
+        </div>
+
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop">
+                <i class="icon-arrow-up"></i>
+            </a>
+        </div>
+
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- jQuery Easing -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Waypoints -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <!-- Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Main -->
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/database.js"></script>
+        <script type="text/javascript" src="js/page-quizzes.js"></script>
 
 </body>
 
