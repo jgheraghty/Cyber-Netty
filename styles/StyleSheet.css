@@ -277,6 +277,7 @@ input {
     display: inline-block;
 }*/
 
+
 /*#joinNetty {
     color: #ffffff;
     text-align: center;
@@ -381,8 +382,8 @@ input {
 .info-about {
     border-radius: 15px;
     /*background: #81cbec;
-    background: #52D681;
-    background: #f2D681*/
+    background: #52D681;*/
+    background: #f2D681;
     background-repeat: no-repeat;
     color: black;
     padding: 20px;

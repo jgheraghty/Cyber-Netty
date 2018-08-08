@@ -8,7 +8,7 @@ function setUpListeners() {
     document.getElementById('a4').addEventListener("click", PersonalInformationActivity, false);
     document.getElementById('a5').addEventListener("click", CyberBullyingActivity, false);
     document.getElementById('a6').addEventListener("click", ProtocolActivity, false);
-    document.getElementById('home').innerHTML = "Click on the sections below to complete some fun activities with Netty!"
+    //document.getElementById('home').innerHTML = "Click on the sections below to complete some fun activities with Netty!"
 }
 
 // When Activity1 button is clicked
