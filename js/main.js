@@ -229,21 +229,21 @@
     var tabs = function() {
 
         // Auto adjust height
-        $('netty-tab-content-wrap').css('height', 0);
+        $('.gtco-tab-content-wrap').css('height', 0);
         var autoHeight = function() {
 
             setTimeout(function() {
 
-                var tabContentWrap = $('netty-tab-content-wrap'),
-                    tabHeight = $('netty-tab-nav').outerHeight(),
+                var tabContentWrap = $('.gtco-tab-content-wrap'),
+                    tabHeight = $('.gtco-tab-nav').outerHeight(),
                     formActiveHeight = $('.tab-content.active').outerHeight(),
                     totalHeight = parseInt(tabHeight + formActiveHeight + 90);
 
                 tabContentWrap.css('height', totalHeight);
 
                 $(window).resize(function() {
-                    var tabContentWrap = $('netty-tab-content-wrap'),
-                        tabHeight = $('netty-tab-nav').outerHeight(),
+                    var tabContentWrap = $('.gtco-tab-content-wrap'),
+                        tabHeight = $('.gtco-tab-nav').outerHeight(),
                         formActiveHeight = $('.tab-content.active').outerHeight(),
                         totalHeight = parseInt(tabHeight + formActiveHeight + 90);
 
@@ -258,7 +258,7 @@
 
 
         // Click tab menu
-        $('netty-tab-nav a').on('click', function(event) {
+        $('.gtco-tab-nav a').on('click', function(event) {
 
             var $this = $(this),
                 tab = $this.data('tab');
@@ -269,14 +269,14 @@
             $('.tab-content')
                 .removeClass('active');
 
-            $('netty-tab-nav li').removeClass('active');
+            $('.gtco-tab-nav li').removeClass('active');
 
             $this
                 .closest('li')
                 .addClass('active')
 
             $this
-                .closest('netty-tabs')
+                .closest('.gtco-tabs')
                 .find('.tab-content[data-tab-content="' + tab + '"]')
                 .removeClass('animated-fast fadeOutDown')
                 .addClass('animated-fast active fadeIn');
@@ -318,7 +318,7 @@
 
     // Loading page
     var loaderPage = function() {
-        $("netty-loader").fadeOut("slow");
+        $(".gtco-loader").fadeOut("slow");
     };
 
     var counter = function() {
