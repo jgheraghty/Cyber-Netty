@@ -703,3 +703,40 @@ input {
 /* Extra large devices (large laptops and desktops, 1200px and up) 
 
 @media only screen and (min-width: 1200px) {}*/
+
+
+/* -- Social Icons --*/
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+
+/* Hover Effect */
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+/* Brands */
+
+.fa-facebook {
+    background: #9de659;
+    color: white;
+}
+
+.fa-instagram {
+    background: #9de659;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
