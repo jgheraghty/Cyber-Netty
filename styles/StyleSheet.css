@@ -386,9 +386,9 @@ input {
     background: #f2D681;
     background-repeat: no-repeat;
     color: black;
-    /*padding: 20px;*/
+    /*padding: 20px;x
     margin-right: 100px;
-    margin-left: 100px;
+    margin-left: 100px;*/
     font-size: 20px;
     margin-bottom: 15px;
 }
@@ -520,6 +520,14 @@ h4 {
     user-select: none;
 }
 
+.layers {
+    margin-bottom: 25px;
+}
+
+.para {
+    margin-top: 30px;
+}
+
 
 /* -- Activities -- */
 
@@ -527,7 +535,7 @@ h4 {
     margin-left: 2px;
     padding: 10px 20px 10px 20px;
     width: 100%;
-    font-size: 35px;
+    /*font-size: 35px;*/
 }
 
 input {
@@ -587,7 +595,8 @@ input {
 }
 
 .questions {
-    color: #9de659;
+    /*color: #9de659;*/
+    color: #ffffff;
 }
 
 .jumbotron p {
