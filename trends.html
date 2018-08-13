@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+
 <html>
 
 <head>
@@ -21,12 +22,13 @@
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="styles/bootstrap.css">
 
-    <!-- Carousel  -->
+    <!-- Owl Carousel  -->
     <link rel="stylesheet" href="styles/owl.carousel.min.css">
     <link rel="stylesheet" href="styles/owl.theme.default.min.css">
 
-    <!-- Theme style  -->
+    <!-- Theme styles  -->
     <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -34,8 +36,6 @@
     <!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
     <![endif]-->
-
-    <!--<link href="styles/StyleSheet.css" rel="stylesheet" />-->
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
@@ -69,7 +69,7 @@
 
 </head>
 
-<body>
+<body onload="setUpListeners()">
 
     <div class="gtco-loader"></div>
 
@@ -103,7 +103,9 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li id="joinNetty"><a class="active" href="page-authenticate.html">Join Netty</a></li>
+                            <li>
+                                <a id="joinNetty" class="join hide" href="page-authenticate.html">Join Netty</a>
+                            </li>
                             </ul>
                         </div>
                     </div>
@@ -111,29 +113,39 @@
                 </div>
         </nav>
 
+        <!--<div class="gtco-section gtco-services">
+                <div id="home" class="info-about">
+                    
+                </div>
+            </div>-->
+
         <div class="gtco-section">
             <div class="gtco-container">
-                <div class="row gtco-heading">
-                    <div class="col-md-7 text-left">
-                        <h2>Activity Progress</h2>
-                        <div id="progressRep">
+                <p>Cyberbullying is bullying that takes place over digital devices like cell phones, computers, and tablets. Cyberbullying can occur through SMS, Text, and apps, or online in social media, forums, or gaming where people can view, participate
+                    in, or share content. Cyberbullying includes sending, posting, or sharing negative, harmful, false, or mean content about someone else. It can include sharing personal or private information about someone else causing embarrassment
+                    or humiliation. Some cyberbullying crosses the line into unlawful or criminal behavior.</p>
 
-                        </div>
-                    </div>
-                    <!--<div class="col-md-3 col-md-push-2 text-center">
-                        <img src="images/Netty.png" alt="netty" />
-                    </div>-->
-                </div>
+                <p>The most common places where cyberbullying occurs are:</p>
+
+                <ul>
+                    <li>Social Media, such as Facebook, Instagram, Snapchat, and Twitter</li>
+                    <li>SMS (Short Message Service) also known as Text Message sent through devices</li>
+                    <i>nstant Message (via devices, email provider services, apps, and social media messaging features)</i>
+                    <li>Email</li>
+                </ul>
             </div>
         </div>
+        </div>
 
+        <!-- END  -->
 
         <footer id="gtco-footer" class="gtco-section" role="contentinfo">
             <div class="gtco-container">
                 <div class="row row-pb-md">
                     <div class="col-md-4 gtco-widget gtco-footer-paragraph">
                         <h3>Cyber Netty</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod.
+                        </p>
                     </div>
                     <div class="col-md-4">
                         <div class="row">
@@ -157,6 +169,15 @@
                                     </li>
                                 </ul>
                             </div>
+                            <!--<div class="col-md-6 gtco-footer-link">
+                                <h3>Work</h3>
+                                <ul class="gtco-list-link">
+                                    <li><a href="#">New York Arena</a></li>
+                                    <li><a href="#">Eagle Park</a></li>
+                                    <li><a href="#">Nationals Park</a></li>
+                                    <li><a href="#">Manila Park</a></li>
+                                </ul>
+                            </div>-->
                         </div>
                     </div>
                     <div class="col-md-4 gtco-footer-subscribe">
@@ -166,12 +187,12 @@
                         <a href="https://www.instagram.com/CyberNetty/" class="fa fa-instagram"></a>
 
                         <!--<form class="form-inline">
-                                <div class="form-group">
-                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                    <input type="email" class="form-control" id="" placeholder="Email">
-                                </div>
-                                <button type="submit" class="btn btn-primary">Send</button>
-                            </form>-->
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control" id="" placeholder="Email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>-->
                     </div>
                 </div>
             </div>
@@ -190,29 +211,29 @@
         </footer>
         <!-- END footer -->
 
-        </div>
+    </div>
 
-        <div class="gototop js-top">
-            <a href="#" class="js-gotop">
-                <i class="icon-arrow-up"></i>
-            </a>
-        </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop">
+            <i class="icon-arrow-up"></i>
+        </a>
+    </div>
 
-        <!-- jQuery -->
-        <script src="js/jquery.min.js"></script>
-        <!-- jQuery Easing -->
-        <script src="js/jquery.easing.1.3.js"></script>
-        <!-- Bootstrap -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Waypoints -->
-        <script src="js/jquery.waypoints.min.js"></script>
-        <!-- Carousel -->
-        <script src="js/owl.carousel.min.js"></script>
-
-        <!-- Main -->
-        <script src="js/main.js"></script>
-        <Script src="js/database.js"></Script>
-        <script src="js/page-progress.js"></script>
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/database.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/activities.js"></script>
 
 </body>
 
