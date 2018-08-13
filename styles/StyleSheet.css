@@ -507,12 +507,13 @@ input {
     font-size: 40px;
 }
 
-h1,
+
+/*h1,
 h2,
 h3,
 h4 {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
-}
+}*/
 
 #content {
     text-align: center;
@@ -735,3 +736,7 @@ input {
     background: #55ACEE;
     color: white;
 }*/
+
+.feature-left {
+    margin-bottom: 20px;
+}
