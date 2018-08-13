@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cyber Netty</title>
+    <title>CyberNetty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Internet safety tool for parents" />
     <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="styles/owl.carousel.min.css">
     <link rel="stylesheet" href="styles/owl.theme.default.min.css">
 
-    <!-- Theme styles  -->
+    <!-- Theme style  -->
     <link rel="stylesheet" href="styles/style.css">
     <link href="styles/StyleSheet.css" rel="stylesheet" />
 
@@ -37,37 +37,6 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
-
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyD2CTlSOa_6c2FIWU1Pe-Sq8V1V0yi6uRU",
-            authDomain: "project400-cybersecurity.firebaseapp.com",
-            databaseURL: "https://project400-cybersecurity.firebaseio.com",
-            projectId: "project400-cybersecurity",
-            storageBucket: "project400-cybersecurity.appspot.com",
-            messagingSenderId: "718162010119"
-        };
-        firebase.initializeApp(config);
-    </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118121632-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-118121632-1');
-    </script>
-
-
 </head>
 
 <body>
@@ -75,7 +44,6 @@
     <div class="gtco-loader"></div>
 
     <div id="page">
-
         <nav class="gtco-nav" role="navigation">
             <div class="gtco-container">
 
@@ -83,11 +51,11 @@
                     <div class="col-sm-2 col-xs-12">
                         <div id="gtco-logo">
                             <a href="index.html">CyberNetty</div>
-                    </div>
-                    <div class="col-xs-10 text-right menu-1">
-                        <ul>
-                            <li>
-                                <a class="active" href="index.html">Home</a>
+                            </div>
+                            <div class="col-xs-10 text-right menu-1">
+                                <ul>
+                                    <li>
+                                        <a class="active" href="index.html">Home</a>
                             </li>
                             <li>
                                 <a href="page-about.html">About Cyber Netty</a>
@@ -95,11 +63,12 @@
                             <li id="loggedIn" class="has-dropdown">
                                 <a href="#">Parent Dashboard</a>
                                 <ul class="dropdown">
-                                    <li>
-                                        <a id="create" href="page-create-activities.html">Create Activity</a>
-                                    </li>
+                                    <li><a id="create" href="page-create-activities.html">Create Activity</a></li>
                                     <li>
                                         <a id="progress" href="page-progress.html">Progress</a>
+                                    </li>
+                                    <li>
+                                        <a id="activities" href="page-activities.html">Activities</a>
                                     </li>
                                     <li>
                                         <a id="btnLogout" href="index.html">Log Out</a>
@@ -116,192 +85,148 @@
                 </div>
         </nav>
 
-        <div class="gtco-container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel owl-carousel-fullwidth">
-                        <div class="item">
-                            <a href="#">
-                                <img src="images/children_in_school.jpeg" alt="Children in School">
-                                <div class="slider-copy">
-                                    <h2>Information on Cyber Bullying</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="images/social_networks.jpeg" alt="Social Networks">
-                                <div class="slider-copy">
-                                    <h2>Current Social Networking Trends</h2>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a href="#">
-                                <img src="images/mobile_phones.jpeg" alt="Mobile Phones">
-                                <div class="slider-copy">
-                                    <h2>Children and Mobile Phones</h2>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="gtco-section">
             <div class="gtco-container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 gtco-heading text-center">
-                        <div>
-                            <h1>Welcome to Cyber Netty!</h1>
-                        </div>
-                        <br>
-                        <div class="hide">
-                            <label for="email">Email:</label>
-                            <br/>
-                            <input type="email" id="email" style="padding-top:5px" />
-                            <br/>
-                            <br/>
-                            <label for="password">Password:</label>
-                            <br/>
-                            <input type="password" id="password" style="padding-top:5px" />
-                            <br/>
-                            <br/>
-                            <button id="btnLogin">Log in</button>
-                            <button id="btnSignUp">Sign up</button>
-                            <!--<button id="btnLogout" class="hide">Log out</button>-->
-                            <button id="btnWriteToDB" class="hide">Write</button>
-                            <button id="btnReadFromDb">Read</button>
-                        </div>
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                <div class="row gtco-heading">
+                    <div class="col-md-7 text-left">
+                        <h2>About Cyber Netty</h2>
+                        <p>Cyber Netty is a home to a collection of internet safety websites found on the internet. Pooled together, you can find all you need to know about internet safety for your child online.</p>
                     </div>
                 </div>
-                <!--<div class="row">
+                <hr>
+                <div class="row">
 
                     <div class="col-md-12">
                         <div class="owl-carousel owl-carousel-carousel">
                             <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_1.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">New York Arena</h2></a>
-                                        <p class="role">New York</p>
+                                <div class="gtco-staff">
+                                    <img src="images/staff_1.jpg" alt="" class="img-responsive">
+                                    <h2>KidsHealth</h2>
+                                    <p class="role">Government Organisation</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_2.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">Eagle Park</h2></a>
-                                        <p class="role">London</p>
+                                <div class="gtco-staff">
+                                    <img src="images/nspcc-net-aware.png" alt="" class="nspcc">
+                                    <h2>NSPCC Net Aware</h2>
+                                    <p class="role">Charity Organisation</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_3.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">Nationals Park</h2></a>
-                                        <p class="role">Paris, France</p>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_1.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">New York Arena</h2></a>
-                                        <p class="role">New York</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_2.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">Eagle Park</h2></a>
-                                        <p class="role">London</p>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_3.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">Nationals Park</h2></a>
-                                        <p class="role">Paris, France</p>
+                                <div class="gtco-staff">
+                                    <img src="images/e-safety.png" alt="" class="e-safety">
+                                    <h2>E-Safety</h2>
+                                    <p class="role">Online Website</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
                                 </div>
                             </div>
 
                             <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_1.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">New York Arena</h2></a>
-                                        <p class="role">New York</p>
+                                <div class="gtco-staff">
+                                    <img src="images/staff_1.jpg" alt="" class="img-responsive">
+                                    <h2>Jane Simpson</h2>
+                                    <p class="role">Architect</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_2.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">Eagle Park</h2></a>
-                                        <p class="role">London</p>
+                                <div class="gtco-staff">
+                                    <img src="images/staff_2.jpg" alt="" class="img-responsive">
+                                    <h2>Richard Wilson</h2>
+                                    <p class="role">Civil Engineer</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="gtco-item">
-                                    <a href="#"><img src="images/img_3.jpg" alt="" class="img-responsive"></a>
-                                    <h2><a href="#">Nationals Park</h2></a>
-                                        <p class="role">Paris, France</p>
+                                <div class="gtco-staff">
+                                    <img src="images/staff_3.jpg" alt="" class="img-responsive">
+                                    <h2>Craig Davidson</h2>
+                                    <p class="role">Engineer</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gtco-staff">
+                                    <img src="images/staff_1.jpg" alt="" class="img-responsive">
+                                    <h2>Jane Simpson</h2>
+                                    <p class="role">Architect</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gtco-staff">
+                                    <img src="images/staff_2.jpg" alt="" class="img-responsive">
+                                    <h2>Richard Wilson</h2>
+                                    <p class="role">Civil Engineer</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="gtco-staff">
+                                    <img src="images/staff_3.jpg" alt="" class="img-responsive">
+                                    <h2>Craig Davidson</h2>
+                                    <p class="role">Engineer</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.</p>
+                                    <p>
+                                        <a href="#" class="gtco-more">Visit website</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                </div>-->
+                </div>
             </div>
         </div>
-        <!-- END Work -->
+        <!-- END -->
 
-        <!--<div class="gtco-section">
+        <div class="gtco-section">
             <div class="gtco-container">
                 <div class="row">
-                    <div class="col-md-6 gtco-news">
-                        <h2>News</h2>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <span class="post-date">September 10, 2016</span>
-                                    <h3>Manila Bridge Re-construction</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod...</p>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <span class="post-date">September 10, 2016</span>
-                                    <h3>Manila Bridge Re-construction</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod...</p>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="#">
-                                    <span class="post-date">September 10, 2016</span>
-                                    <h3>Manila Bridge Re-construction</h3>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod...</p>
-                                </a>
-                            </li>
-                        </ul>
-                        <p><a href="#" class="btn btn-sm btn-special">More News</a></p>
+                    <div class="col-md-5 col-md-push-1 gtco-testimonials">
+                        <h2>Success Stories</h2>
+                        <blockquote>
+                            <p>&ldquo;Cyber Netty was the most helpful tool I found. Ben is very open about his activities online!&ldquo;</p>
+                            <p class="author"><cite>&mdash; Kate Dweller, mother of Ben Dweller</cite></p>
+                        </blockquote>
+                        <blockquote>
+                            <p>&ldquo;The Parent Quiz option was my favourite&ldquo;</p>
+                            <p class="author"><cite>&mdash; Trish</cite></p>
+                        </blockquote>
+                        <blockquote>
+                            <p>&ldquo;Recommended to all my parent-friends. I don't know what I would have done without it.&ldquo;</p>
+                            <p class="author"><cite>&mdash; Michael O'Callaghan, Sligo</cite></p>
+                        </blockquote>
                     </div>
-                    <!-- END News -->
-        <!--<div class="col-md-5 col-md-push-1 gtco-testimonials">
-            <h2>Testimonials</h2>
-            <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
-                <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
-            </blockquote>
-            <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus placerat enim et urna sagittis, rhoncus euismod erat tincidunt. Donec tincidunt volutpat erat.&ldquo;</p>
-                <p class="author"><cite>&mdash; John Doe Dueller</cite></p>
-            </blockquote>
+                </div>
+            </div>
         </div>
-        </div>
-    </div>-->
-        <!--</div>-->
         <!-- END  -->
 
         <div class="gtco-section gto-features">
@@ -309,7 +234,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="feature-left">
-                            <i class="ti-zip icon"></i>
+                            <!--<i class="ti-zip icon"></i>-->
                             <div class="copy">
                                 <h3>Cyber Bullying</h3>
                                 <p>Lorem ipsum dolor sit ameteista, consectetur adipiscing is not elitistaris.</p>
@@ -321,7 +246,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="feature-left">
-                            <i class="ti-hummer icon"></i>
+                            <!--<i class="ti-hummer icon"></i>-->
                             <div class="copy">
                                 <h3>App Trends</h3>
                                 <p>Lorem ipsum dolor sit ameteista, consectetur adipiscing is not elitistaris.</p>
@@ -333,7 +258,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="feature-left">
-                            <i class="ti-plug icon"></i>
+                            <!--<i class="ti-plug icon"></i>-->
                             <div class="copy">
                                 <h3>Activities</h3>
                                 <p>Lorem ipsum dolor sit ameteista, consectetur adipiscing is not elitistaris.</p>
@@ -359,21 +284,11 @@
                             <div class="col-md-6 gtco-footer-link">
                                 <h3>Links</h3>
                                 <ul class="gtco-list-link">
-                                    <li>
-                                        <a href="index.html">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="page-about.html">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">App Trends</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Cyber Bullying</a>
-                                    </li>
-                                    <li>
-                                        <a href="page-activities.html">Activities</a>
-                                    </li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="#">App Trends</a></li>
+                                    <li><a href="#">Cyber Bullying</a></li>
+                                    <li><a href="netty-activities.html">Activities</a></li>
                                 </ul>
                             </div>
                             <!--<div class="col-md-6 gtco-footer-link">
@@ -388,18 +303,15 @@
                         </div>
                     </div>
                     <div class="col-md-4 gtco-footer-subscribe">
-                        <!-- Font awesome icons -->
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="https://www.instagram.com/CyberNetty/" class="fa fa-instagram"></a>
-
-                        <!--<form class="form-inline">
-                            <div class="form-group">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control" id="" placeholder="Email">
+                        <div class="item">
+                            <div class="gtco-staff">
+                                <ul class="fh5co-social">
+                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="#"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                                </ul>
                             </div>
-                            <button type="submit" class="btn btn-primary">Send</button>
-                        </form>-->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -407,9 +319,7 @@
                 <div class="gtco-container">
                     <div class="row">
                         <div class="col-md-6 text-left">
-                            <p>
-                                <small>&copy; Copyright 2018</small>
-                            </p>
+                            <p><small>&copy; Copyright 2018</small></p>
                         </div>
 
                     </div>
@@ -421,9 +331,7 @@
         </div>
 
         <div class="gototop js-top">
-            <a href="#" class="js-gotop">
-                <i class="icon-arrow-up"></i>
-            </a>
+            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
         </div>
 
         <!-- jQuery -->
@@ -439,8 +347,6 @@
 
         <!-- Main -->
         <script src="js/main.js"></script>
-        <script type="text/javascript" src="js/database.js"></script>
-        <script src="js/page-about.js"></script>
 
 </body>
 
