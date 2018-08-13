@@ -1,4 +1,4 @@
-(function () {
+(function() {
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log('Logged in');
@@ -8,8 +8,7 @@
                 if (quiz == null) {
                     quiz = [];
                     quizArea.innerHTML = '';
-                }
-                else {
+                } else {
                     writeOutQuestions(quiz);
                 }
                 const questionTitle = document.getElementById('questionTitle');
@@ -17,7 +16,7 @@
                 const questionAnswerTwo = document.getElementById('questionAnswerTwo');
                 const questionAnswerThree = document.getElementById('questionAnswerThree');
                 const questionAnswerCorrect = document.getElementById('questionAnswerCorrect');
-                document.getElementById("submit").addEventListener('click', function () {
+                document.getElementById("submit").addEventListener('click', function() {
                     const question = {
                         "question": questionTitle.value,
                         "answer1": questionAnswerOne.value,
@@ -47,15 +46,15 @@ function removeQuestion(quiz, index) {
     });
 }
 
-function writeOutQuestions(quiz){
+function writeOutQuestions(quiz) {
     const quizArea = document.getElementById('quiz');
     quizArea.innerHTML = '';
     for (let i = 0; i < quiz.length; i++) {
-        quizArea.innerHTML += ('<h2>' + quiz[i].question + '</h2> <button id="q' + i + '">Remove</button>');
+        quizArea.innerHTML += ('<h3>' + quiz[i].question + '</h3> <button id="q' + i + '"> x Remove</button>');
 
     }
     for (let i = 0; i < quiz.length; i++) {
-        document.getElementById('q' + i).addEventListener('click', function () {
+        document.getElementById('q' + i).addEventListener('click', function() {
             removeQuestion(quiz, i);
         })
     }

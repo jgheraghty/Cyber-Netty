@@ -550,7 +550,9 @@ input {
     padding-left: 5px;
 }
 
-#button {
+#button,
+#submit,
+#buttonSubmit {
     background: #52D681;
     border: none;
     border-radius: 5px;
@@ -561,9 +563,29 @@ input {
     margin-top: 15px;
 }
 
-#button:hover {
+#button:hover,
+#submit:hover,
+#buttonSubmit:hover {
     background: white;
     /*border: 1px solid #52D681;*/
+    color: #52D681;
+    cursor: pointer;
+    border: #52D681 1px solid;
+}
+
+
+/*#button {
+    background: #52D681;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-size: 15px;
+    transition-duration: .5s;
+    margin-top: 15px;
+}
+#button:hover {
+    background: white;
     color: black;
     cursor: pointer;
 }
@@ -581,10 +603,10 @@ input {
 
 #buttonSubmit:hover {
     background: white;
-    /*border: 1px solid #52D681;*/
     color: black;
     cursor: pointer;
 }
+*/
 
 #after_submit {
     visibility: hidden;
