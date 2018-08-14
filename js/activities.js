@@ -115,20 +115,24 @@ function TheInternetActivity() {
 
     <form id="quiz" name="quiz">
 
-    <p class="questions">Question:</p>
-    <p>The Internet is a </p><input id="textbox" type="text" name="question1"/><p> of networks, a networking infrastructure. It </p><input id="textbox" type="text" name="question2"/><p> globally, forming a network in which any computer can </p><input id="textbox" type="text" name="question3"/><p> with any other computer, as long as they are both connected to the </p><input id="textbox" type="text" name="question4"/><p>.</p>
-
-    <h2>Suggested words:</h2>
-    <p>communicate</p>
-    <p>massive network</p>
-    <p>connects millions of computers together</p>
+    <h3>Suggested words:</h3>
+    <p id="suggest">communicate</p>
+    <p id="suggest">massive network</p>
+    <p id="suggest">internet</p>
+    <p id="suggest">connects millions of computers together</p>
+    
+    <p class="questions">Question:</p>        
+    <p>The Internet is a <input id="textbox" type="text" name="question1"/> of networks, a networking infrastructure. It <input id="textbox" type="text" name="question2"/> globally, forming a network in which any computer can <input id="textbox" type="text" name="question3"/> with any other computer, as long as they are both connected to the <input id="textbox" type="text" name="question4"/>.</p>
 
     <input id="button" type="button" value="Submit" onclick="TheInternet()">
+
     </form>
 
     <div id="after_submit">
     <p id="number_correct">
     <p id="message"></p>
+    </div>
+
     `;
 }
 
@@ -203,12 +207,13 @@ function SharingActivity() {
 
     <form id="quiz" name="quiz">
 
-    <p class="questions">Question 1: The internet is like.. </p>
+    <p class="questions">Question: The internet is like.. </p>
     <input id="mc" type="radio" name="question1" value="option1">Floating through the sky in a hot air balloon<br>
     <input id="mc" type="radio" name="question1" value="option2">Hanging out with Netty on the beach<br>
-    <input id="mc" type="radio" name="question1" value="option3">Standing on the street, shouting into a megaphone<br>
+    <input id="mc" type="radio" name="question1" value="option3">Standing on the street, shouting into a microphone<br>
 
     <input id="button" type="button" value="Submit" onclick="Share()">
+    
     </form>
 
     <div id="after_submit">
@@ -355,10 +360,9 @@ function CyberBullyingActivity() {
     <input id="textbox" type="text" name="question2"/>
     <p>another person.</p>
 
-    <h2>Suggested words:</h2>
-    <p>target</p>
-    <p>technology</p>
-    
+    <h3>Suggested words:</h3>
+    <p id="suggest">target</p>
+    <p id="suggest">technology</p>
     
     <input id="button" type="button" value="Submit" onclick="CyberBully()">
     </form>

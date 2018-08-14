@@ -114,7 +114,7 @@ h1 {
     /*position : absolute;
   	left : 320px;
   	top  : 85px;*/
-    font: sans-serif;
+    /*font: sans-serif;*/
     /*text-align: center;*/
 }
 
@@ -311,9 +311,15 @@ input {
 
 /* -- Activity Information -- */
 
-.modal-content {
-    background-color: white;
+.close {
+    font-size: 50px;
+    opacity: 0;
 }
+
+
+/*.modal-content {
+    background-color: white;
+}*/
 
 .modal.fade .modal-dialog {
     width: fit-content;
@@ -382,8 +388,9 @@ input {
 .info-about {
     border-radius: 15px;
     /*background: #81cbec;
-    background: #52D681;*/
-    background: #f2D681;
+    background: #52D681;
+    background: #f2D681;*/
+    border: #52D681 2px solid;
     background-repeat: no-repeat;
     color: black;
     /*padding: 20px;x
@@ -478,6 +485,10 @@ input {
 
 /* -- Navbar -- */
 
+.active {
+    color: #52D681;
+}
+
 .navBar {
     background: #81cbec;
     height: 100px;
@@ -539,8 +550,15 @@ h4 {
     /*font-size: 35px;*/
 }
 
+#suggest {
+    background-color: #52D681;
+    border-radius: 5px;
+    color: white;
+    padding-left: 10px;
+}
+
 input {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
 }
 
 #textbox {
@@ -619,7 +637,7 @@ input {
 
 .questions {
     /*color: #9de659;*/
-    color: #ffffff;
+    color: #52D681;
 }
 
 .jumbotron p {
