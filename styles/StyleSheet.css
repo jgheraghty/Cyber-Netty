@@ -313,7 +313,18 @@ input {
 
 .close {
     font-size: 50px;
-    opacity: 0;
+    opacity: 0.5;
+    font-weight: normal;
+    color: #000;
+    text-shadow: 0 0px 0 transparent;
+}
+
+.close {
+    font-size: 50px;
+    opacity: 0.5;
+    font-weight: normal;
+    color: rgb(61, 60, 60);
+    text-shadow: 0 0px 0 transparent;
 }
 
 
@@ -551,10 +562,17 @@ h4 {
 }
 
 #suggest {
-    background-color: #52D681;
     border-radius: 5px;
-    color: white;
-    padding-left: 10px;
+    color: #52D681;
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+pre {
+    padding: 0px;
+    font-size: 18px;
+    background-color: transparent;
+    border: transparent;
 }
 
 input {

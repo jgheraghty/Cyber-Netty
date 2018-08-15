@@ -116,10 +116,7 @@ function TheInternetActivity() {
     <form id="quiz" name="quiz">
 
     <h3>Suggested words:</h3>
-    <p id="suggest">communicate</p>
-    <p id="suggest">massive network</p>
-    <p id="suggest">internet</p>
-    <p id="suggest">connects millions of computers together</p>
+    <pre id="suggest">communicate     massive network     internet     connects millions of computers together</pre>
     
     <p class="questions">Question:</p>        
     <p>The Internet is a <input id="textbox" type="text" name="question1"/> of networks, a networking infrastructure. It <input id="textbox" type="text" name="question2"/> globally, forming a network in which any computer can <input id="textbox" type="text" name="question3"/> with any other computer, as long as they are both connected to the <input id="textbox" type="text" name="question4"/>.</p>
@@ -361,8 +358,7 @@ function CyberBullyingActivity() {
     <p>another person.</p>
 
     <h3>Suggested words:</h3>
-    <p id="suggest">target</p>
-    <p id="suggest">technology</p>
+    <pre id="suggest">target   technology</pre>
     
     <input id="button" type="button" value="Submit" onclick="CyberBully()">
     </form>
