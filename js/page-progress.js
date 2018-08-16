@@ -112,7 +112,7 @@
                                 <h3>Parent Activity</h3>
                                 <p>Incomplete</p>
                                 </div>
-                                <hr>`;
+                                `;
 
                         } else {
                             content +=

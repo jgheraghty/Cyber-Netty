@@ -601,12 +601,27 @@ input {
 
 #button:hover,
 #submit:hover,
-#buttonSubmit:hover {
+#buttonSubmit:hover,
+#q0:hover,
+#q1:hover,
+#q2:hover {
     background: white;
     /*border: 1px solid #52D681;*/
     color: #52D681;
     cursor: pointer;
     border: #52D681 1px solid;
+}
+
+#q0,
+#q1,
+#q2 {
+    background: #52D681;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    color: white;
+    font-size: 15px;
+    transition-duration: .5s;
 }
 
 
