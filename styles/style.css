@@ -542,6 +542,11 @@ figure {
 #gtco-footer .gtco-footer-paragraph h3 {
     color: #fff;
     margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+#gtco-footer .gtco-footer-paragraph p {
+    padding-left: 20px;
 }
 
 #gtco-footer .gtco-footer-link {
@@ -675,6 +680,7 @@ figure {
 .gtco-item .fh5co-social {
     padding: 0;
     margin: 0;
+    margin-top: 30px;
 }
 
 .gtco-staff .fh5co-social li,
@@ -1029,7 +1035,7 @@ blockquote {
 
 blockquote p {
     font-style: italic;
-    color: #000;
+    /*color: #000;*/
 }
 
 blockquote p>cite {
@@ -1584,7 +1590,7 @@ blockquote p>cite {
 }
 
 .row-pb-md {
-    padding-bottom: 4em !important;
+    padding-bottom: 2em !important;
 }
 
 .row-pb-sm {
