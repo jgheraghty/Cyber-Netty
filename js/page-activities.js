@@ -7,7 +7,7 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
         if (firebaseUser) {
             console.log('Logged in');
-            document.getElementById("userGreeting").innerHTML = '<h2>Hi ' + firebaseUser.displayName + ', join Netty on a quest to discover the online world!</h2>';
+            document.getElementById("userGreeting").innerHTML = '<h3>Hi ' + firebaseUser.displayName + ', join Netty on a quest to discover the online world!</h3>';
 
             navLoggedIn.classList.remove('hide');
             navJoinNetty.classList.add('hide');
