@@ -7,7 +7,7 @@
                 let quiz = snapshot.val();
                 if (quiz == null) {
                     quiz = [];
-                    quizArea.innerHTML = '';
+                    quizArea.innerHTML = '<h3>You have not added any questions.</h3>';
                 } else {
                     writeOutQuestions(quiz);
                 }

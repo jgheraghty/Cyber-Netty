@@ -19,7 +19,7 @@
                     console.log(progress);
 
                     if (progress == null) {
-                        // TODO: Error message for no activities completed yet
+                        // Error message for no activities completed yet
                         document.getElementById('progressRep').innerHTML = "No Progress";
                     } else {
                         var content = '';
