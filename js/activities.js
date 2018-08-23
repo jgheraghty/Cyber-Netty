@@ -85,9 +85,8 @@ function StrangerDanger() {
     if (correct > 2) {
         score = 0;
     }
-    if ()
 
-        const data = {
+    const data = {
         complete: true,
         score: correct
     };
